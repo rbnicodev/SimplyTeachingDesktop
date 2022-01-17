@@ -1,0 +1,11 @@
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\Debug\SimplyTeachingDesktop.exe.config
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\Debug\SimplyTeachingDesktop.exe
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\Debug\SimplyTeachingDesktop.pdb
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.csproj.AssemblyReference.cache
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.csproj.SuggestedBindingRedirects.cache
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.Form1.resources
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.Properties.Resources.resources
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.csproj.GenerateResource.cache
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.csproj.CoreCompileInputs.cache
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.exe
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.pdb
