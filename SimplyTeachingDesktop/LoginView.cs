@@ -18,8 +18,7 @@ namespace SimplyTeachingDesktop
         public LoginView()
         {
             InitializeComponent();
-            this.CenterToScreen();
-            LbSimplyTeaching.BackColor = Color.Transparent;
+            dataController = ControllersUtility.GetDataController();
         }
 
         private Boolean Validate_Email(String email)
@@ -43,37 +42,29 @@ namespace SimplyTeachingDesktop
             }
         }
 
-        private void MainView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void BtExit_Click(object sender, EventArgs e)
         {
             this.Dispose();
         }
 
-        private void mainForm_MouseDown(object sender, MouseEventArgs e)
+        private void Form_MouseDown(object sender, MouseEventArgs e)
         {
             dragging = true;
             startPoint = new Point(e.X, e.Y);
-
         }
 
-        private void mainForm_MouseUp(object sender, MouseEventArgs e)
+        private void Form_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
         }
 
-        private void mainForm_MouseMove(object sender, MouseEventArgs e)
+        private void Form_MouseMove(object sender, MouseEventArgs e)
         {
             if (dragging)
             {
                 Point p = PointToScreen(e.Location);
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
-
             }
-
         }
 
         private void TbUser_Enter(object sender, EventArgs e)
@@ -120,18 +111,26 @@ namespace SimplyTeachingDesktop
             if(TbUser.Text =="" || TbUser.Text == "Usuario")
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = Color.FromArgb(255, 0, 0, 81);
+                TbUser.BackColor = Color.Black;
             }
             else if (!Validate_Email(TbUser.Text))
             {
-                TbUser.BackColor = Color.FromArgb(255, 81, 0, 81);
-                BtnLogin.Enabled = false;
+                TbUser.BackColor = Color.FromArgb(255, 80, 0, 0);
             }
             else
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = Color.FromArgb(255, 0, 81, 81);
-                BtnLogin.Enabled = true;
+                TbUser.BackColor = Color.FromArgb(255, 0, 80, 0);
+            }
+        }
+
+        private void BtnLogin_Click(object sender, EventArgs e)
+        {
+            if (dataController.Login(TbUser.Text, TbPass.Text))
+            {
+                TeachersView teachersView = new TeachersView();
+                teachersView.Show();
+                this.Visible = false;
             }
         }
     }

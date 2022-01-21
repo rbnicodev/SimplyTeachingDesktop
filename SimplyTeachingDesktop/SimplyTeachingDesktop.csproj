@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControllersUtility.cs" />
+    <Compile Include="DataController.cs" />
     <Compile Include="LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +57,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TeachersView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeachersView.Designer.cs">
+      <DependentUpon>TeachersView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +75,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TeachersView.resx">
+      <DependentUpon>TeachersView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

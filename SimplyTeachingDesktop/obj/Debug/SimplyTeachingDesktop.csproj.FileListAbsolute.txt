@@ -9,3 +9,4 @@ C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.exe
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.pdb
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.LoginView.resources
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.TeachersView.resources
