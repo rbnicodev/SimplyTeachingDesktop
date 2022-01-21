@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
@@ -18,7 +17,7 @@ namespace SimplyTeachingDesktop
         public LoginView()
         {
             InitializeComponent();
-            dataController = ControllersUtility.GetDataController();
+            dataController = new DataController();
         }
 
         private Boolean Validate_Email(String email)
