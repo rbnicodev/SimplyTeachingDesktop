@@ -77,6 +77,7 @@ namespace SimplyTeachingDesktop
             this.TbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TbUser.TextChanged += new System.EventHandler(this.TbUser_Changed);
             this.TbUser.Enter += new System.EventHandler(this.TbUser_Enter);
+            this.TbUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_KeyPress);
             this.TbUser.Leave += new System.EventHandler(this.TbUser_Leave);
             // 
             // TbPass
@@ -93,6 +94,7 @@ namespace SimplyTeachingDesktop
             this.TbPass.Text = "Contraseña";
             this.TbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TbPass.Enter += new System.EventHandler(this.TbPass_Enter);
+            this.TbPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_KeyPress);
             this.TbPass.Leave += new System.EventHandler(this.TbPass_Leave);
             // 
             // PbLogo

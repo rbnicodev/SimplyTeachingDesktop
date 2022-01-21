@@ -120,18 +120,28 @@ namespace SimplyTeachingDesktop
             else
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = Color.FromArgb(255, 0, 80, 0);
+                TbUser.BackColor = Color.FromArgb(255, 0, 0, 0);
             }
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (dataController.Login(TbUser.Text, TbPass.Text))
+            if (dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim()))
             {
                 TeachersView teachersView = new TeachersView();
                 teachersView.Show();
                 this.Visible = false;
             }
+            else
+            {
+                MessageBox.Show("Usuario y/o contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Tb_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+                BtnLogin_Click(null, null);
         }
     }
 }
