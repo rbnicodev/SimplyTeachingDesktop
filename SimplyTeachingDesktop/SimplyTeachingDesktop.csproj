@@ -48,7 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControllersUtility.cs" />
     <Compile Include="DataController.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="LoginView.cs">
