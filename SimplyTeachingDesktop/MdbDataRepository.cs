@@ -199,10 +199,10 @@ namespace SimplyTeachingDesktop
         {
             try
             {
-                if (!username.Equals("admin@academy.es"))
+                if (!username.Equals("admin@academy.es") || !password.Equals("admin"))
                     result = false;
-                if (!password.Equals("admin"))
-                    result = false;
+                else
+                    result = true;
             }
             catch (Exception ex)
             {

@@ -23,3 +23,5 @@ C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\Debug\MySql.Data.xml
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.exe.config
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.csproj.CopyComplete
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.StudentsView.resources
+C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.SubjectsView.resources

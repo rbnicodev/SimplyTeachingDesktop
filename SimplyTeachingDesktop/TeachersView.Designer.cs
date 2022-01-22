@@ -28,12 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeachersView));
             this.BtnExit = new System.Windows.Forms.Button();
-            this.DgvTeachers = new System.Windows.Forms.DataGridView();
+            this.dataTable = new System.Windows.Forms.DataGridView();
+            this.Profesores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnMaximize = new System.Windows.Forms.Button();
             this.BtnMinimize = new System.Windows.Forms.Button();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvTeachers)).BeginInit();
+            this.BtnEdit = new System.Windows.Forms.PictureBox();
+            this.BtnAdd = new System.Windows.Forms.PictureBox();
+            this.LbEntity = new System.Windows.Forms.Label();
+            this.BtnAlumnos = new System.Windows.Forms.Label();
+            this.BtnAsignaturas = new System.Windows.Forms.Label();
+            this.BtnProfesores = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnExit
@@ -55,16 +65,30 @@
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // DgvTeachers
+            // dataTable
             // 
-            this.DgvTeachers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvTeachers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.DgvTeachers.Location = new System.Drawing.Point(12, 40);
-            this.DgvTeachers.Name = "DgvTeachers";
-            this.DgvTeachers.RowHeadersWidth = 51;
-            this.DgvTeachers.RowTemplate.Height = 24;
-            this.DgvTeachers.Size = new System.Drawing.Size(628, 668);
-            this.DgvTeachers.TabIndex = 3;
+            this.dataTable.AllowUserToAddRows = false;
+            this.dataTable.AllowUserToDeleteRows = false;
+            this.dataTable.AllowUserToOrderColumns = true;
+            this.dataTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Profesores});
+            this.dataTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.dataTable.Location = new System.Drawing.Point(12, 40);
+            this.dataTable.Name = "dataTable";
+            this.dataTable.ReadOnly = true;
+            this.dataTable.RowHeadersWidth = 51;
+            this.dataTable.RowTemplate.Height = 24;
+            this.dataTable.Size = new System.Drawing.Size(628, 668);
+            this.dataTable.TabIndex = 3;
+            // 
+            // Profesores
+            // 
+            this.Profesores.HeaderText = "Profesores";
+            this.Profesores.MinimumWidth = 6;
+            this.Profesores.Name = "Profesores";
+            this.Profesores.ReadOnly = true;
+            this.Profesores.Width = 125;
             // 
             // BtnMaximize
             // 
@@ -109,12 +133,102 @@
             // 
             this.LbSimplyTeaching.AutoSize = true;
             this.LbSimplyTeaching.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbSimplyTeaching.ForeColor = System.Drawing.Color.DarkGray;
+            this.LbSimplyTeaching.ForeColor = System.Drawing.Color.White;
             this.LbSimplyTeaching.Location = new System.Drawing.Point(13, 13);
             this.LbSimplyTeaching.Name = "LbSimplyTeaching";
             this.LbSimplyTeaching.Size = new System.Drawing.Size(109, 17);
             this.LbSimplyTeaching.TabIndex = 6;
             this.LbSimplyTeaching.Text = "Simply Teaching";
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
+            this.BtnEdit.Location = new System.Drawing.Point(652, 40);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(30, 30);
+            this.BtnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnEdit.TabIndex = 7;
+            this.BtnEdit.TabStop = false;
+            // 
+            // BtnAdd
+            // 
+            this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
+            this.BtnAdd.Location = new System.Drawing.Point(652, 678);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAdd.Name = "BtnAdd";
+            this.BtnAdd.Size = new System.Drawing.Size(30, 30);
+            this.BtnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnAdd.TabIndex = 8;
+            this.BtnAdd.TabStop = false;
+            // 
+            // LbEntity
+            // 
+            this.LbEntity.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.LbEntity.BackColor = System.Drawing.Color.Transparent;
+            this.LbEntity.Font = new System.Drawing.Font("Segoe UI", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbEntity.ForeColor = System.Drawing.Color.White;
+            this.LbEntity.Location = new System.Drawing.Point(710, 40);
+            this.LbEntity.Name = "LbEntity";
+            this.LbEntity.Size = new System.Drawing.Size(500, 120);
+            this.LbEntity.TabIndex = 9;
+            this.LbEntity.Text = "Profesores";
+            this.LbEntity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // BtnAlumnos
+            // 
+            this.BtnAlumnos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.BtnAlumnos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAlumnos.ForeColor = System.Drawing.Color.White;
+            this.BtnAlumnos.Location = new System.Drawing.Point(1120, 680);
+            this.BtnAlumnos.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAlumnos.Name = "BtnAlumnos";
+            this.BtnAlumnos.Size = new System.Drawing.Size(160, 40);
+            this.BtnAlumnos.TabIndex = 10;
+            this.BtnAlumnos.Text = "Alumnos";
+            this.BtnAlumnos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnAlumnos.Click += new System.EventHandler(this.BtnAlumnos_Click);
+            this.BtnAlumnos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LabelButton_MouseClick);
+            this.BtnAlumnos.MouseLeave += new System.EventHandler(this.LabelButton_MouseLeave);
+            this.BtnAlumnos.MouseHover += new System.EventHandler(this.LabelButton_MouseHover);
+            // 
+            // BtnAsignaturas
+            // 
+            this.BtnAsignaturas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnAsignaturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.BtnAsignaturas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAsignaturas.ForeColor = System.Drawing.Color.White;
+            this.BtnAsignaturas.Location = new System.Drawing.Point(960, 680);
+            this.BtnAsignaturas.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnAsignaturas.Name = "BtnAsignaturas";
+            this.BtnAsignaturas.Size = new System.Drawing.Size(160, 40);
+            this.BtnAsignaturas.TabIndex = 11;
+            this.BtnAsignaturas.Text = "Asignaturas";
+            this.BtnAsignaturas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnAsignaturas.Click += new System.EventHandler(this.BtnAsignaturas_Click);
+            this.BtnAsignaturas.MouseClick += new System.Windows.Forms.MouseEventHandler(this.LabelButton_MouseClick);
+            this.BtnAsignaturas.MouseLeave += new System.EventHandler(this.LabelButton_MouseLeave);
+            this.BtnAsignaturas.MouseHover += new System.EventHandler(this.LabelButton_MouseHover);
+            // 
+            // BtnProfesores
+            // 
+            this.BtnProfesores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BtnProfesores.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProfesores.ForeColor = System.Drawing.Color.White;
+            this.BtnProfesores.Location = new System.Drawing.Point(800, 680);
+            this.BtnProfesores.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnProfesores.Name = "BtnProfesores";
+            this.BtnProfesores.Size = new System.Drawing.Size(160, 40);
+            this.BtnProfesores.TabIndex = 12;
+            this.BtnProfesores.Text = "Profesores";
+            this.BtnProfesores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnProfesores.Click += new System.EventHandler(this.BtnProfesores_Click);
             // 
             // TeachersView
             // 
@@ -122,13 +236,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.BtnProfesores);
+            this.Controls.Add(this.BtnAsignaturas);
+            this.Controls.Add(this.BtnAlumnos);
+            this.Controls.Add(this.BtnAdd);
+            this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.LbSimplyTeaching);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnMaximize);
             this.Controls.Add(this.BtnMinimize);
-            this.Controls.Add(this.DgvTeachers);
+            this.Controls.Add(this.dataTable);
+            this.Controls.Add(this.LbEntity);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "TeachersView";
             this.ShowIcon = false;
@@ -139,7 +259,9 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             this.Resize += new System.EventHandler(this.Form_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvTeachers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,10 +269,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.DataGridView DgvTeachers;
-        private System.Windows.Forms.Button BtnMaximize;
-        private System.Windows.Forms.Button BtnMinimize;
-        private System.Windows.Forms.Label LbSimplyTeaching;
+        protected System.Windows.Forms.Button BtnExit;
+        protected System.Windows.Forms.DataGridView dataTable;
+        protected System.Windows.Forms.Button BtnMaximize;
+        protected System.Windows.Forms.Button BtnMinimize;
+        protected System.Windows.Forms.Label LbSimplyTeaching;
+        protected System.Windows.Forms.DataGridViewTextBoxColumn Profesores;
+        protected System.Windows.Forms.PictureBox BtnEdit;
+        protected System.Windows.Forms.PictureBox BtnAdd;
+        protected System.Windows.Forms.Label LbEntity;
+        protected System.Windows.Forms.Label BtnAlumnos;
+        protected System.Windows.Forms.Label BtnAsignaturas;
+        protected System.Windows.Forms.Label BtnProfesores;
     }
 }
