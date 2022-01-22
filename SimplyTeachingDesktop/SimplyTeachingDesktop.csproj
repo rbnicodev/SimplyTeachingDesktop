@@ -60,25 +60,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
-    <Compile Include="StudentsView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="StudentsView.Designer.cs">
-      <DependentUpon>StudentsView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Subject.cs" />
-    <Compile Include="SubjectsView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SubjectsView.Designer.cs">
-      <DependentUpon>SubjectsView.cs</DependentUpon>
-    </Compile>
     <Compile Include="Teacher.cs" />
-    <Compile Include="TeachersView.cs">
+    <Compile Include="TableView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TeachersView.Designer.cs">
-      <DependentUpon>TeachersView.cs</DependentUpon>
+    <Compile Include="TableView.Designer.cs">
+      <DependentUpon>TableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TeacherPanel.Designer.cs">
+      <DependentUpon>TeacherPanel.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
@@ -92,14 +86,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentsView.resx">
-      <DependentUpon>StudentsView.cs</DependentUpon>
+    <EmbeddedResource Include="TableView.resx">
+      <DependentUpon>TableView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SubjectsView.resx">
-      <DependentUpon>SubjectsView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TeachersView.resx">
-      <DependentUpon>TeachersView.cs</DependentUpon>
+    <EmbeddedResource Include="TeacherPanel.resx">
+      <DependentUpon>TeacherPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

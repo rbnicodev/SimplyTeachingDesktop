@@ -127,7 +127,7 @@ namespace SimplyTeachingDesktop
         {
             if (dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim()))
             {
-                TeachersView teachersView = new TeachersView();
+                TableView teachersView = new TableView();
                 teachersView.Show();
                 this.Visible = false;
             }

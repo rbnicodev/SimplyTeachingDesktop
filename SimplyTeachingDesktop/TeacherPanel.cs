@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace SimplyTeachingDesktop
 {
-    public partial class StudentsView : TeachersView
+    public partial class TeacherPanel : UserControl
     {
-        public StudentsView()
+        public TeacherPanel()
         {
             InitializeComponent();
-        }
-
-        private void BtnProfesores_Click(object sender, EventArgs e)
-        {
-            TeachersView form = new TeachersView();
-            form.Show();
-            this.Close();
         }
     }
 }

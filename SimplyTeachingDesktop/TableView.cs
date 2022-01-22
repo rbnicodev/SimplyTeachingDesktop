@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SimplyTeachingDesktop
 {
-    public partial class TeachersView : Form
+    public partial class TableView : Form
     {
-        protected bool dragging = false;
-        protected Point startPoint = new Point(0, 0);
-        public TeachersView()
+        private bool dragging = false;
+        private Point startPoint = new Point(0, 0);
+        private int type = 0;
+        private Color backColor;
+        public TableView()
         {
             InitializeComponent();
         }
@@ -113,36 +109,49 @@ namespace SimplyTeachingDesktop
 
         private void LabelButton_MouseHover(object sender, EventArgs e)
         {
+            backColor = ((Label)sender).BackColor;
             ((Label)sender).BackColor = Color.FromArgb(255, 74, 74, 74);
         }
 
         private void LabelButton_MouseLeave(object sender, EventArgs e)
         {
-            ((Label)sender).BackColor = Color.FromArgb(255, 84, 84, 84);
+            ((Label)sender).BackColor = backColor;
         }
 
         private void LabelButton_MouseClick(object sender, MouseEventArgs e)
         {
             ((Label)sender).BackColor = Color.FromArgb(255, 64, 64, 64);
+            backColor = ((Label)sender).BackColor;
         }
 
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
-            SubjectsView form = new SubjectsView();
-            form.Show();
-            this.Close();
+            BtnAsignaturas.BackColor = Color.FromArgb(255, 64, 64, 64);
+            BtnProfesores.BackColor = Color.FromArgb(255, 84, 84, 84);
+            BtnAlumnos.BackColor = Color.FromArgb(255, 84, 84, 84);
+            backColor = ((Label)sender).BackColor;
+            LbEntity.Text = "Asignaturas";
+            type = 1;
         }
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
         {
-            StudentsView form = new StudentsView();
-            form.Show();
-            this.Close();
+            BtnAsignaturas.BackColor = Color.FromArgb(255, 84, 84, 84);
+            BtnProfesores.BackColor = Color.FromArgb(255, 84, 84, 84);
+            BtnAlumnos.BackColor = Color.FromArgb(255, 64, 64, 64);
+            backColor = ((Label)sender).BackColor;
+            LbEntity.Text = "Alumnos";
+            type = 2;
         }
 
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
-
+            BtnAsignaturas.BackColor = Color.FromArgb(255, 84, 84, 84);
+            BtnProfesores.BackColor = Color.FromArgb(255, 64, 64, 64);
+            BtnAlumnos.BackColor = Color.FromArgb(255, 84, 84, 84);
+            backColor = ((Label)sender).BackColor;
+            LbEntity.Text = "Profesores";
+            type = 0;
         }
     }
 }
