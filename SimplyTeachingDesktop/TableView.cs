@@ -13,6 +13,9 @@ namespace SimplyTeachingDesktop
         public TableView()
         {
             InitializeComponent();
+            studentsPanel1.Visible = false;
+            subjectPanel1.Visible = false;
+            teacherPanel1.Visible = true;
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -42,18 +45,33 @@ namespace SimplyTeachingDesktop
 
         private void Form_Resize(object sender, EventArgs e)
         {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                BtnMaximize.Font = new Font("Marlett", 14);
+                BtnMaximize.Text = "";
+            }
+            else if (this.WindowState == FormWindowState.Normal)
+            {
+                BtnMaximize.Font = new Font("Segoe UI", 12);
+                BtnMaximize.Text = "🗖";
+            }
             dataTable.Width = this.Width / 2 - 10;
             dataTable.Height = this.Height - 45;
             dataTable.Columns[0].Width = dataTable.Width - 1;
-            LbEntity.Location = new Point((this.Width/4)*3 - LbEntity.Width / 2, 30);
+            LbEntity.Location = new Point((this.Width / 4) * 3 - LbEntity.Width / 2, 30);
+            teacherPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 120 / 720);
+            teacherPanel1.Width = this.Width * 615 / 1280;
+            studentsPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 120 / 720);
+            studentsPanel1.Width = this.Width * 615 / 1280;
         }
 
         private void BtnMaximize_Click(object sender, EventArgs e)
         {
-            if(this.WindowState == FormWindowState.Maximized)
+            if (this.WindowState == FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Normal;
-            } else if(this.WindowState != FormWindowState.Maximized)
+            }
+            else if (this.WindowState != FormWindowState.Maximized)
             {
                 this.WindowState = FormWindowState.Maximized;
             }
@@ -66,10 +84,10 @@ namespace SimplyTeachingDesktop
 
         private void Form_Load(object sender, EventArgs e)
         {
-            DgvTeachers_Initcialize();
+            dataTable_Initcialize();
             LbEntity.Location = new Point((this.Width / 4) * 3 - LbEntity.Width / 2, 30);
         }
-        private void DgvTeachers_Initcialize()
+        private void dataTable_Initcialize()
         {
             dataTable.Width = this.Width / 2 - 10;
             dataTable.Height = this.Height - 45;
@@ -77,7 +95,7 @@ namespace SimplyTeachingDesktop
             dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 12;
             dataTable.Height = this.Height - 40;
-            dataTable.Columns[0].Width = dataTable.Width -1;
+            dataTable.Columns[0].Width = dataTable.Width - 1;
             dataTable.EnableHeadersVisualStyles = false;
             dataTable.RowHeadersVisible = false;
             dataTable.ColumnHeadersVisible = false;
@@ -132,6 +150,9 @@ namespace SimplyTeachingDesktop
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Asignaturas";
             type = 1;
+            studentsPanel1.Visible = false;
+            teacherPanel1.Visible = false;
+            subjectPanel1.Visible = true;
         }
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
@@ -142,6 +163,9 @@ namespace SimplyTeachingDesktop
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Alumnos";
             type = 2;
+            studentsPanel1.Visible = true;
+            teacherPanel1.Visible = false;
+            subjectPanel1.Visible = false;
         }
 
         private void BtnProfesores_Click(object sender, EventArgs e)
@@ -152,6 +176,9 @@ namespace SimplyTeachingDesktop
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Profesores";
             type = 0;
+            teacherPanel1.Visible = true;
+            studentsPanel1.Visible = false;
+            subjectPanel1.Visible = false;
         }
     }
 }

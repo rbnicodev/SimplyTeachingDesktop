@@ -41,6 +41,9 @@
             this.BtnAlumnos = new System.Windows.Forms.Label();
             this.BtnAsignaturas = new System.Windows.Forms.Label();
             this.BtnProfesores = new System.Windows.Forms.Label();
+            this.studentsPanel1 = new SimplyTeachingDesktop.StudentsPanel();
+            this.teacherPanel1 = new SimplyTeachingDesktop.TeacherPanel();
+            this.subjectPanel1 = new SimplyTeachingDesktop.SubjectPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).BeginInit();
@@ -55,10 +58,10 @@
             this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnExit.ForeColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(931, 0);
+            this.BtnExit.Location = new System.Drawing.Point(1241, 0);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(0);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(30, 32);
+            this.BtnExit.Size = new System.Drawing.Size(40, 39);
             this.BtnExit.TabIndex = 2;
             this.BtnExit.Text = "🗙";
             this.BtnExit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -74,13 +77,13 @@
             this.dataTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Profesores});
             this.dataTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.dataTable.Location = new System.Drawing.Point(9, 32);
-            this.dataTable.Margin = new System.Windows.Forms.Padding(2);
+            this.dataTable.Location = new System.Drawing.Point(12, 39);
+            this.dataTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataTable.Name = "dataTable";
             this.dataTable.ReadOnly = true;
             this.dataTable.RowHeadersWidth = 51;
             this.dataTable.RowTemplate.Height = 24;
-            this.dataTable.Size = new System.Drawing.Size(471, 543);
+            this.dataTable.Size = new System.Drawing.Size(628, 668);
             this.dataTable.TabIndex = 3;
             // 
             // Profesores
@@ -101,10 +104,10 @@
             this.BtnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMaximize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnMaximize.ForeColor = System.Drawing.Color.White;
-            this.BtnMaximize.Location = new System.Drawing.Point(901, 0);
+            this.BtnMaximize.Location = new System.Drawing.Point(1201, 0);
             this.BtnMaximize.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMaximize.Name = "BtnMaximize";
-            this.BtnMaximize.Size = new System.Drawing.Size(30, 32);
+            this.BtnMaximize.Size = new System.Drawing.Size(40, 39);
             this.BtnMaximize.TabIndex = 4;
             this.BtnMaximize.Text = "🗖";
             this.BtnMaximize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -120,10 +123,10 @@
             this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMinimize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.BtnMinimize.ForeColor = System.Drawing.Color.White;
-            this.BtnMinimize.Location = new System.Drawing.Point(871, 0);
+            this.BtnMinimize.Location = new System.Drawing.Point(1161, 0);
             this.BtnMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMinimize.Name = "BtnMinimize";
-            this.BtnMinimize.Size = new System.Drawing.Size(30, 32);
+            this.BtnMinimize.Size = new System.Drawing.Size(40, 39);
             this.BtnMinimize.TabIndex = 5;
             this.BtnMinimize.Text = "🗕";
             this.BtnMinimize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -135,10 +138,9 @@
             this.LbSimplyTeaching.AutoSize = true;
             this.LbSimplyTeaching.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbSimplyTeaching.ForeColor = System.Drawing.Color.White;
-            this.LbSimplyTeaching.Location = new System.Drawing.Point(10, 11);
-            this.LbSimplyTeaching.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LbSimplyTeaching.Location = new System.Drawing.Point(13, 14);
             this.LbSimplyTeaching.Name = "LbSimplyTeaching";
-            this.LbSimplyTeaching.Size = new System.Drawing.Size(91, 13);
+            this.LbSimplyTeaching.Size = new System.Drawing.Size(109, 17);
             this.LbSimplyTeaching.TabIndex = 6;
             this.LbSimplyTeaching.Text = "Simply Teaching";
             // 
@@ -147,10 +149,10 @@
             this.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
-            this.BtnEdit.Location = new System.Drawing.Point(489, 32);
+            this.BtnEdit.Location = new System.Drawing.Point(652, 39);
             this.BtnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(22, 24);
+            this.BtnEdit.Size = new System.Drawing.Size(29, 30);
             this.BtnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnEdit.TabIndex = 7;
             this.BtnEdit.TabStop = false;
@@ -160,10 +162,10 @@
             this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.BtnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
-            this.BtnAdd.Location = new System.Drawing.Point(489, 551);
+            this.BtnAdd.Location = new System.Drawing.Point(652, 678);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(22, 24);
+            this.BtnAdd.Size = new System.Drawing.Size(29, 30);
             this.BtnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnAdd.TabIndex = 8;
             this.BtnAdd.TabStop = false;
@@ -174,10 +176,9 @@
             this.LbEntity.BackColor = System.Drawing.Color.Transparent;
             this.LbEntity.Font = new System.Drawing.Font("Segoe UI", 40F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbEntity.ForeColor = System.Drawing.Color.White;
-            this.LbEntity.Location = new System.Drawing.Point(532, 32);
-            this.LbEntity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LbEntity.Location = new System.Drawing.Point(709, 39);
             this.LbEntity.Name = "LbEntity";
-            this.LbEntity.Size = new System.Drawing.Size(375, 98);
+            this.LbEntity.Size = new System.Drawing.Size(500, 121);
             this.LbEntity.TabIndex = 9;
             this.LbEntity.Text = "Profesores";
             this.LbEntity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -188,10 +189,10 @@
             this.BtnAlumnos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.BtnAlumnos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAlumnos.ForeColor = System.Drawing.Color.White;
-            this.BtnAlumnos.Location = new System.Drawing.Point(840, 552);
+            this.BtnAlumnos.Location = new System.Drawing.Point(1120, 679);
             this.BtnAlumnos.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAlumnos.Name = "BtnAlumnos";
-            this.BtnAlumnos.Size = new System.Drawing.Size(120, 32);
+            this.BtnAlumnos.Size = new System.Drawing.Size(160, 39);
             this.BtnAlumnos.TabIndex = 10;
             this.BtnAlumnos.Text = "Alumnos";
             this.BtnAlumnos.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -205,10 +206,10 @@
             this.BtnAsignaturas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
             this.BtnAsignaturas.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnAsignaturas.ForeColor = System.Drawing.Color.White;
-            this.BtnAsignaturas.Location = new System.Drawing.Point(720, 552);
+            this.BtnAsignaturas.Location = new System.Drawing.Point(960, 679);
             this.BtnAsignaturas.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAsignaturas.Name = "BtnAsignaturas";
-            this.BtnAsignaturas.Size = new System.Drawing.Size(120, 32);
+            this.BtnAsignaturas.Size = new System.Drawing.Size(160, 39);
             this.BtnAsignaturas.TabIndex = 11;
             this.BtnAsignaturas.Text = "Asignaturas";
             this.BtnAsignaturas.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -222,10 +223,10 @@
             this.BtnProfesores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BtnProfesores.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnProfesores.ForeColor = System.Drawing.Color.White;
-            this.BtnProfesores.Location = new System.Drawing.Point(600, 552);
+            this.BtnProfesores.Location = new System.Drawing.Point(800, 679);
             this.BtnProfesores.Margin = new System.Windows.Forms.Padding(0);
             this.BtnProfesores.Name = "BtnProfesores";
-            this.BtnProfesores.Size = new System.Drawing.Size(120, 32);
+            this.BtnProfesores.Size = new System.Drawing.Size(160, 39);
             this.BtnProfesores.TabIndex = 12;
             this.BtnProfesores.Text = "Profesores";
             this.BtnProfesores.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -233,12 +234,42 @@
             this.BtnProfesores.MouseLeave += new System.EventHandler(this.LabelButton_MouseLeave);
             this.BtnProfesores.MouseHover += new System.EventHandler(this.LabelButton_MouseHover);
             // 
+            // studentsPanel1
+            // 
+            this.studentsPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.studentsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.studentsPanel1.Location = new System.Drawing.Point(653, 124);
+            this.studentsPanel1.Name = "studentsPanel1";
+            this.studentsPanel1.Size = new System.Drawing.Size(615, 550);
+            this.studentsPanel1.TabIndex = 14;
+            // 
+            // teacherPanel1
+            // 
+            this.teacherPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.teacherPanel1.AutoSize = true;
+            this.teacherPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.teacherPanel1.Location = new System.Drawing.Point(653, 124);
+            this.teacherPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.teacherPanel1.MinimumSize = new System.Drawing.Size(615, 550);
+            this.teacherPanel1.Name = "teacherPanel1";
+            this.teacherPanel1.Size = new System.Drawing.Size(615, 550);
+            this.teacherPanel1.TabIndex = 13;
+            // 
+            // subjectPanel1
+            // 
+            this.subjectPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.subjectPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.subjectPanel1.Location = new System.Drawing.Point(653, 124);
+            this.subjectPanel1.Name = "subjectPanel1";
+            this.subjectPanel1.Size = new System.Drawing.Size(615, 550);
+            this.subjectPanel1.TabIndex = 15;
+            // 
             // TableView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(960, 585);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.BtnProfesores);
             this.Controls.Add(this.BtnAsignaturas);
             this.Controls.Add(this.BtnAlumnos);
@@ -250,8 +281,12 @@
             this.Controls.Add(this.BtnMinimize);
             this.Controls.Add(this.dataTable);
             this.Controls.Add(this.LbEntity);
+            this.Controls.Add(this.subjectPanel1);
+            this.Controls.Add(this.studentsPanel1);
+            this.Controls.Add(this.teacherPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(960, 585);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "TableView";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -283,5 +318,8 @@
         protected System.Windows.Forms.Label BtnAlumnos;
         protected System.Windows.Forms.Label BtnAsignaturas;
         protected System.Windows.Forms.Label BtnProfesores;
+        private TeacherPanel teacherPanel1;
+        private StudentsPanel studentsPanel1;
+        private SubjectPanel subjectPanel1;
     }
 }

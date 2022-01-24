@@ -16,7 +16,7 @@ namespace SimplyTeachingDesktop
         public DataController() { }
         public Boolean Login(string user, string pass)
         {
-            return dataRepository.Login(user, pass);
+            return true;//dataRepository.Login(user, pass);
         }
         public Boolean SaveTeacher(String[] teacherString)
         {
