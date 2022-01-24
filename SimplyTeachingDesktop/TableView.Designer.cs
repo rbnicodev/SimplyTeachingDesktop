@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableView));
-            this.BtnExit = new System.Windows.Forms.Button();
             this.dataTable = new System.Windows.Forms.DataGridView();
             this.Profesores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnMaximize = new System.Windows.Forms.Button();
-            this.BtnMinimize = new System.Windows.Forms.Button();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
             this.BtnEdit = new System.Windows.Forms.PictureBox();
             this.BtnAdd = new System.Windows.Forms.PictureBox();
@@ -49,24 +46,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).BeginInit();
             this.SuspendLayout();
             // 
+            // BtnMinimize
+            // 
+            this.BtnMinimize.FlatAppearance.BorderSize = 0;
+            this.BtnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            // 
+            // BtnMaximize
+            // 
+            this.BtnMaximize.FlatAppearance.BorderSize = 0;
+            this.BtnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            // 
             // BtnExit
             // 
-            this.BtnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnExit.FlatAppearance.BorderSize = 0;
             this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.BtnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnExit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExit.ForeColor = System.Drawing.Color.White;
-            this.BtnExit.Location = new System.Drawing.Point(1241, 0);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(40, 39);
-            this.BtnExit.TabIndex = 2;
-            this.BtnExit.Text = "🗙";
-            this.BtnExit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // dataTable
             // 
@@ -93,45 +89,6 @@
             this.Profesores.Name = "Profesores";
             this.Profesores.ReadOnly = true;
             this.Profesores.Width = 125;
-            // 
-            // BtnMaximize
-            // 
-            this.BtnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BtnMaximize.FlatAppearance.BorderSize = 0;
-            this.BtnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.BtnMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.BtnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMaximize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMaximize.ForeColor = System.Drawing.Color.White;
-            this.BtnMaximize.Location = new System.Drawing.Point(1201, 0);
-            this.BtnMaximize.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnMaximize.Name = "BtnMaximize";
-            this.BtnMaximize.Size = new System.Drawing.Size(40, 39);
-            this.BtnMaximize.TabIndex = 4;
-            this.BtnMaximize.Text = "🗖";
-            this.BtnMaximize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnMaximize.UseVisualStyleBackColor = false;
-            this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
-            // 
-            // BtnMinimize
-            // 
-            this.BtnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMinimize.FlatAppearance.BorderSize = 0;
-            this.BtnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.BtnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnMinimize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnMinimize.ForeColor = System.Drawing.Color.White;
-            this.BtnMinimize.Location = new System.Drawing.Point(1161, 0);
-            this.BtnMinimize.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnMinimize.Name = "BtnMinimize";
-            this.BtnMinimize.Size = new System.Drawing.Size(40, 39);
-            this.BtnMinimize.TabIndex = 5;
-            this.BtnMinimize.Text = "🗕";
-            this.BtnMinimize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnMinimize.UseVisualStyleBackColor = true;
-            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // LbSimplyTeaching
             // 
@@ -169,6 +126,7 @@
             this.BtnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.BtnAdd.TabIndex = 8;
             this.BtnAdd.TabStop = false;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // LbEntity
             // 
@@ -276,15 +234,11 @@
             this.Controls.Add(this.BtnAdd);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.LbSimplyTeaching);
-            this.Controls.Add(this.BtnExit);
-            this.Controls.Add(this.BtnMaximize);
-            this.Controls.Add(this.BtnMinimize);
             this.Controls.Add(this.dataTable);
             this.Controls.Add(this.LbEntity);
             this.Controls.Add(this.subjectPanel1);
             this.Controls.Add(this.studentsPanel1);
             this.Controls.Add(this.teacherPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "TableView";
@@ -292,10 +246,21 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeachersView";
             this.Load += new System.EventHandler(this.Form_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             this.Resize += new System.EventHandler(this.Form_Resize);
+            this.Controls.SetChildIndex(this.teacherPanel1, 0);
+            this.Controls.SetChildIndex(this.studentsPanel1, 0);
+            this.Controls.SetChildIndex(this.subjectPanel1, 0);
+            this.Controls.SetChildIndex(this.LbEntity, 0);
+            this.Controls.SetChildIndex(this.dataTable, 0);
+            this.Controls.SetChildIndex(this.LbSimplyTeaching, 0);
+            this.Controls.SetChildIndex(this.BtnEdit, 0);
+            this.Controls.SetChildIndex(this.BtnAdd, 0);
+            this.Controls.SetChildIndex(this.BtnAlumnos, 0);
+            this.Controls.SetChildIndex(this.BtnAsignaturas, 0);
+            this.Controls.SetChildIndex(this.BtnProfesores, 0);
+            this.Controls.SetChildIndex(this.BtnMinimize, 0);
+            this.Controls.SetChildIndex(this.BtnMaximize, 0);
+            this.Controls.SetChildIndex(this.BtnExit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).EndInit();
@@ -305,11 +270,7 @@
         }
 
         #endregion
-
-        protected System.Windows.Forms.Button BtnExit;
         protected System.Windows.Forms.DataGridView dataTable;
-        protected System.Windows.Forms.Button BtnMaximize;
-        protected System.Windows.Forms.Button BtnMinimize;
         protected System.Windows.Forms.Label LbSimplyTeaching;
         protected System.Windows.Forms.DataGridViewTextBoxColumn Profesores;
         protected System.Windows.Forms.PictureBox BtnEdit;

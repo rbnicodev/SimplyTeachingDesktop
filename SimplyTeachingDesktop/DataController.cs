@@ -34,7 +34,6 @@ namespace SimplyTeachingDesktop
                 teacher.seg_social = int.Parse(teacherString[5]);
                 teacher.tel_1 = int.Parse(teacherString[6]);
                 teacher.tel_2 = int.Parse(teacherString[7]);
-                teacher.setImage(teacherString[8]);
 
                 if(dataRepository.SaveTeacher(teacher))
                     result = true;

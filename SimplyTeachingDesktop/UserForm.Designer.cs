@@ -50,6 +50,7 @@
             this.BtnMinimize.Text = "🗕";
             this.BtnMinimize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnMinimize.UseVisualStyleBackColor = true;
+            this.BtnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click);
             // 
             // BtnMaximize
             // 
@@ -69,6 +70,7 @@
             this.BtnMaximize.Text = "🗖";
             this.BtnMaximize.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnMaximize.UseVisualStyleBackColor = false;
+            this.BtnMaximize.Click += new System.EventHandler(this.BtnMaximize_Click);
             // 
             // BtnExit
             // 
@@ -87,6 +89,7 @@
             this.BtnExit.Text = "🗙";
             this.BtnExit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // UserForm
             // 
@@ -101,6 +104,9 @@
             this.Name = "UserForm";
             this.Text = "UserForm";
             this.SizeChanged += new System.EventHandler(this.UserForm_SizeChanged);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
             this.ResumeLayout(false);
 
         }

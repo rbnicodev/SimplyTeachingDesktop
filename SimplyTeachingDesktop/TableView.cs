@@ -4,10 +4,8 @@ using System.Windows.Forms;
 
 namespace SimplyTeachingDesktop
 {
-    public partial class TableView : Form
+    public partial class TableView : UserForm
     {
-        private bool dragging = false;
-        private Point startPoint = new Point(0, 0);
         private int type = 0;
         private Color backColor;
         public TableView()
@@ -18,43 +16,8 @@ namespace SimplyTeachingDesktop
             teacherPanel1.Visible = true;
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Form_MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
-        }
-
-        private void Form_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
-        private void Form_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
-            }
-        }
-
         private void Form_Resize(object sender, EventArgs e)
         {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                BtnMaximize.Font = new Font("Marlett", 14);
-                BtnMaximize.Text = "";
-            }
-            else if (this.WindowState == FormWindowState.Normal)
-            {
-                BtnMaximize.Font = new Font("Segoe UI", 12);
-                BtnMaximize.Text = "🗖";
-            }
             dataTable.Width = this.Width / 2 - 10;
             dataTable.Height = this.Height - 45;
             dataTable.Columns[0].Width = dataTable.Width - 1;
@@ -63,23 +26,6 @@ namespace SimplyTeachingDesktop
             teacherPanel1.Width = this.Width * 615 / 1280;
             studentsPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 120 / 720);
             studentsPanel1.Width = this.Width * 615 / 1280;
-        }
-
-        private void BtnMaximize_Click(object sender, EventArgs e)
-        {
-            if (this.WindowState == FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Normal;
-            }
-            else if (this.WindowState != FormWindowState.Maximized)
-            {
-                this.WindowState = FormWindowState.Maximized;
-            }
-        }
-
-        private void BtnMinimize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -179,6 +125,20 @@ namespace SimplyTeachingDesktop
             teacherPanel1.Visible = true;
             studentsPanel1.Visible = false;
             subjectPanel1.Visible = false;
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            AddEditForm addEditForm = new AddEditForm();
+            if(addEditForm.ShowDialog() == DialogResult.OK)
+            {
+                ReloadTable();
+            }
+        }
+
+        private void ReloadTable()
+        {
+
         }
     }
 }

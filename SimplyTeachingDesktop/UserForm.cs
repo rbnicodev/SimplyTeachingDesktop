@@ -50,7 +50,7 @@ namespace SimplyTeachingDesktop
             this.WindowState = FormWindowState.Minimized;
         }
 
-        protected void BtnExit_Click(object sender, EventArgs e)
+        protected virtual void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

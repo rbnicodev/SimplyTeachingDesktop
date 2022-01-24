@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace SimplyTeachingDesktop
 {
-    internal class Subject
+    public class Subject : Entity
     {
+        private int id;
+        private int hour;
+        private double price;
+        private int day;
+        public Subject()
+        {
+            type = 1;
+        }
     }
 }

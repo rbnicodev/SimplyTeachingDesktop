@@ -262,7 +262,6 @@ namespace SimplyTeachingDesktop
 
             try
             {
-                byte[] photo = teacher.image;
                 connection = new MySqlConnection(connectionString);
                 query = "INSERT INTO teachers (id, name, last_name_1, last_name_2, post_address, seg_social, tel_1, tel_2, email, photo) VALUES(@id, @name, @last_name_1, @last_name_2, @post_address, @seg_social, @tel_1, @tel_2, @email, @photo);";
                 command = connection.CreateCommand();
@@ -276,7 +275,6 @@ namespace SimplyTeachingDesktop
                 command.Parameters.AddWithValue("@tel_1", teacher.tel_1);
                 command.Parameters.AddWithValue("@tel_2", teacher.tel_2);
                 command.Parameters.AddWithValue("@email", teacher.email);
-                command.Parameters.AddWithValue("@photo", teacher.image);
                 command.ExecuteNonQuery();
             }
             catch (Exception ex)

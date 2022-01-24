@@ -1,9 +1,14 @@
 ﻿using System.IO;
 namespace SimplyTeachingDesktop
 {
-    internal class Teacher
+    public class Teacher : Entity
     {
+        public Teacher()
+        {
+            type = 0;
+        }
         public int id;
+        public string dni;
         public string name;
         public string last_name_1;
         public string last_name_2;
@@ -12,20 +17,5 @@ namespace SimplyTeachingDesktop
         public int tel_1;
         public int tel_2;
         public string email;
-        public byte[] image;
-
-        public void setImage(string filePath)
-        {
-            FileStream stream = new FileStream(filePath, FileMode.Open, FileAccess.Read);
-            BinaryReader reader = new BinaryReader(stream);
-
-            byte[] photo = reader.ReadBytes((int)stream.Length);
-
-            reader.Close();
-            stream.Close();
-
-            image = photo;
-        }
-
     }
 }
