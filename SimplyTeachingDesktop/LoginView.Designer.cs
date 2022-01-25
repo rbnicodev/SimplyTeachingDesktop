@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace SimplyTeachingDesktop
 {
@@ -100,7 +101,18 @@ namespace SimplyTeachingDesktop
             // 
             // PbLogo
             // 
-            this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
+            Bitmap image = null;
+            if (EnviromentVars.night)
+            {
+                image = new Bitmap("images/logo-night.png");
+            }
+            else
+            {
+                image = new Bitmap("images/logo-day.png");
+            }
+            this.PbLogo.Dock = DockStyle.None;
+            this.PbLogo.Image = (Image)image;
+            //this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
             this.PbLogo.Location = new System.Drawing.Point(128, 23);
             this.PbLogo.Margin = new System.Windows.Forms.Padding(2);
             this.PbLogo.Name = "PbLogo";

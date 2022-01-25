@@ -118,11 +118,11 @@ namespace SimplyTeachingDesktop
             Bitmap image2 = null;
             if (EnviromentVars.night)
             {
-                image2 = new Bitmap("images/edit-night.png");
+                image2 = new Bitmap("images/add-night.png");
             }
             else
             {
-                image2 = new Bitmap("images/edit-day.png");
+                image2 = new Bitmap("images/add-day.png");
             }
             this.BtnAdd.Dock = DockStyle.None;
             this.BtnAdd.Image = (Image)image2;
