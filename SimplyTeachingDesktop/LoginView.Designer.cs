@@ -66,7 +66,7 @@ namespace SimplyTeachingDesktop
             // TbUser
             // 
             this.TbUser.BackColor = EnviromentVars.color7;
-            this.TbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbUser.ForeColor = EnviromentVars.color2;
             this.TbUser.Location = new System.Drawing.Point(112, 156);
@@ -84,7 +84,7 @@ namespace SimplyTeachingDesktop
             // TbPass
             // 
             this.TbPass.BackColor = EnviromentVars.color7;
-            this.TbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbPass.ForeColor = EnviromentVars.color2;
             this.TbPass.Location = new System.Drawing.Point(112, 205);

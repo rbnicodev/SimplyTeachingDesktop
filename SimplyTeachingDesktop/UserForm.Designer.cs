@@ -42,7 +42,7 @@
             this.BtnMinimize.FlatAppearance.MouseOverBackColor = EnviromentVars.color5;
             this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMinimize.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.BtnMinimize.ForeColor = System.Drawing.Color.White;
+            this.BtnMinimize.ForeColor = EnviromentVars.color1;
             this.BtnMinimize.Location = new System.Drawing.Point(871, 0);
             this.BtnMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMinimize.Name = "BtnMinimize";
@@ -61,7 +61,7 @@
             this.BtnMaximize.FlatAppearance.MouseOverBackColor = EnviromentVars.color5;
             this.BtnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMaximize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMaximize.ForeColor = System.Drawing.Color.White;
+            this.BtnMaximize.ForeColor = EnviromentVars.color1;
             this.BtnMaximize.Location = new System.Drawing.Point(901, 0);
             this.BtnMaximize.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMaximize.Name = "BtnMaximize";

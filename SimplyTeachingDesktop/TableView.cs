@@ -76,7 +76,7 @@ namespace SimplyTeachingDesktop
         private void LabelButton_MouseHover(object sender, EventArgs e)
         {
             backColor = ((Label)sender).BackColor;
-            ((Label)sender).BackColor = EnviromentVars.color3;
+            ((Label)sender).BackColor = EnviromentVars.color4;
         }
 
         private void LabelButton_MouseLeave(object sender, EventArgs e)
@@ -86,15 +86,15 @@ namespace SimplyTeachingDesktop
 
         private void LabelButton_MouseClick(object sender, MouseEventArgs e)
         {
-            ((Label)sender).BackColor = EnviromentVars.color4;
+            ((Label)sender).BackColor = EnviromentVars.color6;
             backColor = ((Label)sender).BackColor;
         }
 
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnviromentVars.color4;
-            BtnProfesores.BackColor = EnviromentVars.color2;
-            BtnAlumnos.BackColor = EnviromentVars.color2;
+            BtnAsignaturas.BackColor = EnviromentVars.color6;
+            BtnProfesores.BackColor = EnviromentVars.color5;
+            BtnAlumnos.BackColor = EnviromentVars.color5;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Asignaturas";
             type = 1;
@@ -105,9 +105,9 @@ namespace SimplyTeachingDesktop
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnviromentVars.color2;
-            BtnProfesores.BackColor = EnviromentVars.color2;
-            BtnAlumnos.BackColor = EnviromentVars.color4;
+            BtnAsignaturas.BackColor = EnviromentVars.color5;
+            BtnProfesores.BackColor = EnviromentVars.color5;
+            BtnAlumnos.BackColor = EnviromentVars.color6;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Alumnos";
             type = 2;
@@ -118,9 +118,9 @@ namespace SimplyTeachingDesktop
 
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnviromentVars.color2;
-            BtnProfesores.BackColor = EnviromentVars.color4;
-            BtnAlumnos.BackColor = EnviromentVars.color2;
+            BtnAsignaturas.BackColor = EnviromentVars.color5;
+            BtnProfesores.BackColor = EnviromentVars.color6;
+            BtnAlumnos.BackColor = EnviromentVars.color5;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Profesores";
             type = 0;
@@ -147,5 +147,10 @@ namespace SimplyTeachingDesktop
 
         }
 
+        private void BtnBack_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            new LoginView().ShowDialog();
+        }
     }
 }

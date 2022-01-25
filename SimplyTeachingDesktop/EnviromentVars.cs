@@ -22,7 +22,7 @@ namespace SimplyTeachingDesktop
         public static Color colorResaltLow = Color.FromArgb(255, 0, 100, 195);
 
 
-        public static void setNight(Boolean activeNight)
+        public static void SetNight(Boolean activeNight)
         {
             if(activeNight)
             {

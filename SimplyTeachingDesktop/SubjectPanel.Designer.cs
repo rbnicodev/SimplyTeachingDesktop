@@ -42,7 +42,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbID.AutoSize = true;
             this.LbID.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbID.ForeColor = System.Drawing.Color.White;
+            this.LbID.ForeColor = EnviromentVars.color1;
             this.LbID.Location = new System.Drawing.Point(12, 100);
             this.LbID.Name = "LbID";
             this.LbID.Size = new System.Drawing.Size(48, 35);
@@ -55,7 +55,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbHora.AutoSize = true;
             this.LbHora.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbHora.ForeColor = System.Drawing.Color.White;
+            this.LbHora.ForeColor = EnviromentVars.color1;
             this.LbHora.Location = new System.Drawing.Point(12, 233);
             this.LbHora.Name = "LbHora";
             this.LbHora.Size = new System.Drawing.Size(79, 35);
@@ -68,7 +68,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbDia.AutoSize = true;
             this.LbDia.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbDia.ForeColor = System.Drawing.Color.White;
+            this.LbDia.ForeColor = EnviromentVars.color1;
             this.LbDia.Location = new System.Drawing.Point(12, 366);
             this.LbDia.Name = "LbDia";
             this.LbDia.Size = new System.Drawing.Size(60, 35);
@@ -80,11 +80,11 @@
             this.TbID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbID.BackColor = System.Drawing.Color.Black;
-            this.TbID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbID.BackColor = EnviromentVars.color7;
+            this.TbID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbID.Enabled = false;
             this.TbID.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbID.ForeColor = System.Drawing.Color.White;
+            this.TbID.ForeColor = EnviromentVars.color1;
             this.TbID.Location = new System.Drawing.Point(188, 100);
             this.TbID.Name = "TbID";
             this.TbID.Size = new System.Drawing.Size(412, 34);
@@ -95,11 +95,11 @@
             this.TbHora.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbHora.BackColor = System.Drawing.Color.Black;
-            this.TbHora.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbHora.BackColor = EnviromentVars.color7;
+            this.TbHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbHora.Enabled = false;
             this.TbHora.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbHora.ForeColor = System.Drawing.Color.White;
+            this.TbHora.ForeColor = EnviromentVars.color1;
             this.TbHora.Location = new System.Drawing.Point(188, 233);
             this.TbHora.Name = "TbHora";
             this.TbHora.Size = new System.Drawing.Size(412, 34);
@@ -110,11 +110,11 @@
             this.TbDia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbDia.BackColor = System.Drawing.Color.Black;
-            this.TbDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbDia.BackColor = EnviromentVars.color7;
+            this.TbDia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbDia.Enabled = false;
             this.TbDia.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbDia.ForeColor = System.Drawing.Color.White;
+            this.TbDia.ForeColor = EnviromentVars.color1;
             this.TbDia.Location = new System.Drawing.Point(188, 366);
             this.TbDia.Name = "TbDia";
             this.TbDia.Size = new System.Drawing.Size(412, 34);
@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.BackColor = EnviromentVars.color6;
             this.Controls.Add(this.TbDia);
             this.Controls.Add(this.TbHora);
             this.Controls.Add(this.TbID);

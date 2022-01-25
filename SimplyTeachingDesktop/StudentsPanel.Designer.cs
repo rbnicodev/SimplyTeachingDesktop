@@ -111,7 +111,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbTutor.BackColor = EnviromentVars.color7;
-            this.TbTutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTutor.Enabled = false;
             this.TbTutor.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbTutor.ForeColor = EnviromentVars.color1;
@@ -126,7 +126,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbTel1.BackColor = EnviromentVars.color7;
-            this.TbTel1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbTel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTel1.Enabled = false;
             this.TbTel1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbTel1.ForeColor = EnviromentVars.color1;
@@ -141,7 +141,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbTel2.BackColor = EnviromentVars.color7;
-            this.TbTel2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbTel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTel2.Enabled = false;
             this.TbTel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbTel2.ForeColor = EnviromentVars.color1;
@@ -156,7 +156,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TbEmail.BackColor = EnviromentVars.color7;
-            this.TbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbEmail.Enabled = false;
             this.TbEmail.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbEmail.ForeColor = EnviromentVars.color1;
@@ -170,7 +170,7 @@
             this.TbCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.TbCurso.BackColor = EnviromentVars.color7;
-            this.TbCurso.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TbCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbCurso.Enabled = false;
             this.TbCurso.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbCurso.ForeColor = EnviromentVars.color1;
@@ -183,7 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = EnviromentVars.color4;
+            this.BackColor = EnviromentVars.color6;
             this.Controls.Add(this.TbCurso);
             this.Controls.Add(this.TbEmail);
             this.Controls.Add(this.TbTel2);

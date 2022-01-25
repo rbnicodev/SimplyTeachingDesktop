@@ -122,11 +122,11 @@ namespace SimplyTeachingDesktop
         {
             if(EnviromentVars.night)
             {
-                EnviromentVars.setNight(false);
+                EnviromentVars.SetNight(false);
             }
             else
             {
-                EnviromentVars.setNight(true);
+                EnviromentVars.SetNight(true);
             }
             this.Visible = false;
             new LoginView().Show();
