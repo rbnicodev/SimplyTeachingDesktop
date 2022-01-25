@@ -38,11 +38,11 @@
             // 
             this.BtnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnMinimize.FlatAppearance.BorderSize = 0;
-            this.BtnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.BtnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.BtnMinimize.FlatAppearance.MouseDownBackColor = EnviromentVars.color6;
+            this.BtnMinimize.FlatAppearance.MouseOverBackColor = EnviromentVars.color5;
             this.BtnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMinimize.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.BtnMinimize.ForeColor = EnviromentVars.color1;
+            this.BtnMinimize.ForeColor = System.Drawing.Color.White;
             this.BtnMinimize.Location = new System.Drawing.Point(871, 0);
             this.BtnMinimize.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMinimize.Name = "BtnMinimize";
@@ -56,13 +56,12 @@
             // BtnMaximize
             // 
             this.BtnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnMaximize.FlatAppearance.BorderSize = 0;
-            this.BtnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.BtnMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.BtnMaximize.FlatAppearance.MouseDownBackColor = EnviromentVars.color6;
+            this.BtnMaximize.FlatAppearance.MouseOverBackColor = EnviromentVars.color5;
             this.BtnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnMaximize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnMaximize.ForeColor = EnviromentVars.color1;
+            this.BtnMaximize.ForeColor = System.Drawing.Color.White;
             this.BtnMaximize.Location = new System.Drawing.Point(901, 0);
             this.BtnMaximize.Margin = new System.Windows.Forms.Padding(0);
             this.BtnMaximize.Name = "BtnMaximize";
@@ -91,12 +90,13 @@
             this.BtnExit.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
+            this.BtnExit.MouseEnter += new System.EventHandler(this.BtnExit_MouseEnter);
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = EnviromentVars.color4;
+            this.BackColor = EnviromentVars.color6;
             this.ClientSize = new System.Drawing.Size(960, 585);
             this.Controls.Add(this.BtnExit);
             this.Controls.Add(this.BtnMaximize);

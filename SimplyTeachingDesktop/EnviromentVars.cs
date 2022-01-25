@@ -17,6 +17,10 @@ namespace SimplyTeachingDesktop
         public static Color color5 = Color.FromArgb(255, 54, 54, 54);
         public static Color color6 = Color.FromArgb(255, 44, 44, 44);
         public static Color color7 = Color.FromArgb(255, 0, 0, 0);
+        public static Color colorResaltHigh = Color.FromArgb(255, 0, 140, 225);
+        public static Color colorResalt = Color.FromArgb(255, 0, 120, 215);
+        public static Color colorResaltLow = Color.FromArgb(255, 0, 100, 195);
+
 
         public static void setNight(Boolean activeNight)
         {
@@ -34,7 +38,7 @@ namespace SimplyTeachingDesktop
             else
             {
                 color7 = Color.White;
-                color6 = Color.FromArgb(255, 240, 240, 240);
+                color6 = Color.FromArgb(255, 245, 245, 245);
                 color5 = Color.FromArgb(255, 230, 230, 230);
                 color4 = Color.FromArgb(255, 220, 220, 220);
                 color3 = Color.FromArgb(255, 210, 210, 210);

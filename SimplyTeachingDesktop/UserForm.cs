@@ -76,5 +76,8 @@ namespace SimplyTeachingDesktop
             }
         }
 
+        private void BtnExit_MouseEnter(object sender, EventArgs e)
+        {
+        }
     }
 }
