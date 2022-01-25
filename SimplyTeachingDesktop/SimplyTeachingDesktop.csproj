@@ -82,7 +82,7 @@
     <Compile Include="DataController.cs" />
     <Compile Include="DataRepository.cs" />
     <Compile Include="Entity.cs" />
-    <Compile Include="EnviromentVars.cs" />
+    <Compile Include="EnvironmentVars.cs" />
     <Compile Include="LoginView.cs">
       <SubType>Form</SubType>
     </Compile>

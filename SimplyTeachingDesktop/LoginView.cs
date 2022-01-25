@@ -55,7 +55,7 @@ namespace SimplyTeachingDesktop
             if(TbPass.Text == "Contraseña")
             {
                 TbPass.Text = "";
-                TbPass.ForeColor = EnviromentVars.color1;
+                TbPass.ForeColor = EnvironmentVars.color1;
                 TbPass.PasswordChar = '*';
             }
         }
@@ -65,7 +65,7 @@ namespace SimplyTeachingDesktop
             if(TbUser.Text == "")
             {
                 TbUser.Text = "Usuario";
-                TbUser.ForeColor = EnviromentVars.color2;
+                TbUser.ForeColor = EnvironmentVars.color2;
             }
         }
 
@@ -74,7 +74,7 @@ namespace SimplyTeachingDesktop
             if (TbPass.Text == "")
             {
                 TbPass.Text = "Contraseña";
-                TbPass.ForeColor = EnviromentVars.color2;
+                TbPass.ForeColor = EnvironmentVars.color2;
                 TbPass.PasswordChar = '\0';
             }
         }
@@ -85,7 +85,7 @@ namespace SimplyTeachingDesktop
             if(TbUser.Text =="" || TbUser.Text == "Usuario")
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = EnviromentVars.color7;
+                TbUser.BackColor = EnvironmentVars.color7;
             }
             else if (!Validate_Email(TbUser.Text))
             {
@@ -94,8 +94,8 @@ namespace SimplyTeachingDesktop
             else
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = EnviromentVars.color7;
-                TbUser.ForeColor = EnviromentVars.color1;
+                TbUser.BackColor = EnvironmentVars.color7;
+                TbUser.ForeColor = EnvironmentVars.color1;
             }
         }
 
@@ -121,13 +121,13 @@ namespace SimplyTeachingDesktop
 
         private void LbNight_Click(object sender, EventArgs e)
         {
-            if(EnviromentVars.night)
+            if(EnvironmentVars.night)
             {
-                EnviromentVars.SetNight(false);
+                EnvironmentVars.SetNight(false);
             }
             else
             {
-                EnviromentVars.SetNight(true);
+                EnvironmentVars.SetNight(true);
             }
             setTheme();
 
@@ -135,16 +135,16 @@ namespace SimplyTeachingDesktop
 
         private void setTheme()
         {
-            BackColor = EnviromentVars.color6;
-            LbNight.ForeColor = EnviromentVars.color1;
-            LbSimplyTeaching.ForeColor = EnviromentVars.color1;
-            TbPass.BackColor = EnviromentVars.color7;
-            TbUser.BackColor = EnviromentVars.color7;
-            TbPass.ForeColor = EnviromentVars.color2;
-            TbUser.ForeColor = EnviromentVars.color2;
-            BtnExit.ForeColor = EnviromentVars.color1;
+            BackColor = EnvironmentVars.color6;
+            LbNight.ForeColor = EnvironmentVars.color1;
+            LbSimplyTeaching.ForeColor = EnvironmentVars.color1;
+            TbPass.BackColor = EnvironmentVars.color7;
+            TbUser.BackColor = EnvironmentVars.color7;
+            TbPass.ForeColor = EnvironmentVars.color2;
+            TbUser.ForeColor = EnvironmentVars.color2;
+            BtnExit.ForeColor = EnvironmentVars.color1;
             Bitmap image = null;
-            if (EnviromentVars.night)
+            if (EnvironmentVars.night)
             {
                 image = new Bitmap("images/logo-night.png");
             }

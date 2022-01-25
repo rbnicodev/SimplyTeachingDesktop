@@ -22,6 +22,7 @@ namespace SimplyTeachingDesktop
             BtnExit.ForeColor = EnvironmentVars.color1;
             BtnMaximize.ForeColor = EnvironmentVars.color1;
             BtnMinimize.ForeColor = EnvironmentVars.color1;
+            this.CenterToScreen();
         }
 
         protected void UserForm_SizeChanged(object sender, EventArgs e)

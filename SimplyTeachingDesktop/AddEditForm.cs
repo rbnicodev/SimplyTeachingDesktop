@@ -8,5 +8,9 @@ namespace SimplyTeachingDesktop
 {
     internal class AddEditForm : UserForm
     {
+        protected override void BtnExit_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }

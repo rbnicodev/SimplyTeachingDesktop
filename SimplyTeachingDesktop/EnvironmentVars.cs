@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SimplyTeachingDesktop
 {
-    public class EnviromentVars
+    public class EnvironmentVars
     {
         public static Boolean night = true;
         public static Color color1 = Color.White;
