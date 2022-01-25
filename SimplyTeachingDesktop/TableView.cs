@@ -10,6 +10,7 @@ namespace SimplyTeachingDesktop
         private Color backColor;
         public TableView()
         {
+
             InitializeComponent();
             studentsPanel1.Visible = false;
             subjectPanel1.Visible = false;
@@ -35,9 +36,10 @@ namespace SimplyTeachingDesktop
         }
         private void dataTable_Initcialize()
         {
+            dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 10;
             dataTable.Height = this.Height - 45;
-            dataTable.BackgroundColor = Color.FromArgb(255, 44, 44, 44);
+            dataTable.BackgroundColor = EnviromentVars.color6;
             dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 12;
             dataTable.Height = this.Height - 40;
@@ -49,10 +51,10 @@ namespace SimplyTeachingDesktop
             dataTable.Font = new Font(dataTable.Font, FontStyle.Bold);
             dataTable.DefaultCellStyle.Font = new Font("Segoe UI", 15);
             dataTable.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataTable.DefaultCellStyle.BackColor = Color.FromArgb(255, 44, 44, 44);
-            dataTable.DefaultCellStyle.SelectionBackColor = Color.FromArgb(255, 84, 84, 84);
-            dataTable.DefaultCellStyle.ForeColor = Color.White;
-            dataTable.DefaultCellStyle.SelectionForeColor = Color.White;
+            dataTable.DefaultCellStyle.BackColor = EnviromentVars.color6;
+            dataTable.DefaultCellStyle.SelectionBackColor = EnviromentVars.color2;
+            dataTable.DefaultCellStyle.ForeColor = EnviromentVars.color1;
+            dataTable.DefaultCellStyle.SelectionForeColor = EnviromentVars.color1;
             dataTable.Rows.Add("Jacinto");
             dataTable.Rows.Add("Eustaquio");
             dataTable.Rows.Add("Rigodolfo");
@@ -63,7 +65,7 @@ namespace SimplyTeachingDesktop
             {
                 if ((i % 2) == 0)
                 {
-                    dgvr.DefaultCellStyle.BackColor = Color.FromArgb(255, 54, 54, 54);
+                    dgvr.DefaultCellStyle.BackColor = EnviromentVars.color5;
                 }
                 dgvr.Height = 40;
                 dgvr.Resizable = DataGridViewTriState.False;
@@ -74,7 +76,7 @@ namespace SimplyTeachingDesktop
         private void LabelButton_MouseHover(object sender, EventArgs e)
         {
             backColor = ((Label)sender).BackColor;
-            ((Label)sender).BackColor = Color.FromArgb(255, 74, 74, 74);
+            ((Label)sender).BackColor = EnviromentVars.color3;
         }
 
         private void LabelButton_MouseLeave(object sender, EventArgs e)
@@ -84,15 +86,15 @@ namespace SimplyTeachingDesktop
 
         private void LabelButton_MouseClick(object sender, MouseEventArgs e)
         {
-            ((Label)sender).BackColor = Color.FromArgb(255, 64, 64, 64);
+            ((Label)sender).BackColor = EnviromentVars.color4;
             backColor = ((Label)sender).BackColor;
         }
 
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = Color.FromArgb(255, 64, 64, 64);
-            BtnProfesores.BackColor = Color.FromArgb(255, 84, 84, 84);
-            BtnAlumnos.BackColor = Color.FromArgb(255, 84, 84, 84);
+            BtnAsignaturas.BackColor = EnviromentVars.color4;
+            BtnProfesores.BackColor = EnviromentVars.color2;
+            BtnAlumnos.BackColor = EnviromentVars.color2;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Asignaturas";
             type = 1;
@@ -103,9 +105,9 @@ namespace SimplyTeachingDesktop
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = Color.FromArgb(255, 84, 84, 84);
-            BtnProfesores.BackColor = Color.FromArgb(255, 84, 84, 84);
-            BtnAlumnos.BackColor = Color.FromArgb(255, 64, 64, 64);
+            BtnAsignaturas.BackColor = EnviromentVars.color2;
+            BtnProfesores.BackColor = EnviromentVars.color2;
+            BtnAlumnos.BackColor = EnviromentVars.color4;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Alumnos";
             type = 2;
@@ -116,9 +118,9 @@ namespace SimplyTeachingDesktop
 
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = Color.FromArgb(255, 84, 84, 84);
-            BtnProfesores.BackColor = Color.FromArgb(255, 64, 64, 64);
-            BtnAlumnos.BackColor = Color.FromArgb(255, 84, 84, 84);
+            BtnAsignaturas.BackColor = EnviromentVars.color2;
+            BtnProfesores.BackColor = EnviromentVars.color4;
+            BtnAlumnos.BackColor = EnviromentVars.color2;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Profesores";
             type = 0;
@@ -130,9 +132,13 @@ namespace SimplyTeachingDesktop
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             AddEditForm addEditForm = new AddEditForm();
+            this.Visible = false;
             if(addEditForm.ShowDialog() == DialogResult.OK)
             {
                 ReloadTable();
+            } else
+            {
+                this.Visible = true;
             }
         }
 
@@ -140,5 +146,6 @@ namespace SimplyTeachingDesktop
         {
 
         }
+
     }
 }

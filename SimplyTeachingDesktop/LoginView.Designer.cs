@@ -37,9 +37,28 @@ namespace SimplyTeachingDesktop
             this.TbPass = new System.Windows.Forms.TextBox();
             this.PbLogo = new System.Windows.Forms.PictureBox();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LbNight = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // BtnMinimize
+            // 
+            this.BtnMinimize.FlatAppearance.BorderSize = 0;
+            this.BtnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            // 
+            // BtnMaximize
+            // 
+            this.BtnMaximize.FlatAppearance.BorderSize = 0;
+            this.BtnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.BtnMaximize.Font = new System.Drawing.Font("Segoe UI", 12F);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             // 
             // BtnLogin
             // 
@@ -53,10 +72,10 @@ namespace SimplyTeachingDesktop
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.White;
-            this.BtnLogin.Location = new System.Drawing.Point(220, 310);
-            this.BtnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BtnLogin.Location = new System.Drawing.Point(165, 252);
+            this.BtnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLogin.Name = "BtnLogin";
-            this.BtnLogin.Size = new System.Drawing.Size(160, 60);
+            this.BtnLogin.Size = new System.Drawing.Size(120, 49);
             this.BtnLogin.TabIndex = 0;
             this.BtnLogin.Text = "Iniciar Sesión";
             this.BtnLogin.UseVisualStyleBackColor = false;
@@ -64,14 +83,14 @@ namespace SimplyTeachingDesktop
             // 
             // TbUser
             // 
-            this.TbUser.BackColor = System.Drawing.Color.Black;
+            this.TbUser.BackColor = EnviromentVars.color7;
             this.TbUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbUser.ForeColor = System.Drawing.Color.Gray;
-            this.TbUser.Location = new System.Drawing.Point(149, 192);
-            this.TbUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TbUser.ForeColor = EnviromentVars.color2;
+            this.TbUser.Location = new System.Drawing.Point(112, 156);
+            this.TbUser.Margin = new System.Windows.Forms.Padding(2);
             this.TbUser.Name = "TbUser";
-            this.TbUser.Size = new System.Drawing.Size(300, 31);
+            this.TbUser.Size = new System.Drawing.Size(225, 25);
             this.TbUser.TabIndex = 2;
             this.TbUser.Text = "Usuario";
             this.TbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -82,14 +101,14 @@ namespace SimplyTeachingDesktop
             // 
             // TbPass
             // 
-            this.TbPass.BackColor = System.Drawing.Color.Black;
+            this.TbPass.BackColor = EnviromentVars.color7;
             this.TbPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TbPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbPass.ForeColor = System.Drawing.Color.Gray;
-            this.TbPass.Location = new System.Drawing.Point(149, 252);
-            this.TbPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TbPass.ForeColor = EnviromentVars.color2;
+            this.TbPass.Location = new System.Drawing.Point(112, 205);
+            this.TbPass.Margin = new System.Windows.Forms.Padding(2);
             this.TbPass.Name = "TbPass";
-            this.TbPass.Size = new System.Drawing.Size(300, 31);
+            this.TbPass.Size = new System.Drawing.Size(225, 25);
             this.TbPass.TabIndex = 3;
             this.TbPass.Text = "Contraseña";
             this.TbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -100,10 +119,10 @@ namespace SimplyTeachingDesktop
             // PbLogo
             // 
             this.PbLogo.Image = ((System.Drawing.Image)(resources.GetObject("PbLogo.Image")));
-            this.PbLogo.Location = new System.Drawing.Point(171, 28);
-            this.PbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PbLogo.Location = new System.Drawing.Point(128, 23);
+            this.PbLogo.Margin = new System.Windows.Forms.Padding(2);
             this.PbLogo.Name = "PbLogo";
-            this.PbLogo.Size = new System.Drawing.Size(260, 100);
+            this.PbLogo.Size = new System.Drawing.Size(195, 81);
             this.PbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PbLogo.TabIndex = 4;
             this.PbLogo.TabStop = false;
@@ -113,56 +132,54 @@ namespace SimplyTeachingDesktop
             this.LbSimplyTeaching.AutoSize = true;
             this.LbSimplyTeaching.BackColor = System.Drawing.Color.Transparent;
             this.LbSimplyTeaching.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbSimplyTeaching.ForeColor = System.Drawing.Color.White;
-            this.LbSimplyTeaching.Location = new System.Drawing.Point(139, 126);
+            this.LbSimplyTeaching.ForeColor = EnviromentVars.color1;
+            this.LbSimplyTeaching.Location = new System.Drawing.Point(104, 102);
+            this.LbSimplyTeaching.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbSimplyTeaching.Name = "LbSimplyTeaching";
-            this.LbSimplyTeaching.Size = new System.Drawing.Size(320, 52);
+            this.LbSimplyTeaching.Size = new System.Drawing.Size(256, 42);
             this.LbSimplyTeaching.TabIndex = 5;
             this.LbSimplyTeaching.Text = "Simply Teaching";
             // 
-            // button1
+            // LbNight
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(560, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "🗙";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.BtExit_Click);
+            this.LbNight.ForeColor = EnviromentVars.color1;
+            this.LbNight.AutoSize = true;
+            this.LbNight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbNight.Location = new System.Drawing.Point(405, 291);
+            this.LbNight.Name = "LbNight";
+            this.LbNight.Size = new System.Drawing.Size(33, 25);
+            this.LbNight.TabIndex = 9;
+            this.LbNight.Text = "🌓";
+            this.LbNight.Click += new System.EventHandler(this.LbNight_Click);
             // 
             // LoginView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(600, 400);
-            this.Controls.Add(this.button1);
+            //this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(450, 325);
+            this.Controls.Add(this.LbNight);
             this.Controls.Add(this.LbSimplyTeaching);
             this.Controls.Add(this.PbLogo);
             this.Controls.Add(this.TbPass);
             this.Controls.Add(this.TbUser);
             this.Controls.Add(this.BtnLogin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.MaximumSize = new System.Drawing.Size(600, 400);
-            this.MinimumSize = new System.Drawing.Size(600, 400);
+            this.MaximumSize = new System.Drawing.Size(450, 325);
+            this.MinimumSize = new System.Drawing.Size(450, 325);
             this.Name = "LoginView";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SimplyTeaching";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form_MouseUp);
+            this.Controls.SetChildIndex(this.BtnLogin, 0);
+            this.Controls.SetChildIndex(this.TbUser, 0);
+            this.Controls.SetChildIndex(this.TbPass, 0);
+            this.Controls.SetChildIndex(this.PbLogo, 0);
+            this.Controls.SetChildIndex(this.LbSimplyTeaching, 0);
+            this.Controls.SetChildIndex(this.BtnMinimize, 0);
+            this.Controls.SetChildIndex(this.BtnMaximize, 0);
+            this.Controls.SetChildIndex(this.BtnExit, 0);
+            this.Controls.SetChildIndex(this.LbNight, 0);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,7 +193,7 @@ namespace SimplyTeachingDesktop
         private System.Windows.Forms.TextBox TbPass;
         private System.Windows.Forms.PictureBox PbLogo;
         private System.Windows.Forms.Label LbSimplyTeaching;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label LbNight;
     }
 }
 

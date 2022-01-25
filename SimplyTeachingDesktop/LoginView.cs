@@ -10,14 +10,13 @@ using System.Text.RegularExpressions;
 
 namespace SimplyTeachingDesktop
 {
-    public partial class LoginView : Form
+    public partial class LoginView : UserForm
     {
-        private bool dragging = false;
-        private Point startPoint = new Point(0, 0);
         public LoginView()
         {
             InitializeComponent();
             dataController = new DataController();
+            BtnExit.Location = new Point(this.Width - 30, 0);
         }
 
         private Boolean Validate_Email(String email)
@@ -41,31 +40,6 @@ namespace SimplyTeachingDesktop
             }
         }
 
-        private void BtExit_Click(object sender, EventArgs e)
-        {
-            this.Dispose();
-        }
-
-        private void Form_MouseDown(object sender, MouseEventArgs e)
-        {
-            dragging = true;
-            startPoint = new Point(e.X, e.Y);
-        }
-
-        private void Form_MouseUp(object sender, MouseEventArgs e)
-        {
-            dragging = false;
-        }
-
-        private void Form_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (dragging)
-            {
-                Point p = PointToScreen(e.Location);
-                Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
-            }
-        }
-
         private void TbUser_Enter(object sender, EventArgs e)
         {
             if(TbUser.Text == "Usuario")
@@ -80,7 +54,7 @@ namespace SimplyTeachingDesktop
             if(TbPass.Text == "Contraseña")
             {
                 TbPass.Text = "";
-                TbPass.ForeColor = Color.White;
+                TbPass.ForeColor = EnviromentVars.color1;
                 TbPass.PasswordChar = '*';
             }
         }
@@ -90,7 +64,7 @@ namespace SimplyTeachingDesktop
             if(TbUser.Text == "")
             {
                 TbUser.Text = "Usuario";
-                TbUser.ForeColor = Color.Gray;
+                TbUser.ForeColor = EnviromentVars.color2;
             }
         }
 
@@ -99,7 +73,7 @@ namespace SimplyTeachingDesktop
             if (TbPass.Text == "")
             {
                 TbPass.Text = "Contraseña";
-                TbPass.ForeColor = Color.Gray;
+                TbPass.ForeColor = EnviromentVars.color2;
                 TbPass.PasswordChar = '\0';
             }
         }
@@ -110,7 +84,7 @@ namespace SimplyTeachingDesktop
             if(TbUser.Text =="" || TbUser.Text == "Usuario")
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = Color.Black;
+                TbUser.BackColor = EnviromentVars.color7;
             }
             else if (!Validate_Email(TbUser.Text))
             {
@@ -119,7 +93,8 @@ namespace SimplyTeachingDesktop
             else
             {
                 TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = Color.FromArgb(255, 0, 0, 0);
+                TbUser.BackColor = EnviromentVars.color7;
+                TbUser.ForeColor = EnviromentVars.color1;
             }
         }
 
@@ -141,6 +116,20 @@ namespace SimplyTeachingDesktop
         {
             if (e.KeyChar == (char)Keys.Return)
                 BtnLogin_Click(null, null);
+        }
+
+        private void LbNight_Click(object sender, EventArgs e)
+        {
+            if(EnviromentVars.night)
+            {
+                EnviromentVars.setNight(false);
+            }
+            else
+            {
+                EnviromentVars.setNight(true);
+            }
+            this.Visible = false;
+            new LoginView().Show();
         }
     }
 }

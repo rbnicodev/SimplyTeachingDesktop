@@ -16,6 +16,7 @@ namespace SimplyTeachingDesktop
         protected Point startPoint = new Point(0, 0);
         public UserForm()
         {
+
             InitializeComponent();
         }
 
@@ -74,5 +75,6 @@ namespace SimplyTeachingDesktop
                 Location = new Point(p.X - this.startPoint.X, p.Y - this.startPoint.Y);
             }
         }
+
     }
 }
