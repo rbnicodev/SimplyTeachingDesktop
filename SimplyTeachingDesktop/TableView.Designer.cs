@@ -1,4 +1,7 @@
-﻿namespace SimplyTeachingDesktop
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace SimplyTeachingDesktop
 {
     partial class TableView
     {
@@ -78,7 +81,7 @@
             this.LbSimplyTeaching.AutoSize = true;
             this.LbSimplyTeaching.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbSimplyTeaching.ForeColor = EnviromentVars.color1;
-            this.LbSimplyTeaching.Location = new System.Drawing.Point(75, 9);
+            this.LbSimplyTeaching.Location = new System.Drawing.Point(30, 9);
             this.LbSimplyTeaching.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbSimplyTeaching.Name = "LbSimplyTeaching";
             this.LbSimplyTeaching.Size = new System.Drawing.Size(91, 13);
@@ -89,7 +92,18 @@
             // 
             this.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
+            Bitmap image = null;
+            if(EnviromentVars.night)
+            {
+                image = new Bitmap("images/edit-night.png");
+            }
+            else
+            {
+                image = new Bitmap("images/edit-day.png");
+            }
+            this.BtnEdit.Dock = DockStyle.None;
+            this.BtnEdit.Image = (Image) image;
+            //this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
             this.BtnEdit.Location = new System.Drawing.Point(489, 32);
             this.BtnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.BtnEdit.Name = "BtnEdit";
@@ -101,7 +115,18 @@
             // BtnAdd
             // 
             this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
+            Bitmap image2 = null;
+            if (EnviromentVars.night)
+            {
+                image2 = new Bitmap("images/edit-night.png");
+            }
+            else
+            {
+                image2 = new Bitmap("images/edit-day.png");
+            }
+            this.BtnAdd.Dock = DockStyle.None;
+            this.BtnAdd.Image = (Image)image2;
+            //this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
             this.BtnAdd.Location = new System.Drawing.Point(489, 551);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAdd.Name = "BtnAdd";
@@ -211,7 +236,7 @@
             this.BtnBack.AutoSize = true;
             this.BtnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnBack.ForeColor = EnviromentVars.color1;
-            this.BtnBack.Location = new System.Drawing.Point(5, 5);
+            this.BtnBack.Location = new System.Drawing.Point(5, 2);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(20, 25);
             this.BtnBack.TabIndex = 16;

@@ -80,5 +80,10 @@ namespace SimplyTeachingDesktop
         {
             BtnExit.ForeColor = Color.White;
         }
+
+        private void BtnExit_MouseLeave(object sender, EventArgs e)
+        {
+            BtnExit.ForeColor = EnviromentVars.color1;
+        }
     }
 }

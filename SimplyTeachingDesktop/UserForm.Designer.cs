@@ -91,6 +91,7 @@
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             this.BtnExit.MouseEnter += new System.EventHandler(this.BtnExit_MouseEnter);
+            this.BtnExit.MouseLeave += new System.EventHandler(this.BtnExit_MouseLeave);
             // 
             // UserForm
             // 
