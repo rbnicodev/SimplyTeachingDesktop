@@ -40,7 +40,7 @@ namespace SimplyTeachingDesktop
             dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 10;
             dataTable.Height = this.Height - 45;
-            dataTable.BackgroundColor = EnviromentVars.color6;
+            dataTable.BackgroundColor = EnvironmentVars.color6;
             dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 12;
             dataTable.Height = this.Height - 40;
@@ -52,10 +52,10 @@ namespace SimplyTeachingDesktop
             dataTable.Font = new Font(dataTable.Font, FontStyle.Bold);
             dataTable.DefaultCellStyle.Font = new Font("Segoe UI", 15);
             dataTable.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataTable.DefaultCellStyle.BackColor = EnviromentVars.color6;
-            dataTable.DefaultCellStyle.SelectionBackColor = EnviromentVars.color2;
-            dataTable.DefaultCellStyle.ForeColor = EnviromentVars.color1;
-            dataTable.DefaultCellStyle.SelectionForeColor = EnviromentVars.color1;
+            dataTable.DefaultCellStyle.BackColor = EnvironmentVars.color6;
+            dataTable.DefaultCellStyle.SelectionBackColor = EnvironmentVars.color2;
+            dataTable.DefaultCellStyle.ForeColor = EnvironmentVars.color1;
+            dataTable.DefaultCellStyle.SelectionForeColor = EnvironmentVars.color1;
             dataTable.Rows.Clear();
             dataTable.Rows.Add("Jacinto");
             dataTable.Rows.Add("Eustaquio");
@@ -67,7 +67,7 @@ namespace SimplyTeachingDesktop
             {
                 if ((i % 2) == 0)
                 {
-                    dgvr.DefaultCellStyle.BackColor = EnviromentVars.color5;
+                    dgvr.DefaultCellStyle.BackColor = EnvironmentVars.color5;
                 }
                 dgvr.Height = 40;
                 dgvr.Resizable = DataGridViewTriState.False;
@@ -78,7 +78,7 @@ namespace SimplyTeachingDesktop
         private void LabelButton_MouseHover(object sender, EventArgs e)
         {
             backColor = ((Label)sender).BackColor;
-            ((Label)sender).BackColor = EnviromentVars.color4;
+            ((Label)sender).BackColor = EnvironmentVars.color4;
         }
 
         private void LabelButton_MouseLeave(object sender, EventArgs e)
@@ -88,15 +88,15 @@ namespace SimplyTeachingDesktop
 
         private void LabelButton_MouseClick(object sender, MouseEventArgs e)
         {
-            ((Label)sender).BackColor = EnviromentVars.color6;
+            ((Label)sender).BackColor = EnvironmentVars.color6;
             backColor = ((Label)sender).BackColor;
         }
 
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnviromentVars.color6;
-            BtnProfesores.BackColor = EnviromentVars.color5;
-            BtnAlumnos.BackColor = EnviromentVars.color5;
+            BtnAsignaturas.BackColor = EnvironmentVars.color6;
+            BtnProfesores.BackColor = EnvironmentVars.color5;
+            BtnAlumnos.BackColor = EnvironmentVars.color5;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Asignaturas";
             type = 1;
@@ -107,9 +107,9 @@ namespace SimplyTeachingDesktop
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnviromentVars.color5;
-            BtnProfesores.BackColor = EnviromentVars.color5;
-            BtnAlumnos.BackColor = EnviromentVars.color6;
+            BtnAsignaturas.BackColor = EnvironmentVars.color5;
+            BtnProfesores.BackColor = EnvironmentVars.color5;
+            BtnAlumnos.BackColor = EnvironmentVars.color6;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Alumnos";
             type = 2;
@@ -120,9 +120,9 @@ namespace SimplyTeachingDesktop
 
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnviromentVars.color5;
-            BtnProfesores.BackColor = EnviromentVars.color6;
-            BtnAlumnos.BackColor = EnviromentVars.color5;
+            BtnAsignaturas.BackColor = EnvironmentVars.color5;
+            BtnProfesores.BackColor = EnvironmentVars.color6;
+            BtnAlumnos.BackColor = EnvironmentVars.color5;
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Profesores";
             type = 0;
@@ -157,12 +157,12 @@ namespace SimplyTeachingDesktop
         private void setTheme()
         {
             dataTable_Initcialize();
-            this.BackColor = EnviromentVars.color6;
-            LbEntity.ForeColor = EnviromentVars.color1;
-            LbSimplyTeaching.ForeColor = EnviromentVars.color1;
+            this.BackColor = EnvironmentVars.color6;
+            LbEntity.ForeColor = EnvironmentVars.color1;
+            LbSimplyTeaching.ForeColor = EnvironmentVars.color1;
 
             Bitmap image2 = null;
-            if (EnviromentVars.night)
+            if (EnvironmentVars.night)
             {
                 image2 = new Bitmap("images/add-night.png");
             }
@@ -175,7 +175,7 @@ namespace SimplyTeachingDesktop
             image2 = null;
 
             Bitmap image = null;
-            if (EnviromentVars.night)
+            if (EnvironmentVars.night)
             {
                 image = new Bitmap("images/edit-night.png");
             }
@@ -187,16 +187,16 @@ namespace SimplyTeachingDesktop
             this.BtnEdit.Image = (Image)image;
             image = null;
 
-            BtnAlumnos.ForeColor = EnviromentVars.color1;
-            BtnAlumnos.BackColor = EnviromentVars.color5;
-            BtnProfesores.ForeColor = EnviromentVars.color1;
-            BtnProfesores.BackColor = EnviromentVars.color6;
-            BtnAsignaturas.ForeColor = EnviromentVars.color1;
-            BtnAsignaturas.BackColor = EnviromentVars.color5;
+            BtnAlumnos.ForeColor = EnvironmentVars.color1;
+            BtnAlumnos.BackColor = EnvironmentVars.color5;
+            BtnProfesores.ForeColor = EnvironmentVars.color1;
+            BtnProfesores.BackColor = EnvironmentVars.color6;
+            BtnAsignaturas.ForeColor = EnvironmentVars.color1;
+            BtnAsignaturas.BackColor = EnvironmentVars.color5;
 
-            BtnMaximize.ForeColor = EnviromentVars.color1;
-            BtnExit.ForeColor = EnviromentVars.color1;
-            BtnMinimize.ForeColor = EnviromentVars.color1;
+            BtnMaximize.ForeColor = EnvironmentVars.color1;
+            BtnExit.ForeColor = EnvironmentVars.color1;
+            BtnMinimize.ForeColor = EnvironmentVars.color1;
 
         }
     }

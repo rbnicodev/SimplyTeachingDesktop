@@ -18,10 +18,10 @@ namespace SimplyTeachingDesktop
         {
 
             InitializeComponent();
-            BackColor = EnviromentVars.color6;
-            BtnExit.ForeColor = EnviromentVars.color1;
-            BtnMaximize.ForeColor = EnviromentVars.color1;
-            BtnMinimize.ForeColor = EnviromentVars.color1;
+            BackColor = EnvironmentVars.color6;
+            BtnExit.ForeColor = EnvironmentVars.color1;
+            BtnMaximize.ForeColor = EnvironmentVars.color1;
+            BtnMinimize.ForeColor = EnvironmentVars.color1;
         }
 
         protected void UserForm_SizeChanged(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace SimplyTeachingDesktop
 
         private void BtnExit_MouseLeave(object sender, EventArgs e)
         {
-            BtnExit.ForeColor = EnviromentVars.color1;
+            BtnExit.ForeColor = EnvironmentVars.color1;
         }
     }
 }
