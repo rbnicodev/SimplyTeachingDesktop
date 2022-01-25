@@ -92,18 +92,8 @@ namespace SimplyTeachingDesktop
             // 
             this.BtnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BtnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            Bitmap image = null;
-            if(EnviromentVars.night)
-            {
-                image = new Bitmap("images/edit-night.png");
-            }
-            else
-            {
-                image = new Bitmap("images/edit-day.png");
-            }
-            this.BtnEdit.Dock = DockStyle.None;
-            this.BtnEdit.Image = (Image) image;
-            //this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
+
+            this.BtnEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtnEdit.Image")));
             this.BtnEdit.Location = new System.Drawing.Point(489, 32);
             this.BtnEdit.Margin = new System.Windows.Forms.Padding(0);
             this.BtnEdit.Name = "BtnEdit";
@@ -115,18 +105,8 @@ namespace SimplyTeachingDesktop
             // BtnAdd
             // 
             this.BtnAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            Bitmap image2 = null;
-            if (EnviromentVars.night)
-            {
-                image2 = new Bitmap("images/add-night.png");
-            }
-            else
-            {
-                image2 = new Bitmap("images/add-day.png");
-            }
-            this.BtnAdd.Dock = DockStyle.None;
-            this.BtnAdd.Image = (Image)image2;
-            //this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
+            
+            this.BtnAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdd.Image")));
             this.BtnAdd.Location = new System.Drawing.Point(489, 551);
             this.BtnAdd.Margin = new System.Windows.Forms.Padding(0);
             this.BtnAdd.Name = "BtnAdd";

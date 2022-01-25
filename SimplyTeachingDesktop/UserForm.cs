@@ -18,6 +18,10 @@ namespace SimplyTeachingDesktop
         {
 
             InitializeComponent();
+            BackColor = EnviromentVars.color6;
+            BtnExit.ForeColor = EnviromentVars.color1;
+            BtnMaximize.ForeColor = EnviromentVars.color1;
+            BtnMinimize.ForeColor = EnviromentVars.color1;
         }
 
         protected void UserForm_SizeChanged(object sender, EventArgs e)

@@ -17,6 +17,7 @@ namespace SimplyTeachingDesktop
             InitializeComponent();
             dataController = new DataController();
             BtnExit.Location = new Point(this.Width - 30, 0);
+            setTheme();
         }
 
         private Boolean Validate_Email(String email)
@@ -128,8 +129,32 @@ namespace SimplyTeachingDesktop
             {
                 EnviromentVars.SetNight(true);
             }
-            this.Visible = false;
-            new LoginView().Show();
+            setTheme();
+
+        }
+
+        private void setTheme()
+        {
+            BackColor = EnviromentVars.color6;
+            LbNight.ForeColor = EnviromentVars.color1;
+            LbSimplyTeaching.ForeColor = EnviromentVars.color1;
+            TbPass.BackColor = EnviromentVars.color7;
+            TbUser.BackColor = EnviromentVars.color7;
+            TbPass.ForeColor = EnviromentVars.color2;
+            TbUser.ForeColor = EnviromentVars.color2;
+            BtnExit.ForeColor = EnviromentVars.color1;
+            Bitmap image = null;
+            if (EnviromentVars.night)
+            {
+                image = new Bitmap("images/logo-night.png");
+            }
+            else
+            {
+                image = new Bitmap("images/logo-day.png");
+            }
+            this.PbLogo.Dock = DockStyle.None;
+            this.PbLogo.Image = (Image)image;
+            image = null;
         }
     }
 }
