@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimplyTeachingDesktop
+namespace SimplyTeachingDesktop.Servers
 {
-    public class Entity
+    internal class UserServer
     {
-        public int type;
-        public Entity() { }
     }
 }

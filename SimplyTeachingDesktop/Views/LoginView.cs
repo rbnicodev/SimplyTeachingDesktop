@@ -12,34 +12,16 @@ namespace SimplyTeachingDesktop
 {
     public partial class LoginView : UserForm
     {
+        DataController controller;
         public LoginView()
         {
             InitializeComponent();
-            dataController = new DataController();
+            controller = ControllerBuilder.GetController();
             BtnExit.Location = new Point(this.Width - 30, 0);
+            this.CenterToScreen();
             setTheme();
         }
 
-        private Boolean Validate_Email(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-        }
 
         private void TbUser_Enter(object sender, EventArgs e)
         {
@@ -87,7 +69,7 @@ namespace SimplyTeachingDesktop
                 TbUser.BorderStyle = BorderStyle.None;
                 TbUser.BackColor = EnvironmentVars.color7;
             }
-            else if (!Validate_Email(TbUser.Text))
+            else if (!controller.Validate_Email(TbUser.Text))
             {
                 TbUser.BackColor = Color.FromArgb(255, 80, 0, 0);
             }
@@ -101,7 +83,7 @@ namespace SimplyTeachingDesktop
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim()))
+            if (/*dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim())*/true)
             {
                 TableView teachersView = new TableView();
                 teachersView.Show();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SimplyTeachingDesktop
@@ -8,10 +9,12 @@ namespace SimplyTeachingDesktop
     {
         private int type = 0;
         private Color backColor;
+        private DataController controller = ControllerBuilder.GetController();
         public TableView()
         {
 
             InitializeComponent();
+            this.CenterToScreen();
             studentsPanel1.Visible = false;
             subjectPanel1.Visible = false;
             teacherPanel1.Visible = true;
@@ -37,14 +40,11 @@ namespace SimplyTeachingDesktop
         }
         private void dataTable_Initcialize()
         {
-            dataTable.BorderStyle = BorderStyle.None;
-            dataTable.Width = this.Width / 2 - 10;
-            dataTable.Height = this.Height - 45;
             dataTable.BackgroundColor = EnvironmentVars.color6;
             dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 12;
             dataTable.Height = this.Height - 40;
-            dataTable.Columns[0].Width = dataTable.Width - 1;
+            dataTable.Columns[1].Width = dataTable.Width - dataTable.Columns[0].Width -2;
             dataTable.EnableHeadersVisualStyles = false;
             dataTable.RowHeadersVisible = false;
             dataTable.ColumnHeadersVisible = false;
@@ -57,11 +57,10 @@ namespace SimplyTeachingDesktop
             dataTable.DefaultCellStyle.ForeColor = EnvironmentVars.color1;
             dataTable.DefaultCellStyle.SelectionForeColor = EnvironmentVars.color1;
             dataTable.Rows.Clear();
-            dataTable.Rows.Add("Jacinto");
-            dataTable.Rows.Add("Eustaquio");
-            dataTable.Rows.Add("Rigodolfo");
-            dataTable.Rows.Add("Eneldo");
-            dataTable.Rows.Add("Roberto");
+            dataTable.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            ReloadTable();
+
+
             int i = 2;
             foreach (DataGridViewRow dgvr in dataTable.Rows)
             {
@@ -92,6 +91,19 @@ namespace SimplyTeachingDesktop
             backColor = ((Label)sender).BackColor;
         }
 
+        private void BtnProfesores_Click(object sender, EventArgs e)
+        {
+            BtnAsignaturas.BackColor = EnvironmentVars.color5;
+            BtnProfesores.BackColor = EnvironmentVars.color6;
+            BtnAlumnos.BackColor = EnvironmentVars.color5;
+            backColor = ((Label)sender).BackColor;
+            LbEntity.Text = "Profesores";
+            type = 0;
+            teacherPanel1.Visible = true;
+            studentsPanel1.Visible = false;
+            subjectPanel1.Visible = false;
+        }
+
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color6;
@@ -118,34 +130,31 @@ namespace SimplyTeachingDesktop
             subjectPanel1.Visible = false;
         }
 
-        private void BtnProfesores_Click(object sender, EventArgs e)
-        {
-            BtnAsignaturas.BackColor = EnvironmentVars.color5;
-            BtnProfesores.BackColor = EnvironmentVars.color6;
-            BtnAlumnos.BackColor = EnvironmentVars.color5;
-            backColor = ((Label)sender).BackColor;
-            LbEntity.Text = "Profesores";
-            type = 0;
-            teacherPanel1.Visible = true;
-            studentsPanel1.Visible = false;
-            subjectPanel1.Visible = false;
-        }
+        
 
-        private void BtnAdd_Click(object sender, EventArgs e)
-        {
-            AddEditForm addEditForm = new AddEditForm();
-            this.Visible = false;
-            if(addEditForm.ShowDialog() == DialogResult.OK)
-            {
-                ReloadTable();
-            } else
-            {
-                this.Visible = true;
-            }
-        }
+        
 
         private void ReloadTable()
         {
+            string[][] rows = null;
+            if (type == 0)
+            {
+                rows = controller.TeachersTable();
+                if(rows != null)
+                {
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        dataTable.Rows.Add(rows[i]);
+                    }
+                }
+            }
+            else if (type == 1)
+            {
+                dataTable.Rows.Add(controller.SubjectsTable());
+            } else if (type == 2)
+            {
+                dataTable.Rows.Add(controller.StudentsTable());
+            }
 
         }
 
@@ -198,6 +207,41 @@ namespace SimplyTeachingDesktop
             BtnExit.ForeColor = EnvironmentVars.color1;
             BtnMinimize.ForeColor = EnvironmentVars.color1;
 
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            AddEditForm addEditForm = new AddEditForm();
+            this.Visible = false;
+            if (addEditForm.ShowDialog() == DialogResult.OK)
+            {
+                ReloadTable();
+            }
+            else
+            {
+                this.Visible = true;
+            }
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string id = dataTable.SelectedRows[0].Cells[1].Value.ToString();
+                AddEditForm addEditForm = new AddEditForm(type, id);
+                this.Visible = false;
+                if (addEditForm.ShowDialog() == DialogResult.OK)
+                {
+                    ReloadTable();
+                }
+                else
+                {
+                    this.Visible = true;
+                }
+            }catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

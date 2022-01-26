@@ -5,7 +5,7 @@ namespace SimplyTeachingDesktop
 {
     partial class LoginView
     {
-        private DataController dataController;
+        //private DataController dataController;
         /// <summary>
         /// Variable del diseñador necesaria.
         /// </summary>

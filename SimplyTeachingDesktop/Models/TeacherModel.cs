@@ -1,11 +1,10 @@
 ﻿using System.IO;
 namespace SimplyTeachingDesktop
 {
-    public class Teacher : Entity
+    public class TeacherModel : Entity 
     {
-        public Teacher()
+        public TeacherModel()
         {
-            type = 0;
         }
         public int id;
         public string dni;
@@ -17,5 +16,6 @@ namespace SimplyTeachingDesktop
         public int tel_1;
         public int tel_2;
         public string email;
+        public int type = 0;
     }
 }
