@@ -90,6 +90,7 @@ namespace SimplyTeachingDesktop
             this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTable.Size = new System.Drawing.Size(471, 443);
             this.dataTable.TabIndex = 3;
+            this.dataTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataTable_CellMouseClick);
             // 
             // Id
             // 

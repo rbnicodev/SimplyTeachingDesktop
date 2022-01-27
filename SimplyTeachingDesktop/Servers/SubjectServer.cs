@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimplyTeachingDesktop.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,12 @@ namespace SimplyTeachingDesktop.Servers
 
         public SubjectServer()
         {
-            repository = new MdbStudentRepository();
+            repository = new MdbSubjectRepository();
         }
 
         public string[][] AllSubjectsId()
         {
-            List<Entity> subjects = repository.findAll();
+            List<Entity> subjects = repository.FindAll();
 
             string[][] subjectsTable = new string[subjects.Count][];
             int i = 0;
@@ -30,6 +31,19 @@ namespace SimplyTeachingDesktop.Servers
             });
 
             return subjectsTable;
+        }
+
+        public string[] Find(int id)
+        {
+            SubjectModel model = repository.Find(id) as SubjectModel;
+            string[] result = new string[10];
+            result[0] = model.id.ToString();
+            result[1] = model.name;
+            result[2] = model.hour.ToString();
+            result[3] = model.day.ToString();
+            result[4] = model.price.ToString();
+
+            return result;
         }
     }
 }

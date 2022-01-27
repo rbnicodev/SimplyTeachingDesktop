@@ -17,24 +17,39 @@ namespace SimplyTeachingDesktop
         string query = null;
         bool result = true;
 
-        public bool delete(Entity entity)
+        public bool Delete(Entity entity)
         {
             throw new NotImplementedException();
         }
 
-        public Entity find(int id)
+        public Entity Find(int id)
         {
             return new StudentModel();
         }
 
-        public List<Entity> findAll()
+        public List<Entity> FindAll()
         {
             throw new NotImplementedException();
         }
 
-        public bool save(Entity entity)
+        public bool Save(Entity entity)
         {
             throw new NotImplementedException();
+        }
+
+        public bool TestConnection()
+        {
+            bool result = false;
+
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                connection.Open();
+            }
+            catch (AggregateException ex) { Console.WriteLine(ex.StackTrace); }
+            catch (Exception ex) { Console.WriteLine(ex.StackTrace); }
+
+            return result;
         }
     }
 }

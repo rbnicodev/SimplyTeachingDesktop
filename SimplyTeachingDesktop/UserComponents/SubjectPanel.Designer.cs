@@ -140,11 +140,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LbID;
-        private System.Windows.Forms.Label LbHora;
-        private System.Windows.Forms.Label LbDia;
-        private System.Windows.Forms.TextBox TbID;
-        private System.Windows.Forms.TextBox TbHora;
-        private System.Windows.Forms.TextBox TbDia;
+        public System.Windows.Forms.Label LbID;
+        public System.Windows.Forms.Label LbHora;
+        public System.Windows.Forms.Label LbDia;
+        public System.Windows.Forms.TextBox TbID;
+        public System.Windows.Forms.TextBox TbHora;
+        public System.Windows.Forms.TextBox TbDia;
     }
 }

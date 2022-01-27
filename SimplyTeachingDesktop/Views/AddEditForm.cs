@@ -9,7 +9,6 @@ namespace SimplyTeachingDesktop
 {
     internal class AddEditForm : UserForm
     {
-        private System.Windows.Forms.SplitContainer SplitPanel;
         private List<Label> fields;
         private List<TextBox> values;
 
@@ -25,9 +24,6 @@ namespace SimplyTeachingDesktop
 
         private void InitializeComponent()
         {
-            this.SplitPanel = new System.Windows.Forms.SplitContainer();
-            ((System.ComponentModel.ISupportInitialize)(this.SplitPanel)).BeginInit();
-            this.SplitPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnMinimize
@@ -47,31 +43,21 @@ namespace SimplyTeachingDesktop
             this.BtnExit.FlatAppearance.BorderSize = 0;
             this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            // 
-            // SplitPanel
-            // 
-            this.SplitPanel.IsSplitterFixed = true;
-            this.SplitPanel.Location = new System.Drawing.Point(0, 0);
-            this.SplitPanel.Name = "SplitPanel";
-            this.SplitPanel.Size = new System.Drawing.Size(960, 585);
-            this.SplitPanel.SplitterDistance = 479;
-            this.SplitPanel.TabIndex = 9;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click_1);
             // 
             // AddEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(960, 585);
-            this.Controls.Add(this.SplitPanel);
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "AddEditForm";
-            this.Controls.SetChildIndex(this.BtnMinimize, 0);
-            this.Controls.SetChildIndex(this.BtnMaximize, 0);
-            this.Controls.SetChildIndex(this.BtnExit, 0);
-            this.Controls.SetChildIndex(this.SplitPanel, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.SplitPanel)).EndInit();
-            this.SplitPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+
+        private void BtnExit_Click_1(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
         }
     }
 }

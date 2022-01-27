@@ -16,7 +16,7 @@ namespace SimplyTeachingDesktop.Servers
         }
         public string[][] AllStudentsId()
         {
-            List<Entity> students = repository.findAll(); 
+            List<Entity> students = repository.FindAll(); 
 
             string[][] studentsTable = new string[students.Count][];
             int i = 0;

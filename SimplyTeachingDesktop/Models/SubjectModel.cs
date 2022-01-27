@@ -12,8 +12,8 @@ namespace SimplyTeachingDesktop
         public int id;
         public string name;
         public int hour;
-        public double price;
         public int day;
+        public double price;
         public SubjectModel()
         {
         }

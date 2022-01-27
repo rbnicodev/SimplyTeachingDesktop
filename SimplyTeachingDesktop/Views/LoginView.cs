@@ -83,16 +83,24 @@ namespace SimplyTeachingDesktop
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if (/*dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim())*/true)
+            if(controller.TestConnection())
             {
-                TableView teachersView = new TableView();
-                teachersView.Show();
-                this.Visible = false;
+                if (/*dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim())*/true)
+                {
+                    TableView teachersView = new TableView();
+                    teachersView.Show();
+                    this.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("Usuario y/o contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Usuario y/o contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha habido algún error con la conexión\nComprueba que tengas conexión a internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void Tb_KeyPress(object sender, KeyPressEventArgs e)

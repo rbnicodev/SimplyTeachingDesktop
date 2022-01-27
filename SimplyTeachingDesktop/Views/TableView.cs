@@ -141,6 +141,7 @@ namespace SimplyTeachingDesktop
             studentsPanel1.Visible = false;
             teacherPanel1.Visible = false;
             subjectPanel1.Visible = true;
+            ReloadTable();
         }
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
@@ -154,6 +155,7 @@ namespace SimplyTeachingDesktop
             studentsPanel1.Visible = true;
             teacherPanel1.Visible = false;
             subjectPanel1.Visible = false;
+            ReloadTable();
         }
 
         
@@ -177,11 +179,26 @@ namespace SimplyTeachingDesktop
             }
             else if (type == 1)
             {
-                dataTable.Rows.Add(controller.SubjectsTable());
+                rows = controller.SubjectsTable();
+                if (rows != null)
+                {
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        dataTable.Rows.Add(rows[i]);
+                    }
+                }
             } else if (type == 2)
             {
-                dataTable.Rows.Add(controller.StudentsTable());
+                rows = controller.StudentsTable();
+                if (rows != null)
+                {
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        dataTable.Rows.Add(rows[i]);
+                    }
+                }
             }
+            Data_Panel();
 
         }
 
@@ -273,6 +290,48 @@ namespace SimplyTeachingDesktop
             }catch (ArgumentOutOfRangeException ex)
             {
                 MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DataTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) { Data_Panel(); }
+
+        private void Data_Panel()
+        {
+            if (dataTable.SelectedRows.Count > 0)
+            {
+                switch(type)
+                {
+                    case 0:
+                        string[] teacher = controller.FindTeacher(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
+                        if (teacher != null)
+                        {
+                            teacherPanel1.TbTel1.Text = teacher[6];
+                            teacherPanel1.TbTel2.Text = teacher[7];
+                            teacherPanel1.TbDir.Text = teacher[4];
+                            teacherPanel1.TbEmail.Text = teacher[8];
+                        }
+                        teacher = null;
+                        break;
+                    case 1:
+                        string[] subject = controller.FindSubject(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
+                        if (subject != null)
+                        {
+                            subjectPanel1.TbID.Text = subject[0];
+                            subjectPanel1.TbHora.Text = subject[2];
+                            subjectPanel1.TbDia.Text = subject[3];
+                        }
+                        subject = null;
+                        break;
+                    case 2:
+                        string[] student = controller.FindSubject(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
+                        if (student != null)
+                        {
+
+                        }
+                        student = null;
+                        break;
+                    default: break;
+                }
             }
         }
     }

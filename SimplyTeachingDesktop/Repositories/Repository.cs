@@ -5,9 +5,10 @@ namespace SimplyTeachingDesktop
 {
     interface Repository
     {
-        bool save(Entity entity);
-        bool delete(Entity entity);
-        Entity find(int id);
-        List<Entity> findAll();
+        bool TestConnection();
+        bool Save(Entity entity);
+        bool Delete(Entity entity);
+        Entity Find(int id);
+        List<Entity> FindAll();
     }
 }

@@ -22,6 +22,15 @@ namespace SimplyTeachingDesktop
             teacherServer = new TeacherServer();
             userServer = new UserServer();
         }
+
+        public Boolean TestConnection()
+        {
+            bool result = false; ;
+            if (userServer.TestConnection()) result = true;
+
+            return result;
+        }
+
         public Boolean Login(string user, string pass)
         {
             //TO-DO
@@ -87,6 +96,20 @@ namespace SimplyTeachingDesktop
         public string[][] SubjectsTable()
         {
             return subjectServer.AllSubjectsId();
+        }
+
+        public string[] FindTeacher(string id)
+        {
+            int a;
+            if (int.TryParse(id, out a)) return teacherServer.Find(int.Parse(id));
+            else return null;
+        }
+
+        public string[] FindSubject(string id)
+        {
+            int a;
+            if (int.TryParse(id, out a)) return subjectServer.Find(int.Parse(id));
+            else return null;
         }
 
     }

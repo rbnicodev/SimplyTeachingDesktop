@@ -203,15 +203,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LbTutor;
-        private System.Windows.Forms.Label LbTel1;
-        private System.Windows.Forms.Label LbTel2;
-        private System.Windows.Forms.Label LbEmail;
-        private System.Windows.Forms.Label LbCurso;
-        private System.Windows.Forms.TextBox TbTutor;
-        private System.Windows.Forms.TextBox TbTel1;
-        private System.Windows.Forms.TextBox TbTel2;
-        private System.Windows.Forms.TextBox TbEmail;
-        private System.Windows.Forms.TextBox TbCurso;
+        public System.Windows.Forms.Label LbTutor;
+        public System.Windows.Forms.Label LbTel1;
+        public System.Windows.Forms.Label LbTel2;
+        public System.Windows.Forms.Label LbEmail;
+        public System.Windows.Forms.Label LbCurso;
+        public System.Windows.Forms.TextBox TbTutor;
+        public System.Windows.Forms.TextBox TbTel1;
+        public System.Windows.Forms.TextBox TbTel2;
+        public System.Windows.Forms.TextBox TbEmail;
+        public System.Windows.Forms.TextBox TbCurso;
     }
 }
