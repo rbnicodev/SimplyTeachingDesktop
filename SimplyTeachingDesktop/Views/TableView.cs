@@ -25,18 +25,49 @@ namespace SimplyTeachingDesktop
         {
             dataTable.Width = this.Width / 2 - 10;
             dataTable.Height = this.Height - 45;
-            dataTable.Columns[0].Width = dataTable.Width - 1;
-            LbEntity.Location = new Point((this.Width / 4) * 3 - LbEntity.Width / 2, 30);
-            teacherPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 120 / 720);
+            dataTable.Location = new Point(9, 132);
+            dataTable.Columns[1].Width = this.dataTable.Width - dataTable.Columns[0].Width -2;
+            LbEntity.Location = new Point((this.Width / 4) * 1 - LbEntity.Width / 2, 30);
+            teacherPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 80 / 720);
             teacherPanel1.Width = this.Width * 615 / 1280;
-            studentsPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 120 / 720);
+            subjectPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 70 / 720);
+            subjectPanel1.Width = this.Width * 615 / 1280;
+            studentsPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 105 / 720);
             studentsPanel1.Width = this.Width * 615 / 1280;
+            BtnEdit.Location = new Point(this.Width / 8 * 7 - 12, this.Height - 60);
+            BtnAdd.Location = new Point(this.Width / 8 * 5 - 12, this.Height - 60);
+            BtnProfesores.Width = (this.Width / 2 - 12) / 3;
+            BtnProfesores.Location = new Point((this.Width / 2 + 12), 32);
+            BtnAsignaturas.Width = (this.Width / 2 - 12) / 3;
+            BtnAsignaturas.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width), 32);
+            BtnAlumnos.Width = (this.Width / 2 - 12) / 3;
+            BtnAlumnos.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width * 2), 32);
         }
 
         private void Form_Load(object sender, EventArgs e)
         {
             dataTable_Initcialize();
-            LbEntity.Location = new Point((this.Width / 4) * 3 - LbEntity.Width / 2, 30);
+            BtnAdd.Size = new Size(28, 28);
+            BtnEdit.Size = new Size(28, 28);
+            LbEntity.Location = new Point((this.Width / 4) * 1 - LbEntity.Width / 2, 30);
+            BtnProfesores.Width = (this.Width / 2 - 12) / 3;
+            BtnProfesores.Location = new Point((this.Width / 2 + 12), 32);
+            BtnAsignaturas.Width = (this.Width / 2 - 12) / 3;
+            BtnAsignaturas.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width), 32);
+            BtnAlumnos.Width = (this.Width / 2 - 12) / 3;
+            BtnAlumnos.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width * 2), 32);
+            BtnAsignaturas.BackColor = EnvironmentVars.color4;
+            BtnProfesores.BackColor = EnvironmentVars.color6;
+            BtnAlumnos.BackColor = EnvironmentVars.color4;
+            BtnEdit.Location = new Point(this.Width / 8 * 7 - 14, this.Height - 60);
+            BtnAdd.Location = new Point(this.Width / 8 * 5 - 14, this.Height - 60);
+
+            teacherPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 80 / 720);
+            teacherPanel1.Width = this.Width * 615 / 1280;
+            subjectPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 70 / 720);
+            subjectPanel1.Width = this.Width * 615 / 1280;
+            studentsPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 105 / 720);
+            studentsPanel1.Width = this.Width * 615 / 1280;
         }
         private void dataTable_Initcialize()
         {
@@ -76,27 +107,21 @@ namespace SimplyTeachingDesktop
 
         private void LabelButton_MouseHover(object sender, EventArgs e)
         {
-            backColor = ((Label)sender).BackColor;
-            ((Label)sender).BackColor = EnvironmentVars.color4;
+            backColor = ((Button)sender).BackColor;
+            ((Button)sender).BackColor = EnvironmentVars.color4;
         }
 
         private void LabelButton_MouseLeave(object sender, EventArgs e)
         {
-            ((Label)sender).BackColor = backColor;
-        }
-
-        private void LabelButton_MouseClick(object sender, MouseEventArgs e)
-        {
-            ((Label)sender).BackColor = EnvironmentVars.color6;
-            backColor = ((Label)sender).BackColor;
+            ((Button)sender).BackColor = backColor;
         }
 
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnvironmentVars.color5;
+            BtnAsignaturas.BackColor = EnvironmentVars.color4;
             BtnProfesores.BackColor = EnvironmentVars.color6;
-            BtnAlumnos.BackColor = EnvironmentVars.color5;
-            backColor = ((Label)sender).BackColor;
+            BtnAlumnos.BackColor = EnvironmentVars.color4;
+            backColor = ((Button)sender).BackColor;
             LbEntity.Text = "Profesores";
             type = 0;
             ReloadTable();
@@ -108,9 +133,9 @@ namespace SimplyTeachingDesktop
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color6;
-            BtnProfesores.BackColor = EnvironmentVars.color5;
-            BtnAlumnos.BackColor = EnvironmentVars.color5;
-            backColor = ((Label)sender).BackColor;
+            BtnProfesores.BackColor = EnvironmentVars.color4;
+            BtnAlumnos.BackColor = EnvironmentVars.color4;
+            backColor = ((Button)sender).BackColor;
             LbEntity.Text = "Asignaturas";
             type = 1;
             studentsPanel1.Visible = false;
@@ -120,10 +145,10 @@ namespace SimplyTeachingDesktop
 
         private void BtnAlumnos_Click(object sender, EventArgs e)
         {
-            BtnAsignaturas.BackColor = EnvironmentVars.color5;
-            BtnProfesores.BackColor = EnvironmentVars.color5;
+            BtnAsignaturas.BackColor = EnvironmentVars.color4;
+            BtnProfesores.BackColor = EnvironmentVars.color4;
             BtnAlumnos.BackColor = EnvironmentVars.color6;
-            backColor = ((Label)sender).BackColor;
+            backColor = ((Button)sender).BackColor;
             LbEntity.Text = "Alumnos";
             type = 2;
             studentsPanel1.Visible = true;
