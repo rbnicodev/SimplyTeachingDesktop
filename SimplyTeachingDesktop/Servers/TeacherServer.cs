@@ -26,6 +26,7 @@ namespace SimplyTeachingDesktop.Servers
                 row[0] = (teacher as TeacherModel).id.ToString();
                 row[1] = (teacher as TeacherModel).name + " " + (teacher as TeacherModel).last_name_1;
                 teachersTable[i] = row;
+                i++;
             });
 
             return teachersTable;

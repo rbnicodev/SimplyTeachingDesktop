@@ -15,6 +15,7 @@ namespace SimplyTeachingDesktop
         public SubjectPanel()
         {
             InitializeComponent();
+            BackColor = EnvironmentVars.color6;
         }
     }
 }

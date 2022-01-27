@@ -99,6 +99,7 @@ namespace SimplyTeachingDesktop
             backColor = ((Label)sender).BackColor;
             LbEntity.Text = "Profesores";
             type = 0;
+            ReloadTable();
             teacherPanel1.Visible = true;
             studentsPanel1.Visible = false;
             subjectPanel1.Visible = false;
@@ -136,6 +137,7 @@ namespace SimplyTeachingDesktop
 
         private void ReloadTable()
         {
+            dataTable.Rows.Clear();
             string[][] rows = null;
             if (type == 0)
             {
@@ -202,10 +204,15 @@ namespace SimplyTeachingDesktop
             BtnProfesores.BackColor = EnvironmentVars.color6;
             BtnAsignaturas.ForeColor = EnvironmentVars.color1;
             BtnAsignaturas.BackColor = EnvironmentVars.color5;
-
+            BtnBack.ForeColor = EnvironmentVars.color1;
             BtnMaximize.ForeColor = EnvironmentVars.color1;
             BtnExit.ForeColor = EnvironmentVars.color1;
             BtnMinimize.ForeColor = EnvironmentVars.color1;
+
+            studentsPanel1.BackColor = EnvironmentVars.color6;
+            teacherPanel1.BackColor = EnvironmentVars.color6;
+            subjectPanel1.BackColor = EnvironmentVars.color6;
+            dataTable.GridColor = EnvironmentVars.color2;
 
         }
 

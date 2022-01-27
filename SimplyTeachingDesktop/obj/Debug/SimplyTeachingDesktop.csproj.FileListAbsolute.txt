@@ -26,7 +26,6 @@ C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.StudentsPanel.resources
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.SubjectPanel.resources
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.UserForm.resources
-C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.csproj.AssemblyReference.cache
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\Debug\SimplyTeachingDesktop.exe.manifest
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\bin\Debug\SimplyTeachingDesktop.application
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.exe.manifest

@@ -33,6 +33,8 @@ namespace SimplyTeachingDesktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableView));
             this.dataTable = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
             this.BtnEdit = new System.Windows.Forms.PictureBox();
             this.BtnAdd = new System.Windows.Forms.PictureBox();
@@ -44,8 +46,6 @@ namespace SimplyTeachingDesktop
             this.teacherPanel1 = new SimplyTeachingDesktop.TeacherPanel();
             this.subjectPanel1 = new SimplyTeachingDesktop.SubjectPanel();
             this.BtnBack = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).BeginInit();
@@ -82,11 +82,21 @@ namespace SimplyTeachingDesktop
             this.dataTable.Location = new System.Drawing.Point(9, 32);
             this.dataTable.Margin = new System.Windows.Forms.Padding(2);
             this.dataTable.Name = "dataTable";
-            this.dataTable.ReadOnly = true;
             this.dataTable.RowHeadersWidth = 51;
             this.dataTable.RowTemplate.Height = 24;
+            this.dataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataTable.Size = new System.Drawing.Size(471, 543);
             this.dataTable.TabIndex = 3;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
             // LbSimplyTeaching
             // 
@@ -233,18 +243,6 @@ namespace SimplyTeachingDesktop
             this.BtnBack.TabIndex = 16;
             this.BtnBack.Text = "❮";
             this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
             // 
             // TableView
             // 
