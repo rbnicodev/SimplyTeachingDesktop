@@ -260,15 +260,16 @@ namespace SimplyTeachingDesktop
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            AddEditForm addEditForm = new AddEditForm();
-            this.Visible = false;
+            AddEditForm addEditForm = new AddEditForm(type);
+            //this.Visible = false;
             if (addEditForm.ShowDialog() == DialogResult.OK)
             {
                 ReloadTable();
+                this.Focus();
             }
             else
             {
-                this.Visible = true;
+                this.Focus();
             }
         }
 
@@ -278,14 +279,14 @@ namespace SimplyTeachingDesktop
             {
                 string id = dataTable.SelectedRows[0].Cells[1].Value.ToString();
                 AddEditForm addEditForm = new AddEditForm(type, id);
-                this.Visible = false;
                 if (addEditForm.ShowDialog() == DialogResult.OK)
                 {
                     ReloadTable();
+                    this.Focus();
                 }
                 else
                 {
-                    this.Visible = true;
+                    this.Focus();
                 }
             }catch (ArgumentOutOfRangeException ex)
             {
@@ -323,10 +324,13 @@ namespace SimplyTeachingDesktop
                         subject = null;
                         break;
                     case 2:
-                        string[] student = controller.FindSubject(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
+                        string[] student = controller.FindStudent(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
                         if (student != null)
                         {
-
+                            studentsPanel1.TbEmail.Text = student[7];
+                            studentsPanel1.TbTel1.Text = student[5];
+                            studentsPanel1.TbTel2.Text = student[6];
+                            studentsPanel1.TbTutor.Text = student[8];
                         }
                         student = null;
                         break;

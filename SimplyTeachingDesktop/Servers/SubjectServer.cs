@@ -39,8 +39,16 @@ namespace SimplyTeachingDesktop.Servers
             string[] result = new string[10];
             result[0] = model.id.ToString();
             result[1] = model.name;
-            result[2] = model.hour.ToString();
-            result[3] = model.day.ToString();
+            result[2] = (model.hour / 100).ToString() + ":" + (model.hour % 100).ToString() + "h";
+            switch(model.day)
+            {
+                case 1: result[3] = "Lunes"; break;
+                case 2: result[3] = "Martes"; break;
+                case 3: result[3] = "Miércoles"; break;
+                case 4: result[3] = "Jueves"; break;
+                case 5: result[3] = "Viernes"; break;
+                default: result[3] = ""; break;
+            }
             result[4] = model.price.ToString();
 
             return result;

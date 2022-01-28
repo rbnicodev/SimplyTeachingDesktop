@@ -44,10 +44,27 @@ namespace SimplyTeachingDesktop.Servers
             result[4] = model.post_address;
             result[5] = model.seg_social.ToString();
             result[6] = model.tel_1.ToString();
-            result[7] = model.tel_2.ToString();
+            if(model.tel_1 <= 0)
+            {
+                result[7] = model.tel_2.ToString();
+            }else
+            {
+                result[7] = "";
+            }
             result[8] = model.email;
 
             return result;
+        }
+
+        public List<string> FindAll()
+        {
+            List <string> teachers = new List<string>();
+            foreach(TeacherModel teacher in repository.FindAll())
+            {
+                teachers.Add(teacher.name + " " + teacher.last_name_1);
+            }
+
+            return teachers;
         }
     }
 }

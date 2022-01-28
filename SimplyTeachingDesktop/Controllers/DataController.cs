@@ -40,24 +40,6 @@ namespace SimplyTeachingDesktop
             return true;
         }
         
-        public Boolean ValidateTeacher(String[] teacherString)
-        {
-            Boolean result = true;
-
-            return result;
-        }
-        public Boolean ValidateStudent(String[] teacherString)
-        {
-            Boolean result = true;
-
-            return result;
-        }
-        public Boolean ValidateSubject(String[] teacherString)
-        {
-            Boolean result = true;
-
-            return result;
-        }
 
         public Boolean Validate_Email(String email)
         {
@@ -101,16 +83,33 @@ namespace SimplyTeachingDesktop
         public string[] FindTeacher(string id)
         {
             int a;
-            if (int.TryParse(id, out a)) return teacherServer.Find(int.Parse(id));
+            if (int.TryParse(id, out a)) return teacherServer.Find(a);
             else return null;
         }
 
         public string[] FindSubject(string id)
         {
             int a;
-            if (int.TryParse(id, out a)) return subjectServer.Find(int.Parse(id));
+            if (int.TryParse(id, out a)) return subjectServer.Find(a);
             else return null;
         }
+
+        public string[] FindStudent(string id)
+        {
+            int a;
+            if (int.TryParse(id, out a)) return studentServer.Find(a);
+            else return null;
+        }
+
+        public Boolean SaveStudent(string[] student) { return true; }
+
+        public Boolean SaveSubject(string[] subject) { return true; }
+
+        public Boolean SaveTeacher(string[] teacher) { return true; }
+        public Boolean DeleteStudent(string id) { return true; }
+        public Boolean DeleteSubject(string id) { return true; }
+        public Boolean DeleteTeacher(string id) { return true; }
+        public List<string> FindAllTeachers() { return teacherServer.FindAll(); }
 
     }
 }

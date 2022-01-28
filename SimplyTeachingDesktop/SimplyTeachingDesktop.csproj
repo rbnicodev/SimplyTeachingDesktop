@@ -82,6 +82,12 @@
     <Compile Include="Servers\SubjectServer.cs" />
     <Compile Include="Servers\TeacherServer.cs" />
     <Compile Include="Servers\UserServer.cs" />
+    <Compile Include="UserComponents\StudentsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserComponents\StudentsAdd.Designer.cs">
+      <DependentUpon>StudentsAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.cs" />
+    <EmbeddedResource Include="UserComponents\StudentsAdd.resx">
+      <DependentUpon>StudentsAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AddEditForm.resx">
       <DependentUpon>AddEditForm.cs</DependentUpon>
     </EmbeddedResource>

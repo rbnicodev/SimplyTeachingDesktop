@@ -32,12 +32,10 @@
             this.LbTel1 = new System.Windows.Forms.Label();
             this.LbTel2 = new System.Windows.Forms.Label();
             this.LbEmail = new System.Windows.Forms.Label();
-            this.LbCurso = new System.Windows.Forms.Label();
             this.TbTutor = new System.Windows.Forms.TextBox();
             this.TbTel1 = new System.Windows.Forms.TextBox();
             this.TbTel2 = new System.Windows.Forms.TextBox();
             this.TbEmail = new System.Windows.Forms.TextBox();
-            this.TbCurso = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LbTutor
@@ -46,10 +44,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbTutor.AutoSize = true;
             this.LbTutor.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTutor.ForeColor = EnvironmentVars.color1;
-            this.LbTutor.Location = new System.Drawing.Point(12, 61);
+            this.LbTutor.ForeColor = System.Drawing.Color.White;
+            this.LbTutor.Location = new System.Drawing.Point(9, 50);
+            this.LbTutor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbTutor.Name = "LbTutor";
-            this.LbTutor.Size = new System.Drawing.Size(86, 35);
+            this.LbTutor.Size = new System.Drawing.Size(69, 28);
             this.LbTutor.TabIndex = 0;
             this.LbTutor.Text = "Tutor:";
             // 
@@ -59,10 +58,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbTel1.AutoSize = true;
             this.LbTel1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTel1.ForeColor = EnvironmentVars.color1;
-            this.LbTel1.Location = new System.Drawing.Point(12, 161);
+            this.LbTel1.ForeColor = System.Drawing.Color.White;
+            this.LbTel1.Location = new System.Drawing.Point(9, 131);
+            this.LbTel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbTel1.Name = "LbTel1";
-            this.LbTel1.Size = new System.Drawing.Size(146, 35);
+            this.LbTel1.Size = new System.Drawing.Size(117, 28);
             this.LbTel1.TabIndex = 1;
             this.LbTel1.Text = "Teléfono 1:";
             // 
@@ -72,10 +72,11 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbTel2.AutoSize = true;
             this.LbTel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbTel2.ForeColor = EnvironmentVars.color1;
-            this.LbTel2.Location = new System.Drawing.Point(12, 261);
+            this.LbTel2.ForeColor = System.Drawing.Color.White;
+            this.LbTel2.Location = new System.Drawing.Point(9, 212);
+            this.LbTel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbTel2.Name = "LbTel2";
-            this.LbTel2.Size = new System.Drawing.Size(146, 35);
+            this.LbTel2.Size = new System.Drawing.Size(117, 28);
             this.LbTel2.TabIndex = 2;
             this.LbTel2.Text = "Teléfono 2:";
             // 
@@ -85,39 +86,28 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.LbEmail.AutoSize = true;
             this.LbEmail.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbEmail.ForeColor = EnvironmentVars.color1;
-            this.LbEmail.Location = new System.Drawing.Point(12, 361);
+            this.LbEmail.ForeColor = System.Drawing.Color.White;
+            this.LbEmail.Location = new System.Drawing.Point(9, 293);
+            this.LbEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbEmail.Name = "LbEmail";
-            this.LbEmail.Size = new System.Drawing.Size(85, 35);
+            this.LbEmail.Size = new System.Drawing.Size(69, 28);
             this.LbEmail.TabIndex = 3;
             this.LbEmail.Text = "Email:";
-            // 
-            // LbCurso
-            // 
-            this.LbCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.LbCurso.AutoSize = true;
-            this.LbCurso.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbCurso.ForeColor = EnvironmentVars.color1;
-            this.LbCurso.Location = new System.Drawing.Point(12, 461);
-            this.LbCurso.Name = "LbCurso";
-            this.LbCurso.Size = new System.Drawing.Size(89, 35);
-            this.LbCurso.TabIndex = 4;
-            this.LbCurso.Text = "Curso:";
             // 
             // TbTutor
             // 
             this.TbTutor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbTutor.BackColor = EnvironmentVars.color7;
+            this.TbTutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TbTutor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTutor.Enabled = false;
             this.TbTutor.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbTutor.ForeColor = EnvironmentVars.color1;
-            this.TbTutor.Location = new System.Drawing.Point(188, 61);
+            this.TbTutor.ForeColor = System.Drawing.Color.White;
+            this.TbTutor.Location = new System.Drawing.Point(141, 50);
+            this.TbTutor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbTutor.Name = "TbTutor";
-            this.TbTutor.Size = new System.Drawing.Size(412, 34);
+            this.TbTutor.Size = new System.Drawing.Size(310, 34);
             this.TbTutor.TabIndex = 5;
             // 
             // TbTel1
@@ -125,14 +115,15 @@
             this.TbTel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbTel1.BackColor = EnvironmentVars.color7;
+            this.TbTel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TbTel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTel1.Enabled = false;
             this.TbTel1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbTel1.ForeColor = EnvironmentVars.color1;
-            this.TbTel1.Location = new System.Drawing.Point(188, 161);
+            this.TbTel1.ForeColor = System.Drawing.Color.White;
+            this.TbTel1.Location = new System.Drawing.Point(141, 131);
+            this.TbTel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbTel1.Name = "TbTel1";
-            this.TbTel1.Size = new System.Drawing.Size(412, 34);
+            this.TbTel1.Size = new System.Drawing.Size(310, 34);
             this.TbTel1.TabIndex = 6;
             // 
             // TbTel2
@@ -140,14 +131,15 @@
             this.TbTel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbTel2.BackColor = EnvironmentVars.color7;
+            this.TbTel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TbTel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTel2.Enabled = false;
             this.TbTel2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbTel2.ForeColor = EnvironmentVars.color1;
-            this.TbTel2.Location = new System.Drawing.Point(188, 261);
+            this.TbTel2.ForeColor = System.Drawing.Color.White;
+            this.TbTel2.Location = new System.Drawing.Point(141, 212);
+            this.TbTel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbTel2.Name = "TbTel2";
-            this.TbTel2.Size = new System.Drawing.Size(412, 34);
+            this.TbTel2.Size = new System.Drawing.Size(310, 34);
             this.TbTel2.TabIndex = 7;
             // 
             // TbEmail
@@ -155,47 +147,33 @@
             this.TbEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TbEmail.BackColor = EnvironmentVars.color7;
+            this.TbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbEmail.Enabled = false;
             this.TbEmail.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbEmail.ForeColor = EnvironmentVars.color1;
-            this.TbEmail.Location = new System.Drawing.Point(188, 361);
+            this.TbEmail.ForeColor = System.Drawing.Color.White;
+            this.TbEmail.Location = new System.Drawing.Point(141, 293);
+            this.TbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TbEmail.Name = "TbEmail";
-            this.TbEmail.Size = new System.Drawing.Size(412, 34);
+            this.TbEmail.Size = new System.Drawing.Size(310, 34);
             this.TbEmail.TabIndex = 8;
-            // 
-            // TbCurso
-            // 
-            this.TbCurso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.TbCurso.BackColor = EnvironmentVars.color7;
-            this.TbCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbCurso.Enabled = false;
-            this.TbCurso.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbCurso.ForeColor = EnvironmentVars.color1;
-            this.TbCurso.Location = new System.Drawing.Point(188, 461);
-            this.TbCurso.Name = "TbCurso";
-            this.TbCurso.Size = new System.Drawing.Size(50, 34);
-            this.TbCurso.TabIndex = 9;
             // 
             // StudentsPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = EnvironmentVars.color6;
-            this.Controls.Add(this.TbCurso);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.Controls.Add(this.TbEmail);
             this.Controls.Add(this.TbTel2);
             this.Controls.Add(this.TbTel1);
             this.Controls.Add(this.TbTutor);
-            this.Controls.Add(this.LbCurso);
             this.Controls.Add(this.LbEmail);
             this.Controls.Add(this.LbTel2);
             this.Controls.Add(this.LbTel1);
             this.Controls.Add(this.LbTutor);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StudentsPanel";
-            this.Size = new System.Drawing.Size(615, 550);
+            this.Size = new System.Drawing.Size(461, 447);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,11 +185,9 @@
         public System.Windows.Forms.Label LbTel1;
         public System.Windows.Forms.Label LbTel2;
         public System.Windows.Forms.Label LbEmail;
-        public System.Windows.Forms.Label LbCurso;
         public System.Windows.Forms.TextBox TbTutor;
         public System.Windows.Forms.TextBox TbTel1;
         public System.Windows.Forms.TextBox TbTel2;
         public System.Windows.Forms.TextBox TbEmail;
-        public System.Windows.Forms.TextBox TbCurso;
     }
 }
