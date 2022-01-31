@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimplyTeachingDesktop
 {
-    interface Entity
+    public interface Entity
     {
     }
 }

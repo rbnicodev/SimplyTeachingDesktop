@@ -87,6 +87,11 @@ namespace SimplyTeachingDesktop
             else return null;
         }
 
+        public string[] FindTeacherByName(string name)
+        {
+            return teacherServer.Find(name);
+        }
+
         public string[] FindSubject(string id)
         {
             int a;
@@ -106,7 +111,7 @@ namespace SimplyTeachingDesktop
         public Boolean SaveSubject(string[] subject) { return true; }
 
         public Boolean SaveTeacher(string[] teacher) { return true; }
-        public Boolean DeleteStudent(string id) { return true; }
+        public Boolean DeleteStudent(string id) { return true; ; }
         public Boolean DeleteSubject(string id) { return true; }
         public Boolean DeleteTeacher(string id) { return true; }
         public List<string> FindAllTeachers() { return teacherServer.FindAll(); }

@@ -60,9 +60,9 @@
             this.LbPrice.ForeColor = System.Drawing.Color.White;
             this.LbPrice.Location = new System.Drawing.Point(47, 362);
             this.LbPrice.Name = "LbPrice";
-            this.LbPrice.Size = new System.Drawing.Size(40, 21);
+            this.LbPrice.Size = new System.Drawing.Size(56, 21);
             this.LbPrice.TabIndex = 53;
-            this.LbPrice.Text = "DNI:";
+            this.LbPrice.Text = "Precio:";
             // 
             // TbName
             // 
@@ -140,6 +140,7 @@
             // 
             // CbDay
             // 
+            this.CbDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbDay.FormattingEnabled = true;
             this.CbDay.Items.AddRange(new object[] {
             "Lunes",
@@ -192,7 +193,7 @@
         public System.Windows.Forms.Label LbHour;
         public System.Windows.Forms.Label LbName;
         public System.Windows.Forms.Label LbID;
-        private System.Windows.Forms.ComboBox CbDay;
-        private UserComponents.SelectHour selectHour1;
+        public SelectHour selectHour1;
+        public System.Windows.Forms.ComboBox CbDay;
     }
 }

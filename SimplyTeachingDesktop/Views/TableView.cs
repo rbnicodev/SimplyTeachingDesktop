@@ -276,23 +276,24 @@ namespace SimplyTeachingDesktop
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    string id = dataTable.SelectedRows[0].Cells[1].Value.ToString();
-            //    AddEditForm addEditForm = new AddEditForm(type, id);
-            //    if (addEditForm.ShowDialog() == DialogResult.OK)
-            //    {
-            //        ReloadTable();
-            //        this.Focus();
-            //    }
-            //    else
-            //    {
-            //        this.Focus();
-            //    }
-            //}catch (ArgumentOutOfRangeException ex)
-            //{
-            //    MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            try
+            {
+                string id = dataTable.SelectedRows[0].Cells[0].Value.ToString();
+                AddEditForm addEditForm = new AddEditForm(type, id);
+                if (addEditForm.ShowDialog() == DialogResult.OK)
+                {
+                    ReloadTable();
+                    this.Focus();
+                }
+                else
+                {
+                    this.Focus();
+                }
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void DataTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) { Data_Panel(); }
@@ -307,10 +308,10 @@ namespace SimplyTeachingDesktop
                         string[] teacher = controller.FindTeacher(dataTable.SelectedRows[0].Cells["id"].Value.ToString());
                         if (teacher != null)
                         {
-                            teacherPanel1.TbTel1.Text = teacher[6];
-                            teacherPanel1.TbTel2.Text = teacher[7];
-                            teacherPanel1.TbDir.Text = teacher[4];
-                            teacherPanel1.TbEmail.Text = teacher[8];
+                            teacherPanel1.TbTel1.Text = teacher[7];
+                            teacherPanel1.TbTel2.Text = teacher[8];
+                            teacherPanel1.TbDir.Text = teacher[5];
+                            teacherPanel1.TbEmail.Text = teacher[9];
                         }
                         teacher = null;
                         break;

@@ -38,22 +38,31 @@ namespace SimplyTeachingDesktop.Servers
             string[] result = new string[10];
             result[0] = model.id.ToString();
             result[1] = model.dni;
-            result[1] = model.name;
-            result[2] = model.last_name_1;
-            result[3] = model.last_name_2;
-            result[4] = model.post_address;
-            result[5] = model.seg_social.ToString();
-            result[6] = model.tel_1.ToString();
+            result[2] = model.name;
+            result[3] = model.last_name_1;
+            result[4] = model.last_name_2;
+            result[5] = model.post_address;
+            result[6] = model.seg_social.ToString();
+            result[7] = model.tel_1.ToString();
             if(model.tel_1 <= 0)
             {
-                result[7] = model.tel_2.ToString();
+                result[8] = model.tel_2.ToString();
             }else
             {
-                result[7] = "";
+                result[8] = "";
             }
-            result[8] = model.email;
+            result[9] = model.email;
 
             return result;
+        }
+        public string[] Find(string name)
+        {
+            foreach(TeacherModel teacher in repository.FindAll())
+            {
+                if(teacher.name.Equals(name))
+                    return Find(teacher.id);
+            }
+            return null;
         }
 
         public List<string> FindAll()

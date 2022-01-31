@@ -276,9 +276,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CbTutor.BackColor = System.Drawing.Color.Black;
+            this.CbTutor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbTutor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbTutor.ForeColor = System.Drawing.Color.White;
             this.CbTutor.FormattingEnabled = true;
+            this.CbTutor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.CbTutor.Location = new System.Drawing.Point(363, 362);
             this.CbTutor.Name = "CbTutor";
             this.CbTutor.Size = new System.Drawing.Size(329, 29);
