@@ -82,14 +82,17 @@
     <Compile Include="Servers\SubjectServer.cs" />
     <Compile Include="Servers\TeacherServer.cs" />
     <Compile Include="Servers\UserServer.cs" />
+    <Compile Include="UserComponents\SelectHour.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserComponents\SelectHour.Designer.cs">
+      <DependentUpon>SelectHour.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserComponents\StudentsAdd.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserComponents\StudentsAdd.Designer.cs">
       <DependentUpon>StudentsAdd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AddEditForm.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Repositories\MdbSubjectRepository.cs" />
@@ -97,6 +100,18 @@
     <Compile Include="Repositories\Repository.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="EnvironmentVars.cs" />
+    <Compile Include="UserComponents\TeachersAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserComponents\TeachersAdd.Designer.cs">
+      <DependentUpon>TeachersAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddEditForm.Designer.cs">
+      <DependentUpon>AddEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +136,12 @@
       <DependentUpon>SubjectPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\TeacherModel.cs" />
+    <Compile Include="UserComponents\SubjectsAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserComponents\SubjectsAdd.Designer.cs">
+      <DependentUpon>SubjectsAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\TableView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,8 +161,14 @@
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\UserModel.cs" />
+    <EmbeddedResource Include="UserComponents\SelectHour.resx">
+      <DependentUpon>SelectHour.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserComponents\StudentsAdd.resx">
       <DependentUpon>StudentsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserComponents\TeachersAdd.resx">
+      <DependentUpon>TeachersAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AddEditForm.resx">
       <DependentUpon>AddEditForm.cs</DependentUpon>
@@ -163,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserComponents\SubjectPanel.resx">
       <DependentUpon>SubjectPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserComponents\SubjectsAdd.resx">
+      <DependentUpon>SubjectsAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\TableView.resx">
       <DependentUpon>TableView.cs</DependentUpon>

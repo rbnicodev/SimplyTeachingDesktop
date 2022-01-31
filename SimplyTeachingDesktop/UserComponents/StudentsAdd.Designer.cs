@@ -46,9 +46,6 @@
             this.TbTel2 = new System.Windows.Forms.TextBox();
             this.TbEmail = new System.Windows.Forms.TextBox();
             this.CbTutor = new System.Windows.Forms.ComboBox();
-            this.BtCancel = new System.Windows.Forms.Button();
-            this.BtSave = new System.Windows.Forms.Button();
-            this.BtDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LbID
@@ -58,7 +55,7 @@
             this.LbID.AutoSize = true;
             this.LbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbID.ForeColor = System.Drawing.Color.White;
-            this.LbID.Location = new System.Drawing.Point(48, 50);
+            this.LbID.Location = new System.Drawing.Point(50, 2);
             this.LbID.Name = "LbID";
             this.LbID.Size = new System.Drawing.Size(28, 21);
             this.LbID.TabIndex = 0;
@@ -71,7 +68,7 @@
             this.LbName.AutoSize = true;
             this.LbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbName.ForeColor = System.Drawing.Color.White;
-            this.LbName.Location = new System.Drawing.Point(48, 140);
+            this.LbName.Location = new System.Drawing.Point(50, 92);
             this.LbName.Name = "LbName";
             this.LbName.Size = new System.Drawing.Size(71, 21);
             this.LbName.TabIndex = 1;
@@ -84,7 +81,7 @@
             this.LbLastName1.AutoSize = true;
             this.LbLastName1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbLastName1.ForeColor = System.Drawing.Color.White;
-            this.LbLastName1.Location = new System.Drawing.Point(48, 230);
+            this.LbLastName1.Location = new System.Drawing.Point(50, 182);
             this.LbLastName1.Name = "LbLastName1";
             this.LbLastName1.Size = new System.Drawing.Size(97, 21);
             this.LbLastName1.TabIndex = 2;
@@ -97,7 +94,7 @@
             this.LbLastName2.AutoSize = true;
             this.LbLastName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbLastName2.ForeColor = System.Drawing.Color.White;
-            this.LbLastName2.Location = new System.Drawing.Point(48, 320);
+            this.LbLastName2.Location = new System.Drawing.Point(50, 272);
             this.LbLastName2.Name = "LbLastName2";
             this.LbLastName2.Size = new System.Drawing.Size(90, 21);
             this.LbLastName2.TabIndex = 3;
@@ -111,7 +108,7 @@
             this.LbPostAddress.AutoSize = true;
             this.LbPostAddress.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbPostAddress.ForeColor = System.Drawing.Color.White;
-            this.LbPostAddress.Location = new System.Drawing.Point(451, 50);
+            this.LbPostAddress.Location = new System.Drawing.Point(453, 2);
             this.LbPostAddress.Name = "LbPostAddress";
             this.LbPostAddress.Size = new System.Drawing.Size(78, 21);
             this.LbPostAddress.TabIndex = 4;
@@ -125,7 +122,7 @@
             this.LbTel1.AutoSize = true;
             this.LbTel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTel1.ForeColor = System.Drawing.Color.White;
-            this.LbTel1.Location = new System.Drawing.Point(454, 140);
+            this.LbTel1.Location = new System.Drawing.Point(456, 92);
             this.LbTel1.Name = "LbTel1";
             this.LbTel1.Size = new System.Drawing.Size(84, 21);
             this.LbTel1.TabIndex = 5;
@@ -139,7 +136,7 @@
             this.LbTel2.AutoSize = true;
             this.LbTel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTel2.ForeColor = System.Drawing.Color.White;
-            this.LbTel2.Location = new System.Drawing.Point(454, 230);
+            this.LbTel2.Location = new System.Drawing.Point(456, 182);
             this.LbTel2.Name = "LbTel2";
             this.LbTel2.Size = new System.Drawing.Size(84, 21);
             this.LbTel2.TabIndex = 6;
@@ -153,7 +150,7 @@
             this.LbEmail.AutoSize = true;
             this.LbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbEmail.ForeColor = System.Drawing.Color.White;
-            this.LbEmail.Location = new System.Drawing.Point(454, 320);
+            this.LbEmail.Location = new System.Drawing.Point(456, 272);
             this.LbEmail.Name = "LbEmail";
             this.LbEmail.Size = new System.Drawing.Size(51, 21);
             this.LbEmail.TabIndex = 7;
@@ -167,7 +164,7 @@
             this.LbTutor.AutoSize = true;
             this.LbTutor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbTutor.ForeColor = System.Drawing.Color.White;
-            this.LbTutor.Location = new System.Drawing.Point(263, 410);
+            this.LbTutor.Location = new System.Drawing.Point(265, 362);
             this.LbTutor.Name = "LbTutor";
             this.LbTutor.Size = new System.Drawing.Size(50, 21);
             this.LbTutor.TabIndex = 8;
@@ -179,7 +176,7 @@
             this.TbID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbID.ForeColor = System.Drawing.Color.White;
-            this.TbID.Location = new System.Drawing.Point(159, 50);
+            this.TbID.Location = new System.Drawing.Point(161, 2);
             this.TbID.Name = "TbID";
             this.TbID.Size = new System.Drawing.Size(258, 29);
             this.TbID.TabIndex = 9;
@@ -190,7 +187,7 @@
             this.TbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbName.ForeColor = System.Drawing.Color.White;
-            this.TbName.Location = new System.Drawing.Point(159, 140);
+            this.TbName.Location = new System.Drawing.Point(161, 92);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(258, 29);
             this.TbName.TabIndex = 10;
@@ -201,7 +198,7 @@
             this.TbLastname1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbLastname1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLastname1.ForeColor = System.Drawing.Color.White;
-            this.TbLastname1.Location = new System.Drawing.Point(159, 230);
+            this.TbLastname1.Location = new System.Drawing.Point(161, 182);
             this.TbLastname1.Name = "TbLastname1";
             this.TbLastname1.Size = new System.Drawing.Size(258, 29);
             this.TbLastname1.TabIndex = 11;
@@ -212,7 +209,7 @@
             this.TbLastName2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbLastName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLastName2.ForeColor = System.Drawing.Color.White;
-            this.TbLastName2.Location = new System.Drawing.Point(159, 320);
+            this.TbLastName2.Location = new System.Drawing.Point(161, 272);
             this.TbLastName2.Name = "TbLastName2";
             this.TbLastName2.Size = new System.Drawing.Size(258, 29);
             this.TbLastName2.TabIndex = 12;
@@ -226,7 +223,7 @@
             this.TbDir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbDir.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbDir.ForeColor = System.Drawing.Color.White;
-            this.TbDir.Location = new System.Drawing.Point(555, 50);
+            this.TbDir.Location = new System.Drawing.Point(557, 2);
             this.TbDir.Name = "TbDir";
             this.TbDir.Size = new System.Drawing.Size(329, 29);
             this.TbDir.TabIndex = 13;
@@ -240,7 +237,7 @@
             this.TbTel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbTel1.ForeColor = System.Drawing.Color.White;
-            this.TbTel1.Location = new System.Drawing.Point(555, 140);
+            this.TbTel1.Location = new System.Drawing.Point(557, 92);
             this.TbTel1.Name = "TbTel1";
             this.TbTel1.Size = new System.Drawing.Size(329, 29);
             this.TbTel1.TabIndex = 14;
@@ -254,7 +251,7 @@
             this.TbTel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbTel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbTel2.ForeColor = System.Drawing.Color.White;
-            this.TbTel2.Location = new System.Drawing.Point(555, 230);
+            this.TbTel2.Location = new System.Drawing.Point(557, 182);
             this.TbTel2.Name = "TbTel2";
             this.TbTel2.Size = new System.Drawing.Size(329, 29);
             this.TbTel2.TabIndex = 15;
@@ -268,7 +265,7 @@
             this.TbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbEmail.ForeColor = System.Drawing.Color.White;
-            this.TbEmail.Location = new System.Drawing.Point(555, 320);
+            this.TbEmail.Location = new System.Drawing.Point(557, 272);
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.Size = new System.Drawing.Size(329, 29);
             this.TbEmail.TabIndex = 16;
@@ -282,62 +279,16 @@
             this.CbTutor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CbTutor.ForeColor = System.Drawing.Color.White;
             this.CbTutor.FormattingEnabled = true;
-            this.CbTutor.Location = new System.Drawing.Point(361, 410);
+            this.CbTutor.Location = new System.Drawing.Point(363, 362);
             this.CbTutor.Name = "CbTutor";
             this.CbTutor.Size = new System.Drawing.Size(329, 29);
             this.CbTutor.TabIndex = 17;
-            // 
-            // BtCancel
-            // 
-            this.BtCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.BtCancel.FlatAppearance.BorderSize = 0;
-            this.BtCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtCancel.ForeColor = System.Drawing.Color.White;
-            this.BtCancel.Location = new System.Drawing.Point(52, 487);
-            this.BtCancel.Name = "BtCancel";
-            this.BtCancel.Size = new System.Drawing.Size(75, 23);
-            this.BtCancel.TabIndex = 18;
-            this.BtCancel.Text = "Cancelar";
-            this.BtCancel.UseVisualStyleBackColor = false;
-            // 
-            // BtSave
-            // 
-            this.BtSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.BtSave.FlatAppearance.BorderSize = 0;
-            this.BtSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtSave.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtSave.ForeColor = System.Drawing.Color.White;
-            this.BtSave.Location = new System.Drawing.Point(418, 487);
-            this.BtSave.Name = "BtSave";
-            this.BtSave.Size = new System.Drawing.Size(75, 23);
-            this.BtSave.TabIndex = 19;
-            this.BtSave.Text = "Guardar";
-            this.BtSave.UseVisualStyleBackColor = false;
-            // 
-            // BtDelete
-            // 
-            this.BtDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            this.BtDelete.FlatAppearance.BorderSize = 0;
-            this.BtDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtDelete.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtDelete.ForeColor = System.Drawing.Color.White;
-            this.BtDelete.Location = new System.Drawing.Point(809, 487);
-            this.BtDelete.Name = "BtDelete";
-            this.BtDelete.Size = new System.Drawing.Size(75, 23);
-            this.BtDelete.TabIndex = 20;
-            this.BtDelete.Text = "Eliminar";
-            this.BtDelete.UseVisualStyleBackColor = false;
-            this.BtDelete.Click += new System.EventHandler(this.BtDelete_Click);
             // 
             // StudentsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.Controls.Add(this.BtDelete);
-            this.Controls.Add(this.BtSave);
-            this.Controls.Add(this.BtCancel);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.Controls.Add(this.CbTutor);
             this.Controls.Add(this.TbEmail);
             this.Controls.Add(this.TbTel2);
@@ -357,7 +308,7 @@
             this.Controls.Add(this.LbName);
             this.Controls.Add(this.LbID);
             this.Name = "StudentsAdd";
-            this.Size = new System.Drawing.Size(930, 535);
+            this.Size = new System.Drawing.Size(930, 393);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,8 +334,5 @@
         public System.Windows.Forms.TextBox TbTel2;
         public System.Windows.Forms.TextBox TbEmail;
         public System.Windows.Forms.ComboBox CbTutor;
-        public System.Windows.Forms.Button BtCancel;
-        public System.Windows.Forms.Button BtSave;
-        public System.Windows.Forms.Button BtDelete;
     }
 }

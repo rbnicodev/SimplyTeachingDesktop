@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SimplyTeachingDesktop.Views;
+using System;
 using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
@@ -275,23 +276,23 @@ namespace SimplyTeachingDesktop
 
         private void BtnEdit_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string id = dataTable.SelectedRows[0].Cells[1].Value.ToString();
-                AddEditForm addEditForm = new AddEditForm(type, id);
-                if (addEditForm.ShowDialog() == DialogResult.OK)
-                {
-                    ReloadTable();
-                    this.Focus();
-                }
-                else
-                {
-                    this.Focus();
-                }
-            }catch (ArgumentOutOfRangeException ex)
-            {
-                MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //try
+            //{
+            //    string id = dataTable.SelectedRows[0].Cells[1].Value.ToString();
+            //    AddEditForm addEditForm = new AddEditForm(type, id);
+            //    if (addEditForm.ShowDialog() == DialogResult.OK)
+            //    {
+            //        ReloadTable();
+            //        this.Focus();
+            //    }
+            //    else
+            //    {
+            //        this.Focus();
+            //    }
+            //}catch (ArgumentOutOfRangeException ex)
+            //{
+            //    MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void DataTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) { Data_Panel(); }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SimplyTeachingDesktop
 {
-    internal class UserModel : Entity
+    public class UserModel : Entity
     {
-        private string user;
-        private string password;
+        public string user;
+        public string password;
     }
 }

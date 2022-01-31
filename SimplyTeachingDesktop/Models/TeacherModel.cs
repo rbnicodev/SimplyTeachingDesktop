@@ -3,9 +3,7 @@ namespace SimplyTeachingDesktop
 {
     public class TeacherModel : Entity 
     {
-        public TeacherModel()
-        {
-        }
+        public TeacherModel(){}
         public int id;
         public string dni;
         public string name;
