@@ -16,6 +16,7 @@ namespace SimplyTeachingDesktop.UserComponents
         public SubjectsAdd()
         {
             InitializeComponent();
+            setTheme();
         }
 
         public void setTheme()

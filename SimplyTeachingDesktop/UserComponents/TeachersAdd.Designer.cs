@@ -44,8 +44,8 @@
             this.LbLastName1 = new System.Windows.Forms.Label();
             this.LbName = new System.Windows.Forms.Label();
             this.LbID = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TbSegSocial = new System.Windows.Forms.TextBox();
+            this.TbDNI = new System.Windows.Forms.TextBox();
             this.LbSegSocial = new System.Windows.Forms.Label();
             this.LbDNI = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -258,30 +258,30 @@
             this.LbID.TabIndex = 17;
             this.LbID.Text = "ID:";
             // 
-            // textBox1
+            // TbSegSocial
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TbSegSocial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(557, 362);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(329, 29);
-            this.textBox1.TabIndex = 36;
+            this.TbSegSocial.BackColor = System.Drawing.Color.Black;
+            this.TbSegSocial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbSegSocial.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbSegSocial.ForeColor = System.Drawing.Color.White;
+            this.TbSegSocial.Location = new System.Drawing.Point(557, 362);
+            this.TbSegSocial.Name = "TbSegSocial";
+            this.TbSegSocial.Size = new System.Drawing.Size(329, 29);
+            this.TbSegSocial.TabIndex = 36;
             // 
-            // textBox2
+            // TbDNI
             // 
-            this.textBox2.BackColor = System.Drawing.Color.Black;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(161, 362);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(258, 29);
-            this.textBox2.TabIndex = 35;
+            this.TbDNI.BackColor = System.Drawing.Color.Black;
+            this.TbDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbDNI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbDNI.ForeColor = System.Drawing.Color.White;
+            this.TbDNI.Location = new System.Drawing.Point(161, 362);
+            this.TbDNI.Name = "TbDNI";
+            this.TbDNI.Size = new System.Drawing.Size(258, 29);
+            this.TbDNI.TabIndex = 35;
             // 
             // LbSegSocial
             // 
@@ -315,8 +315,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.TbSegSocial);
+            this.Controls.Add(this.TbDNI);
             this.Controls.Add(this.LbSegSocial);
             this.Controls.Add(this.LbDNI);
             this.Controls.Add(this.TbEmail);
@@ -360,8 +360,8 @@
         public System.Windows.Forms.Label LbLastName1;
         public System.Windows.Forms.Label LbName;
         public System.Windows.Forms.Label LbID;
-        public System.Windows.Forms.TextBox textBox1;
-        public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.TextBox TbSegSocial;
+        public System.Windows.Forms.TextBox TbDNI;
         public System.Windows.Forms.Label LbSegSocial;
         public System.Windows.Forms.Label LbDNI;
     }

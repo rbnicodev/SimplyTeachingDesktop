@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,12 +33,7 @@ namespace SimplyTeachingDesktop.UserComponents
 
         private void UpMin_Click(object sender, EventArgs e)
         {
-            if (int.Parse(TbMin.Text) < 59) TbMin.Text = (int.Parse(TbMin.Text) + 1).ToString();
-            else
-            {
-                TbMin.Text = "0";
-                UpHour_Click(null, null);
-            }
+
         }
 
         private void DownMin_Click(object sender, EventArgs e)
@@ -72,6 +68,12 @@ namespace SimplyTeachingDesktop.UserComponents
         private void SelectHour_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnUp2_MouseDown(object sender, MouseEventArgs e)
+        {
+            Thread.Sleep(10);
+            UpMin_Click(null, null);
         }
     }
 }

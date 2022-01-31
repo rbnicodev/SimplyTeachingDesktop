@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Button BtnCancel;
             this.teachersAdd1 = new SimplyTeachingDesktop.UserComponents.TeachersAdd();
             this.LbEntity = new System.Windows.Forms.Label();
             this.studentsAdd1 = new SimplyTeachingDesktop.UserComponents.StudentsAdd();
             this.subjectsAdd1 = new SimplyTeachingDesktop.UserComponents.SubjectsAdd();
-            BtnCancel = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnMinimize
@@ -67,11 +66,11 @@
             this.LbEntity.AutoSize = true;
             this.LbEntity.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbEntity.ForeColor = System.Drawing.Color.White;
-            this.LbEntity.Location = new System.Drawing.Point(365, 26);
+            this.LbEntity.Location = new System.Drawing.Point(405, 25);
             this.LbEntity.Name = "LbEntity";
-            this.LbEntity.Size = new System.Drawing.Size(220, 37);
+            this.LbEntity.Size = new System.Drawing.Size(127, 37);
             this.LbEntity.TabIndex = 10;
-            this.LbEntity.Text = "Añadir Profesor";
+            this.LbEntity.Text = "Profesor";
             // 
             // studentsAdd1
             // 
@@ -83,6 +82,7 @@
             // 
             // subjectsAdd1
             // 
+            this.subjectsAdd1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.subjectsAdd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.subjectsAdd1.Location = new System.Drawing.Point(242, 90);
             this.subjectsAdd1.Name = "subjectsAdd1";
@@ -91,17 +91,17 @@
             // 
             // BtnCancel
             // 
-            BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
-            BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            BtnCancel.FlatAppearance.BorderSize = 0;
-            BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            BtnCancel.ForeColor = System.Drawing.Color.White;
-            BtnCancel.Location = new System.Drawing.Point(191, 522);
-            BtnCancel.Name = "BtnCancel";
-            BtnCancel.Size = new System.Drawing.Size(75, 23);
-            BtnCancel.TabIndex = 13;
-            BtnCancel.Text = "Cancel";
-            BtnCancel.UseVisualStyleBackColor = false;
+            this.BtnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.BtnCancel.FlatAppearance.BorderSize = 0;
+            this.BtnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCancel.ForeColor = System.Drawing.Color.White;
+            this.BtnCancel.Location = new System.Drawing.Point(190, 520);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.TabIndex = 13;
+            this.BtnCancel.Text = "Cancel";
+            this.BtnCancel.UseVisualStyleBackColor = false;
             // 
             // AddEditForm
             // 
@@ -109,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(960, 577);
-            this.Controls.Add(BtnCancel);
+            this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.subjectsAdd1);
             this.Controls.Add(this.studentsAdd1);
             this.Controls.Add(this.LbEntity);
@@ -124,7 +124,7 @@
             this.Controls.SetChildIndex(this.BtnMaximize, 0);
             this.Controls.SetChildIndex(this.BtnExit, 0);
             this.Controls.SetChildIndex(this.subjectsAdd1, 0);
-            this.Controls.SetChildIndex(BtnCancel, 0);
+            this.Controls.SetChildIndex(this.BtnCancel, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +136,6 @@
         private System.Windows.Forms.Label LbEntity;
         private UserComponents.StudentsAdd studentsAdd1;
         private UserComponents.SubjectsAdd subjectsAdd1;
+        private System.Windows.Forms.Button BtnCancel;
     }
 }
