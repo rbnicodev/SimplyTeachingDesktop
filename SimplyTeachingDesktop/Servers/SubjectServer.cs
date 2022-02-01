@@ -28,6 +28,7 @@ namespace SimplyTeachingDesktop.Servers
                 row[0] = (subject as SubjectModel).id.ToString();
                 row[1] = (subject as SubjectModel).name.ToString();
                 subjectsTable[i] = row;
+                i++;
             });
 
             return subjectsTable;

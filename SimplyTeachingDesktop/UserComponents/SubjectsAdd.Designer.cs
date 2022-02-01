@@ -49,7 +49,7 @@
             this.TbPrice.Location = new System.Drawing.Point(158, 362);
             this.TbPrice.Name = "TbPrice";
             this.TbPrice.Size = new System.Drawing.Size(258, 29);
-            this.TbPrice.TabIndex = 55;
+            this.TbPrice.TabIndex = 4;
             // 
             // LbPrice
             // 
@@ -73,7 +73,7 @@
             this.TbName.Location = new System.Drawing.Point(158, 92);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(258, 29);
-            this.TbName.TabIndex = 46;
+            this.TbName.TabIndex = 1;
             // 
             // TbID
             // 
@@ -84,7 +84,7 @@
             this.TbID.Location = new System.Drawing.Point(158, 2);
             this.TbID.Name = "TbID";
             this.TbID.Size = new System.Drawing.Size(258, 29);
-            this.TbID.TabIndex = 45;
+            this.TbID.TabIndex = 0;
             // 
             // LbDay
             // 
@@ -151,7 +151,7 @@
             this.CbDay.Location = new System.Drawing.Point(158, 272);
             this.CbDay.Name = "CbDay";
             this.CbDay.Size = new System.Drawing.Size(258, 21);
-            this.CbDay.TabIndex = 56;
+            this.CbDay.TabIndex = 3;
             // 
             // selectHour1
             // 
@@ -159,7 +159,7 @@
             this.selectHour1.Location = new System.Drawing.Point(158, 170);
             this.selectHour1.Name = "selectHour1";
             this.selectHour1.Size = new System.Drawing.Size(165, 53);
-            this.selectHour1.TabIndex = 57;
+            this.selectHour1.TabIndex = 2;
             // 
             // SubjectsAdd
             // 

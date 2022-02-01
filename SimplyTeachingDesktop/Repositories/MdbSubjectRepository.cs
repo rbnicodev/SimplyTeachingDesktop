@@ -110,21 +110,21 @@ namespace SimplyTeachingDesktop.Repositories
         {
             SubjectModel model = entity as SubjectModel;
             bool result = false;
-            if (Find(model.id) == null) query = "INSERT INTO subjects (id, name, hour, day, price) VALUES (@id, @name, @hour, @day, @price;";
+            if (Find(model.id) == null) query = "INSERT INTO subjects VALUES (@id, @name, @hour, @day, @price);";
             else query = "UPDATE subjects SET name = @name, hour = @hour, day = @day, price = @price WHERE id = @id;";
-
+            connection = new MySqlConnection(connectionString);
+            command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@id", model.id);
+            command.Parameters.AddWithValue("@name", model.name);
+            command.Parameters.AddWithValue("@hour", model.hour);
+            command.Parameters.AddWithValue("@day", model.day);
+            command.Parameters.AddWithValue("@price", model.price);
 
             try
             {
-                connection = new MySqlConnection(connectionString);
-                command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", model.id);
-                command.Parameters.AddWithValue("@name", model.name);
-                command.Parameters.AddWithValue("@hour", model.hour);
-                command.Parameters.AddWithValue("@day", model.day);
-                command.Parameters.AddWithValue("@price", model.price);
                 connection.Open();
                 command.ExecuteNonQuery();
+                result = true;
             }
             catch (MySqlException ex) { Console.WriteLine(ex.StackTrace); }
             catch (Exception e) { Console.WriteLine(e.StackTrace); }

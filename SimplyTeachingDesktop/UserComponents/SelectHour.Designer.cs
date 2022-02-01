@@ -62,6 +62,7 @@
             this.BtnDown2.Name = "BtnDown2";
             this.BtnDown2.Size = new System.Drawing.Size(20, 20);
             this.BtnDown2.TabIndex = 5;
+            this.BtnDown2.TabStop = false;
             this.BtnDown2.Text = "▼";
             this.BtnDown2.UseVisualStyleBackColor = false;
             this.BtnDown2.Click += new System.EventHandler(this.DownMin_Click);
@@ -78,6 +79,7 @@
             this.BtnUp2.Name = "BtnUp2";
             this.BtnUp2.Size = new System.Drawing.Size(20, 20);
             this.BtnUp2.TabIndex = 4;
+            this.BtnUp2.TabStop = false;
             this.BtnUp2.Text = "▲";
             this.BtnUp2.UseVisualStyleBackColor = false;
             this.BtnUp2.Click += new System.EventHandler(this.UpMin_Click);
@@ -91,7 +93,7 @@
             this.TbMin.Name = "TbMin";
             this.TbMin.ReadOnly = true;
             this.TbMin.Size = new System.Drawing.Size(44, 29);
-            this.TbMin.TabIndex = 3;
+            this.TbMin.TabIndex = 1;
             this.TbMin.Text = "00";
             this.TbMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -119,6 +121,7 @@
             this.BtnDown1.Name = "BtnDown1";
             this.BtnDown1.Size = new System.Drawing.Size(20, 20);
             this.BtnDown1.TabIndex = 8;
+            this.BtnDown1.TabStop = false;
             this.BtnDown1.Text = "▼";
             this.BtnDown1.UseVisualStyleBackColor = false;
             this.BtnDown1.Click += new System.EventHandler(this.DownHour_Click);
@@ -135,6 +138,7 @@
             this.BtnUp1.Name = "BtnUp1";
             this.BtnUp1.Size = new System.Drawing.Size(20, 20);
             this.BtnUp1.TabIndex = 7;
+            this.BtnUp1.TabStop = false;
             this.BtnUp1.Text = "▲";
             this.BtnUp1.UseVisualStyleBackColor = false;
             this.BtnUp1.Click += new System.EventHandler(this.UpHour_Click);

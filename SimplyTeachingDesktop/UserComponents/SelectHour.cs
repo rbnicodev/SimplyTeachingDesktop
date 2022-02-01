@@ -84,5 +84,6 @@ namespace SimplyTeachingDesktop.UserComponents
             Thread.Sleep(10);
             UpMin_Click(null, null);
         }
+
     }
 }
