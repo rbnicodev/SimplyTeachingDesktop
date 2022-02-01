@@ -47,7 +47,7 @@
             this.TbH.ReadOnly = true;
             this.TbH.Size = new System.Drawing.Size(44, 29);
             this.TbH.TabIndex = 0;
-            this.TbH.Text = "0";
+            this.TbH.Text = "00";
             this.TbH.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnDown2
@@ -92,7 +92,7 @@
             this.TbMin.ReadOnly = true;
             this.TbMin.Size = new System.Drawing.Size(44, 29);
             this.TbMin.TabIndex = 3;
-            this.TbMin.Text = "0";
+            this.TbMin.Text = "00";
             this.TbMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // LbDotes

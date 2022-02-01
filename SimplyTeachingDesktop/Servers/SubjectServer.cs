@@ -53,5 +53,19 @@ namespace SimplyTeachingDesktop.Servers
 
             return result;
         }
+
+        public bool Save(string[] subject)
+        {
+            SubjectModel model = new SubjectModel();
+
+            model.id = int.Parse(subject[0]);
+            model.name = subject[1];
+            model.hour = int.Parse(subject[2]);
+            model.day = int.Parse(subject[3]);
+            model.price = double.Parse(subject[4]);
+
+            return repository.Save(model);
+
+        }
     }
 }

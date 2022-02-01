@@ -79,7 +79,7 @@ namespace SimplyTeachingDesktop.Views
             teachersAdd1.Visible = true;
             subjectsAdd1.Visible = false;
             studentsAdd1.Visible = false;
-            if (type >= 0)
+            if (id >= 0)
             {
                 entity = controller.FindTeacher(id.ToString());
                 teachersAdd1.TbID.Text = entity[0];
@@ -108,7 +108,7 @@ namespace SimplyTeachingDesktop.Views
             BtnSave.Location = new Point(145, 520);
             BtnSave2.Location = new Point(255, 520);
 
-            if(type >= 0)
+            if(id >= 0)
             {
                 entity = controller.FindSubject(id.ToString());
                 subjectsAdd1.TbID.Text = entity[0];
@@ -153,7 +153,22 @@ namespace SimplyTeachingDesktop.Views
             else MessageBox.Show("Parece que ha habido un error al intentar guardar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private bool saveTeacher() { return false; }
-        private bool saveSubject() { return true; }
+        private bool saveSubject() 
+        {
+            string[] subject = new string[5];
+
+            subject[0] = subjectsAdd1.TbID.Text.Trim();
+            subject[1] = subjectsAdd1.TbName.Text.Trim();
+            subject[2] = subjectsAdd1.selectHour1.TbH.Text + subjectsAdd1.selectHour1.TbMin.Text;
+            subject[3] = (subjectsAdd1.CbDay.SelectedIndex + 1).ToString();
+            subject[4] = subjectsAdd1.TbPrice.Text.Trim();
+            for(int i = 0; i < subject.Length; i++)
+            {
+                Console.WriteLine(subject[i]);
+            }
+            return controller.SaveSubject(subject);
+
+        }
         private bool saveStudent() { return true; }
 
         private void addStudent()
@@ -169,7 +184,7 @@ namespace SimplyTeachingDesktop.Views
             {
                 studentsAdd1.CbTutor.Items.Add(teacher);
             }
-            if (type >= 0)
+            if (id >= 0)
             {
                 entity = controller.FindStudent(id.ToString());
                 studentsAdd1.TbID.Text = entity[0];

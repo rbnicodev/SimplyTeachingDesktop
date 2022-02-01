@@ -22,7 +22,7 @@ namespace SimplyTeachingDesktop.Repositories
 
         public Entity Find(int id)
         {
-            SubjectModel entity = new SubjectModel();
+            SubjectModel entity = null;
 
             connection = new MySqlConnection(connectionString);
             query = "SELECT * FROM subjects WHERE id = @id;";
@@ -36,6 +36,7 @@ namespace SimplyTeachingDesktop.Repositories
 
                 if (reader.HasRows)
                 {
+                    entity = new SubjectModel();
                     while (reader.Read())
                     {
                         entity.id = int.Parse(reader.GetString(0));
@@ -107,7 +108,33 @@ namespace SimplyTeachingDesktop.Repositories
 
         public bool Save(Entity entity)
         {
-            throw new NotImplementedException();
+            SubjectModel model = entity as SubjectModel;
+            bool result = false;
+            if (Find(model.id) == null) query = "INSERT INTO subjects (id, name, hour, day, price) VALUES (@id, @name, @hour, @day, @price;";
+            else query = "UPDATE subjects SET name = @name, hour = @hour, day = @day, price = @price WHERE id = @id;";
+
+
+            try
+            {
+                connection = new MySqlConnection(connectionString);
+                command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", model.id);
+                command.Parameters.AddWithValue("@name", model.name);
+                command.Parameters.AddWithValue("@hour", model.hour);
+                command.Parameters.AddWithValue("@day", model.day);
+                command.Parameters.AddWithValue("@price", model.price);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (MySqlException ex) { Console.WriteLine(ex.StackTrace); }
+            catch (Exception e) { Console.WriteLine(e.StackTrace); }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+
+            return result;
         }
 
         public bool TestConnection()
@@ -121,6 +148,10 @@ namespace SimplyTeachingDesktop.Repositories
             }
             catch (AggregateException ex) { Console.WriteLine(ex.StackTrace); }
             catch (Exception ex) { Console.WriteLine(ex.StackTrace); }
+            finally {
+                if (connection != null)
+                    connection.Close();
+            }
 
             return result;
         }

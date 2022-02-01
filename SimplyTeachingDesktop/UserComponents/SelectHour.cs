@@ -23,17 +23,25 @@ namespace SimplyTeachingDesktop.UserComponents
         {
             if (int.Parse(TbH.Text) < 23) TbH.Text = (int.Parse(TbH.Text) + 1).ToString();
             else TbH.Text = "0";
+            if (int.Parse(TbH.Text) < 10) TbH.Text = "0" + TbH.Text;
         }
 
         private void DownHour_Click(object sender, EventArgs e)
         {
             if (int.Parse(TbH.Text) > 0) TbH.Text = (int.Parse(TbH.Text) - 1).ToString();
             else TbH.Text = "23";
+            if (int.Parse(TbH.Text) < 10) TbH.Text = "0" + TbH.Text;
         }
 
         private void UpMin_Click(object sender, EventArgs e)
         {
-
+            if (int.Parse(TbMin.Text) < 23) TbMin.Text = (int.Parse(TbMin.Text) + 1).ToString();
+            else
+            {
+                TbMin.Text = "59";
+                DownHour_Click(null, null);
+            }
+            if (int.Parse(TbMin.Text) < 10) TbMin.Text = "0" + TbMin.Text;
         }
 
         private void DownMin_Click(object sender, EventArgs e)
@@ -44,6 +52,7 @@ namespace SimplyTeachingDesktop.UserComponents
                 TbMin.Text = "59";
                 DownHour_Click(null, null);
             }
+            if (int.Parse(TbMin.Text) < 10) TbMin.Text = "0" + TbMin.Text;
         }
 
         public void setTheme()

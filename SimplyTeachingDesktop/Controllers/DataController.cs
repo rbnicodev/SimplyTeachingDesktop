@@ -108,7 +108,10 @@ namespace SimplyTeachingDesktop
 
         public Boolean SaveStudent(string[] student) { return true; }
 
-        public Boolean SaveSubject(string[] subject) { return true; }
+        public Boolean SaveSubject(string[] subject)
+        {
+            return subjectServer.Save(subject);
+        }
 
         public Boolean SaveTeacher(string[] teacher) { return true; }
         public Boolean DeleteStudent(string id) { return true; ; }
