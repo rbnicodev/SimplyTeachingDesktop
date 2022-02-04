@@ -83,6 +83,7 @@
             this.TbID.ForeColor = System.Drawing.Color.White;
             this.TbID.Location = new System.Drawing.Point(158, 2);
             this.TbID.Name = "TbID";
+            this.TbID.ReadOnly = true;
             this.TbID.Size = new System.Drawing.Size(258, 29);
             this.TbID.TabIndex = 0;
             // 

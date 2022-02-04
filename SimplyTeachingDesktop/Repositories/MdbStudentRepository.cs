@@ -12,7 +12,7 @@ namespace SimplyTeachingDesktop
  
     internal class MdbStudentRepository : Repository
     {
-        private readonly string connectionString = "datasource=localhost;port=3306;username=root;password=bitnami;database=SimplyTeaching;";
+        private readonly string connectionString = EnvironmentVars.UrlConnection;
         private MySqlConnection connection = null;
         private MySqlCommand command = null;
         string query = null;

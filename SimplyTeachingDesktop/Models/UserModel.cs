@@ -8,6 +8,7 @@ namespace SimplyTeachingDesktop
 {
     public class UserModel : Entity
     {
+        public int id;
         public string user;
         public string password;
     }

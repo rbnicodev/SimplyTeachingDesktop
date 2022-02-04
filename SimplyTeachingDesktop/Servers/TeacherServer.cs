@@ -75,5 +75,25 @@ namespace SimplyTeachingDesktop.Servers
 
             return teachers;
         }
+
+        public bool Save(string[] teacher)
+        {
+            TeacherModel model = new TeacherModel();
+            int aux;
+            int.TryParse(teacher[0], out aux);
+            model.id = aux;
+            model.dni = teacher[1];
+            model.name = teacher[2];
+            model.last_name_1 = teacher[3];
+            model.last_name_2 = teacher[4];
+            model.post_address = teacher[5];
+            if (int.TryParse(teacher[6], out aux)) model.seg_social = aux;
+            if (int.TryParse(teacher[7], out aux)) model.tel_1 = aux;
+            if (int.TryParse(teacher[8], out aux)) model.tel_2 = aux;
+            model.email = teacher[9];
+
+            return repository.Save(model);
+
+        }
     }
 }

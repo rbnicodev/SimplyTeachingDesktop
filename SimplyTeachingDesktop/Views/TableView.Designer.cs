@@ -33,8 +33,6 @@ namespace SimplyTeachingDesktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableView));
             this.dataTable = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
             this.BtnEdit = new System.Windows.Forms.PictureBox();
             this.BtnAdd = new System.Windows.Forms.PictureBox();
@@ -46,6 +44,8 @@ namespace SimplyTeachingDesktop
             this.BtnAsignaturas = new System.Windows.Forms.Button();
             this.BtnAlumnos = new System.Windows.Forms.Button();
             this.teacherPanel1 = new SimplyTeachingDesktop.TeacherPanel();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).BeginInit();
@@ -91,16 +91,6 @@ namespace SimplyTeachingDesktop
             this.dataTable.Size = new System.Drawing.Size(471, 443);
             this.dataTable.TabIndex = 3;
             this.dataTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataTable_CellMouseClick);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
             // 
             // LbSimplyTeaching
             // 
@@ -159,7 +149,7 @@ namespace SimplyTeachingDesktop
             this.studentsPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.studentsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.studentsPanel1.Location = new System.Drawing.Point(500, 83);
-            this.studentsPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.studentsPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.studentsPanel1.Name = "studentsPanel1";
             this.studentsPanel1.Size = new System.Drawing.Size(450, 447);
             this.studentsPanel1.TabIndex = 14;
@@ -253,6 +243,17 @@ namespace SimplyTeachingDesktop
             this.teacherPanel1.Size = new System.Drawing.Size(461, 447);
             this.teacherPanel1.TabIndex = 13;
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
             // TableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -311,11 +312,11 @@ namespace SimplyTeachingDesktop
         private StudentsPanel studentsPanel1;
         private SubjectPanel subjectPanel1;
         private System.Windows.Forms.Label BtnBack;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Nombre;
         private Button BtnProfesores;
         private Button BtnAsignaturas;
         private Button BtnAlumnos;
         private TeacherPanel teacherPanel1;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Nombre;
     }
 }

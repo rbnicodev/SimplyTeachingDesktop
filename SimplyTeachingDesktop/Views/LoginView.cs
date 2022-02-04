@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using SimplyTeachingDesktop.Views;
 
 namespace SimplyTeachingDesktop
 {
@@ -15,6 +16,8 @@ namespace SimplyTeachingDesktop
         DataController controller;
         public LoginView()
         {
+            //PruebaFlow pruebaFlow = new PruebaFlow();
+            //pruebaFlow.ShowDialog();
             InitializeComponent();
             controller = ControllerBuilder.GetController();
             BtnExit.Location = new Point(this.Width - 30, 0);
@@ -85,7 +88,7 @@ namespace SimplyTeachingDesktop
         {
             if(controller.TestConnection())
             {
-                if (/*dataController.Login(TbUser.Text.Trim(), TbPass.Text.Trim())*/true)
+                if (controller.Login(TbUser.Text.Trim(), TbPass.Text.Trim()))
                 {
                     TableView teachersView = new TableView();
                     teachersView.Show();

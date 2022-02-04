@@ -40,7 +40,7 @@ namespace SimplyTeachingDesktop.Servers
             string[] result = new string[10];
             result[0] = model.id.ToString();
             result[1] = model.name;
-            result[2] = (model.hour / 100).ToString() + ":" + (model.hour % 100).ToString() + "h";
+            result[2] = model.hour.Substring(0, model.hour.Length - 3);
             switch(model.day)
             {
                 case 1: result[3] = "Lunes"; break;
@@ -58,15 +58,22 @@ namespace SimplyTeachingDesktop.Servers
         public bool Save(string[] subject)
         {
             SubjectModel model = new SubjectModel();
-
-            model.id = int.Parse(subject[0]);
+            int aux;
+            double aux2;
+            if (int.TryParse(subject[0], out aux))
+                model.id = aux;
             model.name = subject[1];
-            model.hour = int.Parse(subject[2]);
-            model.day = int.Parse(subject[3]);
-            model.price = double.Parse(subject[4]);
+            model.hour = subject[2];
+            if (int.TryParse(subject[3], out aux)) model.day = aux;
+            if (double.TryParse(subject[4], out aux2)) model.price = aux2;
 
             return repository.Save(model);
 
+        }
+
+        public bool Delete(string id)
+        {
+            return repository.Delete(repository.Find(int.Parse(id)));
         }
     }
 }

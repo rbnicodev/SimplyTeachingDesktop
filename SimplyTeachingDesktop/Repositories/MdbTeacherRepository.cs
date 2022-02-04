@@ -10,7 +10,7 @@ namespace SimplyTeachingDesktop
 {
     internal class MdbTeacherRepository : Repository
     {
-        private readonly string connectionString = "datasource=localhost;port=3306;username=root;password=bitnami;database=SimplyTeaching;";
+        private readonly string connectionString = EnvironmentVars.UrlConnection;
         private MySqlConnection connection = null;
         private MySqlCommand command = null;
         private MySqlDataReader reader = null;
@@ -121,7 +121,43 @@ namespace SimplyTeachingDesktop
 
         public bool Save(Entity entity)
         {
-            throw new NotImplementedException();
+            connection = new MySqlConnection(connectionString);
+            command = new MySqlCommand(query, connection);
+            TeacherModel model = entity as TeacherModel;
+            bool result = false;
+            if (Find(model.id) == null) query = "INSERT INTO teachers (dni, name, last_name_1, last_name_2, post_address, seg_social, tel_1, tel_2, email) VALUES (@dni, @name, @last_name_1, @last_name_2, @post_address, @seg_social, @tel_1, @tel_2, @email);";
+            else
+            {
+                query = "UPDATE teachers SET dni = @dni, name = @name, last_name_1 = @last_name_1, last_name_2 = @last_name_2, post_address = @post_address, seg_social = @seg_social, tel_1 = @tel_1, tel_2 = @tel_2, email = @email WHERE id = @id";
+            }
+
+            try { command.Parameters.AddWithValue("@id", model.id); } catch (Exception ex) { }
+            command.Parameters.AddWithValue("@dni", model.dni);
+            command.Parameters.AddWithValue("@name", model.name);
+            command.Parameters.AddWithValue("@last_name_1", model.last_name_1);
+            command.Parameters.AddWithValue("@last_name_2", model.last_name_2);
+            command.Parameters.AddWithValue("@post_address", model.post_address);
+            command.Parameters.AddWithValue("@seg_social", model.seg_social);
+            command.Parameters.AddWithValue("@tel_1", model.tel_1);
+            command.Parameters.AddWithValue("@tel_2", model.tel_2);
+            command.Parameters.AddWithValue("@email", model.email);
+
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException ex) { Console.WriteLine(ex.StackTrace + "NO VAAAAA"); }
+            catch (Exception e) { Console.WriteLine(e.StackTrace); }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+
+            return result;
         }
 
         public bool TestConnection()

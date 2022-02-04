@@ -9,7 +9,7 @@ namespace SimplyTeachingDesktop.Repositories
 {
     internal class MdbUserRepository : Repository
     {
-        private readonly string connectionString = "datasource=localhost;port=3306;username=root;password=bitnami;database=SimplyTeaching;";
+        private readonly string connectionString = EnvironmentVars.UrlConnection;
         private MySqlConnection connection = null;
         private MySqlCommand command = null;
         private MySqlDataReader reader = null;
@@ -21,12 +21,73 @@ namespace SimplyTeachingDesktop.Repositories
 
         public Entity Find(int id)
         {
-            throw new NotImplementedException();
+            UserModel entity = new UserModel();
+
+            connection = new MySqlConnection(connectionString);
+            query = "SELECT * FROM users WHERE id = @id;";
+            command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                connection.Open();
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        entity.id = int.Parse(reader.GetString(0));
+                        entity.user = reader.GetString(1);
+                        entity.password = reader.GetString(2);
+                    }
+                }
+            }
+            catch (MySqlException ex) { }
+            return entity;
         }
 
         public List<Entity> FindAll()
         {
-            throw new NotImplementedException();
+            List<Entity> list = new List<Entity>();
+            UserModel entity = new UserModel();
+
+            connection = new MySqlConnection(connectionString);
+            query = "SELECT * FROM users";
+            command = connection.CreateCommand();
+            command.CommandText = query;
+
+            try
+            {
+                connection.Open();
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        entity = new UserModel();
+                        entity.id = int.Parse(reader.GetString(0));
+                        entity.user = reader.GetString(1);
+                        entity.password = reader.GetString(2);
+
+                        list.Add(entity);
+                        entity = null;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("MdbTeacherRepository\n" + ex.Message);
+            }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+
+
+            return list;
         }
 
         public bool Save(Entity entity)
@@ -49,5 +110,6 @@ namespace SimplyTeachingDesktop.Repositories
 
             return result;
         }
+
     }
 }

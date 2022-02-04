@@ -33,11 +33,7 @@ namespace SimplyTeachingDesktop
 
         public Boolean Login(string user, string pass)
         {
-            //TO-DO
-            //userServer.Login(user, pass);
-            //
-            //
-            return true;
+            return userServer.Login(user, pass);
         }
         
 
@@ -108,14 +104,11 @@ namespace SimplyTeachingDesktop
 
         public Boolean SaveStudent(string[] student) { return true; }
 
-        public Boolean SaveSubject(string[] subject)
-        {
-            return subjectServer.Save(subject);
-        }
+        public Boolean SaveSubject(string[] subject) { return subjectServer.Save(subject); }
 
-        public Boolean SaveTeacher(string[] teacher) { return true; }
+        public Boolean SaveTeacher(string[] teacher) { return teacherServer.Save(teacher); }
         public Boolean DeleteStudent(string id) { return true; ; }
-        public Boolean DeleteSubject(string id) { return true; }
+        public Boolean DeleteSubject(string id) { return subjectServer.Delete(id); }
         public Boolean DeleteTeacher(string id) { return true; }
         public List<string> FindAllTeachers() { return teacherServer.FindAll(); }
 

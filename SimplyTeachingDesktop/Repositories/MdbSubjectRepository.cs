@@ -9,7 +9,7 @@ namespace SimplyTeachingDesktop.Repositories
 {
     internal class MdbSubjectRepository : Repository
     {
-        private readonly string connectionString = "datasource=localhost;port=3306;username=root;password=bitnami;database=SimplyTeaching;";
+        private readonly string connectionString = EnvironmentVars.UrlConnection;
         private MySqlConnection connection = null;
         private MySqlCommand command = null;
         private MySqlDataReader reader = null;
@@ -17,7 +17,27 @@ namespace SimplyTeachingDesktop.Repositories
         string query = null;
         public bool Delete(Entity entity)
         {
-            throw new NotImplementedException();
+            SubjectModel model = entity as SubjectModel;
+            bool result = false;
+
+            connection = new MySqlConnection(connectionString);
+            query = "DELETE FROM subjects WHERE id = @id;";
+            command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@id", model.id);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException e) { Console.WriteLine(e.Message); }
+            catch (Exception e) { Console.WriteLine(e.Message); }
+            finally
+            {
+                if (connection != null) { connection.Close(); }
+            }
+            return result;
         }
 
         public Entity Find(int id)
@@ -41,7 +61,7 @@ namespace SimplyTeachingDesktop.Repositories
                     {
                         entity.id = int.Parse(reader.GetString(0));
                         entity.name = reader.GetString(1);
-                        entity.hour = int.Parse(reader.GetString(2));
+                        entity.hour = reader.GetString(2);
                         entity.day = int.Parse(reader.GetString(3));
                         entity.price = double.Parse(reader.GetString(4));
                     }
@@ -83,7 +103,7 @@ namespace SimplyTeachingDesktop.Repositories
                         entity = new SubjectModel();
                         entity.id = int.Parse(reader.GetString(0));
                         entity.name = reader.GetString(1);
-                        entity.hour = int.Parse(reader.GetString(2));
+                        entity.hour = reader.GetString(2);
                         entity.day = int.Parse(reader.GetString(3));
                         entity.price = double.Parse(reader.GetString(4));
                         
@@ -110,7 +130,8 @@ namespace SimplyTeachingDesktop.Repositories
         {
             SubjectModel model = entity as SubjectModel;
             bool result = false;
-            if (Find(model.id) == null) query = "INSERT INTO subjects VALUES (@id, @name, @hour, @day, @price);";
+            SubjectModel findModel = Find(model.id) as SubjectModel;
+            if (findModel == null) query = "INSERT INTO subjects VALUES (@id, @name, @hour, @day, @price);";
             else query = "UPDATE subjects SET name = @name, hour = @hour, day = @day, price = @price WHERE id = @id;";
             connection = new MySqlConnection(connectionString);
             command = new MySqlCommand(query, connection);

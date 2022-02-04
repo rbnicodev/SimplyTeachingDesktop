@@ -39,7 +39,10 @@ namespace SimplyTeachingDesktop.Views
         public void Init()
         {
             controller = ControllerBuilder.GetController();
-            if (id < 0) BtnDelete.Enabled = false;
+            if (id < 0)
+            {
+                BtnDelete.Enabled = false;
+            }
             switch(type)
             {
                 case 0: addTeacher(); break;
@@ -114,8 +117,8 @@ namespace SimplyTeachingDesktop.Views
                 subjectsAdd1.TbID.Text = entity[0];
                 subjectsAdd1.TbName.Text = entity[1];
                 Console.WriteLine(entity[2]);
-                subjectsAdd1.selectHour1.TbH.Text = (int.Parse(entity[2].Replace(":", "").Replace("h", "")) / 100).ToString();
-                subjectsAdd1.selectHour1.TbMin.Text = (int.Parse(entity[2].Replace(":", "").Replace("h", "")) % 100).ToString();
+                subjectsAdd1.selectHour1.TbH.Text = entity[2].Substring(0, entity[2].Length - 3);
+                subjectsAdd1.selectHour1.TbMin.Text = entity[2].Substring(3);
                 subjectsAdd1.CbDay.Text = entity[3];
                 subjectsAdd1.TbPrice.Text = entity[4];
             }
@@ -152,20 +155,42 @@ namespace SimplyTeachingDesktop.Views
             if(result) this.DialogResult = DialogResult.OK;
             else MessageBox.Show("Parece que ha habido un error al intentar guardar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
-        private bool saveTeacher() { return false; }
+        private bool saveTeacher()
+        {
+            string[] teacher = new string[10];
+            int aux;
+            teacher[0] = teachersAdd1.TbID.Text.Trim();
+            teacher[1] = teachersAdd1.TbDNI.Text.Trim();
+            teacher[2] = teachersAdd1.TbName.Text.Trim();
+            teacher[3] = teachersAdd1.TbLastname1.Text.Trim();
+            teacher[4] = teachersAdd1.TbLastName2.Text.Trim();
+            teacher[5] = teachersAdd1.TbDir.Text.Trim();
+            if (int.TryParse(teachersAdd1.TbSegSocial.Text.Trim(), out aux))
+                teacher[6] = aux.ToString();
+            else
+                teacher[6] = "";
+            if (int.TryParse(teachersAdd1.TbTel1.Text.Trim(), out aux))
+                teacher[7] = aux.ToString();
+            else
+                teacher[7] = "";
+            if (int.TryParse(teachersAdd1.TbTel2.Text.Trim(), out aux))
+                teacher[8] = aux.ToString();
+            else
+                teacher[8] = "";
+            teacher[9] = teachersAdd1.TbEmail.Text.Trim();
+
+            return controller.SaveTeacher(teacher);
+        }
         private bool saveSubject() 
         {
             string[] subject = new string[5];
 
-            subject[0] = subjectsAdd1.TbID.Text.Trim();
-            subject[1] = subjectsAdd1.TbName.Text.Trim();
-            subject[2] = subjectsAdd1.selectHour1.TbH.Text + subjectsAdd1.selectHour1.TbMin.Text;
+            subject[0] = subjectsAdd1.TbID.Text;
+            subject[1] = subjectsAdd1.TbName.Text;
+            subject[2] = subjectsAdd1.selectHour1.TbH.Text + subjectsAdd1.selectHour1.TbMin.Text + "00";
             subject[3] = (subjectsAdd1.CbDay.SelectedIndex + 1).ToString();
-            subject[4] = subjectsAdd1.TbPrice.Text.Trim();
-            for(int i = 0; i < subject.Length; i++)
-            {
-                Console.WriteLine(subject[i]);
-            }
+            subject[4] = subjectsAdd1.TbPrice.Text;
+            Console.WriteLine("VENTANAAAAAAA : " + subject[4]);
             return controller.SaveSubject(subject);
 
         }

@@ -76,7 +76,7 @@ namespace SimplyTeachingDesktop
             dataTable.BorderStyle = BorderStyle.None;
             dataTable.Width = this.Width / 2 - 12;
             dataTable.Height = this.Height - 40;
-            dataTable.Columns[1].Width = dataTable.Width - dataTable.Columns[0].Width -2;
+            dataTable.Columns[1].Width = dataTable.Width -2;/* - dataTable.Columns[0].Width -2;*/
             dataTable.EnableHeadersVisualStyles = false;
             dataTable.RowHeadersVisible = false;
             dataTable.ColumnHeadersVisible = false;

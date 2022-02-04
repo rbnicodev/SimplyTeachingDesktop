@@ -17,5 +17,19 @@ namespace SimplyTeachingDesktop.Servers
             if (repository.TestConnection()) result = true;
             return result;
         }
+        public bool Login(string user, string pass)
+        {
+            bool result = false;
+
+            List<Entity> users = repository.FindAll();
+
+            foreach (Entity entity in users)
+            {
+                UserModel userModel = entity as UserModel;
+                if (userModel.user.Equals(user) && userModel.password.Equals(pass))
+                    result = true;
+            }
+            return result;
+        }
     }
 }

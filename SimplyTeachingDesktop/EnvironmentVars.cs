@@ -21,6 +21,8 @@ namespace SimplyTeachingDesktop
         public static Color colorResalt = Color.FromArgb(255, 0, 120, 215);
         public static Color colorResaltLow = Color.FromArgb(255, 0, 100, 195);
 
+        public static string UrlConnection = "datasource=localhost;port=3306;username=root;password=bitnami;database=SimplyTeaching;";
+
 
         public static void SetNight(Boolean activeNight)
         {
