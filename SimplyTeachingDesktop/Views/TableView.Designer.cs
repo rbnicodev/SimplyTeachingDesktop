@@ -33,6 +33,8 @@ namespace SimplyTeachingDesktop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TableView));
             this.dataTable = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
             this.BtnEdit = new System.Windows.Forms.PictureBox();
             this.BtnAdd = new System.Windows.Forms.PictureBox();
@@ -44,11 +46,14 @@ namespace SimplyTeachingDesktop
             this.BtnAsignaturas = new System.Windows.Forms.Button();
             this.BtnAlumnos = new System.Windows.Forms.Button();
             this.teacherPanel1 = new SimplyTeachingDesktop.TeacherPanel();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HelpPanel = new System.Windows.Forms.Panel();
+            this.LbHelp = new System.Windows.Forms.Label();
+            this.BtnHelpAdd = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).BeginInit();
+            this.HelpPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnHelpAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnMinimize
@@ -91,6 +96,17 @@ namespace SimplyTeachingDesktop
             this.dataTable.Size = new System.Drawing.Size(471, 443);
             this.dataTable.TabIndex = 3;
             this.dataTable.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataTable_CellMouseClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
             // 
             // LbSimplyTeaching
             // 
@@ -243,22 +259,47 @@ namespace SimplyTeachingDesktop
             this.teacherPanel1.Size = new System.Drawing.Size(461, 447);
             this.teacherPanel1.TabIndex = 13;
             // 
-            // Id
+            // HelpPanel
             // 
-            this.Id.HeaderText = "";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
+            this.HelpPanel.Controls.Add(this.LbHelp);
+            this.HelpPanel.Controls.Add(this.BtnHelpAdd);
+            this.HelpPanel.Location = new System.Drawing.Point(32, 292);
+            this.HelpPanel.Name = "HelpPanel";
+            this.HelpPanel.Size = new System.Drawing.Size(396, 95);
+            this.HelpPanel.TabIndex = 20;
+            this.HelpPanel.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // Nombre
+            // LbHelp
             // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
+            this.LbHelp.AutoSize = true;
+            this.LbHelp.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbHelp.ForeColor = System.Drawing.Color.White;
+            this.LbHelp.Location = new System.Drawing.Point(96, 30);
+            this.LbHelp.Name = "LbHelp";
+            this.LbHelp.Size = new System.Drawing.Size(220, 37);
+            this.LbHelp.TabIndex = 10;
+            this.LbHelp.Text = "Añadir Profesor";
+            this.LbHelp.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // BtnHelpAdd
+            // 
+            this.BtnHelpAdd.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.BtnHelpAdd.Image = ((System.Drawing.Image)(resources.GetObject("BtnHelpAdd.Image")));
+            this.BtnHelpAdd.Location = new System.Drawing.Point(19, 17);
+            this.BtnHelpAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnHelpAdd.Name = "BtnHelpAdd";
+            this.BtnHelpAdd.Size = new System.Drawing.Size(57, 59);
+            this.BtnHelpAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.BtnHelpAdd.TabIndex = 9;
+            this.BtnHelpAdd.TabStop = false;
+            this.BtnHelpAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // TableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 585);
+            this.Controls.Add(this.HelpPanel);
             this.Controls.Add(this.BtnAlumnos);
             this.Controls.Add(this.BtnAsignaturas);
             this.Controls.Add(this.BtnProfesores);
@@ -295,9 +336,13 @@ namespace SimplyTeachingDesktop
             this.Controls.SetChildIndex(this.BtnMinimize, 0);
             this.Controls.SetChildIndex(this.BtnMaximize, 0);
             this.Controls.SetChildIndex(this.BtnExit, 0);
+            this.Controls.SetChildIndex(this.HelpPanel, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BtnAdd)).EndInit();
+            this.HelpPanel.ResumeLayout(false);
+            this.HelpPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BtnHelpAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,5 +363,8 @@ namespace SimplyTeachingDesktop
         private TeacherPanel teacherPanel1;
         private DataGridViewTextBoxColumn Id;
         private DataGridViewTextBoxColumn Nombre;
+        private Panel HelpPanel;
+        private Label LbHelp;
+        protected PictureBox BtnHelpAdd;
     }
 }

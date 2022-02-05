@@ -43,6 +43,7 @@ namespace SimplyTeachingDesktop
             BtnAsignaturas.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width), 32);
             BtnAlumnos.Width = (this.Width / 2 - 12) / 3;
             BtnAlumnos.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width * 2), 32);
+            HelpPanel.Location = new Point(32, this.Height / 2);
         }
 
         private void Form_Load(object sender, EventArgs e)
@@ -124,6 +125,7 @@ namespace SimplyTeachingDesktop
             BtnAlumnos.BackColor = EnvironmentVars.color4;
             backColor = ((Button)sender).BackColor;
             LbEntity.Text = "Profesores";
+            LbHelp.Text = "Añadir Profesor";
             type = 0;
             ReloadTable();
             teacherPanel1.Visible = true;
@@ -138,6 +140,7 @@ namespace SimplyTeachingDesktop
             BtnAlumnos.BackColor = EnvironmentVars.color4;
             backColor = ((Button)sender).BackColor;
             LbEntity.Text = "Asignaturas";
+            LbHelp.Text = "Añadir Asignatura";
             type = 1;
             studentsPanel1.Visible = false;
             teacherPanel1.Visible = false;
@@ -152,6 +155,7 @@ namespace SimplyTeachingDesktop
             BtnAlumnos.BackColor = EnvironmentVars.color6;
             backColor = ((Button)sender).BackColor;
             LbEntity.Text = "Alumnos";
+            LbHelp.Text = "Añadir Alumno";
             type = 2;
             studentsPanel1.Visible = true;
             teacherPanel1.Visible = false;
@@ -200,6 +204,10 @@ namespace SimplyTeachingDesktop
                 }
             }
             Data_Panel();
+            if (dataTable.Rows.Count == 0)
+                HelpPanel.Visible = true;
+            else
+                HelpPanel.Visible = false;
 
         }
 
@@ -214,6 +222,8 @@ namespace SimplyTeachingDesktop
             this.BackColor = EnvironmentVars.color6;
             LbEntity.ForeColor = EnvironmentVars.color1;
             LbSimplyTeaching.ForeColor = EnvironmentVars.color1;
+            this.HelpPanel.BackColor = EnvironmentVars.color6;
+            LbHelp.ForeColor = EnvironmentVars.color1;
 
             Bitmap image2 = null;
             if (EnvironmentVars.night)
@@ -226,6 +236,8 @@ namespace SimplyTeachingDesktop
             }
             this.BtnAdd.Dock = DockStyle.None;
             this.BtnAdd.Image = (Image)image2;
+            this.BtnHelpAdd.Dock = DockStyle.None;
+            this.BtnHelpAdd.Image = (Image)image2;
             image2 = null;
 
             Bitmap image = null;
