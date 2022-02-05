@@ -140,7 +140,40 @@ namespace SimplyTeachingDesktop
 
         public bool Save(Entity entity)
         {
-            throw new NotImplementedException();
+            connection = new MySqlConnection(connectionString);
+            StudentModel model = entity as StudentModel;
+            bool result = false;
+            if (model.id == 0) query = "INSERT INTO students VALUES (@id, @name, @last_name_1, @last_name_2, @post_address, @tel_1, @tel_2, @email, @teacher_id)";
+            else query = "UPDATE students SET name = @name, last_name_1 = @last_name_1, last_name_2 = @last_name_2, post_address = @post_address, tel_1 = @tel_1, tel_2 = @tel_2, email = @email, teacher_id = @teacher_id WHERE id = @id;";
+
+            command = new MySqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@id", model.id);
+            command.Parameters.AddWithValue("@name", model.name);
+            command.Parameters.AddWithValue("@last_name_1", model.last_name_1);
+            command.Parameters.AddWithValue("@last_name_2", model.last_name_2);
+            command.Parameters.AddWithValue("@post_address", model.post_address);
+            command.Parameters.AddWithValue("@tel_1", model.tel_1);
+            command.Parameters.AddWithValue("@tel_2", model.tel_2);
+            command.Parameters.AddWithValue("@email", model.email);
+            command.Parameters.AddWithValue("@teacher_id", model.tutor_id);
+
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException ex) { Console.WriteLine("\n\n\nSTUDENT REPOSITORY Save()\n" + ex.StackTrace); }
+            catch (Exception e) { Console.WriteLine("\n\n\nSTUDENT REPOSITORY Save()\n" + e.StackTrace); }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+
+            return result;
         }
 
         public bool TestConnection()

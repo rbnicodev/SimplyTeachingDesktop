@@ -205,7 +205,7 @@ namespace SimplyTeachingDesktop.Views
             student[6] = studentsAdd1.TbTel2.Text;
             student[7] = studentsAdd1.TbEmail.Text;
             string[] teacher = studentsAdd1.CbTutor.Text.Split(' ');
-            student[8] = controller.FindTeacherByName(teacher[0])[0];
+            try { student[8] = controller.FindTeacherByName(teacher[0])[0]; } catch (Exception e) { };
             return controller.SaveStudent(student);
 
         }
