@@ -46,7 +46,7 @@
             this.TbPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbPrice.ForeColor = System.Drawing.Color.White;
-            this.TbPrice.Location = new System.Drawing.Point(158, 362);
+            this.TbPrice.Location = new System.Drawing.Point(158, 315);
             this.TbPrice.Name = "TbPrice";
             this.TbPrice.Size = new System.Drawing.Size(258, 29);
             this.TbPrice.TabIndex = 4;
@@ -58,7 +58,7 @@
             this.LbPrice.AutoSize = true;
             this.LbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbPrice.ForeColor = System.Drawing.Color.White;
-            this.LbPrice.Location = new System.Drawing.Point(47, 362);
+            this.LbPrice.Location = new System.Drawing.Point(47, 315);
             this.LbPrice.Name = "LbPrice";
             this.LbPrice.Size = new System.Drawing.Size(56, 21);
             this.LbPrice.TabIndex = 53;
@@ -70,7 +70,7 @@
             this.TbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbName.ForeColor = System.Drawing.Color.White;
-            this.TbName.Location = new System.Drawing.Point(158, 92);
+            this.TbName.Location = new System.Drawing.Point(158, 45);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(258, 29);
             this.TbName.TabIndex = 1;
@@ -87,6 +87,7 @@
             this.TbID.ReadOnly = true;
             this.TbID.Size = new System.Drawing.Size(258, 29);
             this.TbID.TabIndex = 0;
+            this.TbID.Visible = false;
             // 
             // LbDay
             // 
@@ -95,7 +96,7 @@
             this.LbDay.AutoSize = true;
             this.LbDay.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbDay.ForeColor = System.Drawing.Color.White;
-            this.LbDay.Location = new System.Drawing.Point(47, 272);
+            this.LbDay.Location = new System.Drawing.Point(47, 225);
             this.LbDay.Name = "LbDay";
             this.LbDay.Size = new System.Drawing.Size(36, 21);
             this.LbDay.TabIndex = 40;
@@ -108,7 +109,7 @@
             this.LbHour.AutoSize = true;
             this.LbHour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbHour.ForeColor = System.Drawing.Color.White;
-            this.LbHour.Location = new System.Drawing.Point(47, 182);
+            this.LbHour.Location = new System.Drawing.Point(47, 135);
             this.LbHour.Name = "LbHour";
             this.LbHour.Size = new System.Drawing.Size(47, 21);
             this.LbHour.TabIndex = 39;
@@ -121,7 +122,7 @@
             this.LbName.AutoSize = true;
             this.LbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbName.ForeColor = System.Drawing.Color.White;
-            this.LbName.Location = new System.Drawing.Point(47, 92);
+            this.LbName.Location = new System.Drawing.Point(47, 45);
             this.LbName.Name = "LbName";
             this.LbName.Size = new System.Drawing.Size(71, 21);
             this.LbName.TabIndex = 38;
@@ -139,6 +140,7 @@
             this.LbID.Size = new System.Drawing.Size(28, 21);
             this.LbID.TabIndex = 37;
             this.LbID.Text = "ID:";
+            this.LbID.Visible = false;
             // 
             // CbDay
             // 
@@ -150,7 +152,7 @@
             "Miércoles",
             "Jueves",
             "Viernes"});
-            this.CbDay.Location = new System.Drawing.Point(158, 272);
+            this.CbDay.Location = new System.Drawing.Point(158, 225);
             this.CbDay.Name = "CbDay";
             this.CbDay.Size = new System.Drawing.Size(258, 21);
             this.CbDay.TabIndex = 3;
@@ -158,7 +160,7 @@
             // selectHour1
             // 
             this.selectHour1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.selectHour1.Location = new System.Drawing.Point(158, 170);
+            this.selectHour1.Location = new System.Drawing.Point(158, 123);
             this.selectHour1.Name = "selectHour1";
             this.selectHour1.Size = new System.Drawing.Size(165, 53);
             this.selectHour1.TabIndex = 2;

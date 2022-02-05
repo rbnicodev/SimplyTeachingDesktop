@@ -60,6 +60,7 @@
             this.LbID.Size = new System.Drawing.Size(28, 21);
             this.LbID.TabIndex = 0;
             this.LbID.Text = "ID:";
+            this.LbID.Visible = false;
             // 
             // LbName
             // 
@@ -68,7 +69,7 @@
             this.LbName.AutoSize = true;
             this.LbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbName.ForeColor = System.Drawing.Color.White;
-            this.LbName.Location = new System.Drawing.Point(50, 92);
+            this.LbName.Location = new System.Drawing.Point(50, 42);
             this.LbName.Name = "LbName";
             this.LbName.Size = new System.Drawing.Size(71, 21);
             this.LbName.TabIndex = 1;
@@ -81,7 +82,7 @@
             this.LbLastName1.AutoSize = true;
             this.LbLastName1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbLastName1.ForeColor = System.Drawing.Color.White;
-            this.LbLastName1.Location = new System.Drawing.Point(50, 182);
+            this.LbLastName1.Location = new System.Drawing.Point(50, 135);
             this.LbLastName1.Name = "LbLastName1";
             this.LbLastName1.Size = new System.Drawing.Size(97, 21);
             this.LbLastName1.TabIndex = 2;
@@ -94,7 +95,7 @@
             this.LbLastName2.AutoSize = true;
             this.LbLastName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbLastName2.ForeColor = System.Drawing.Color.White;
-            this.LbLastName2.Location = new System.Drawing.Point(50, 272);
+            this.LbLastName2.Location = new System.Drawing.Point(50, 228);
             this.LbLastName2.Name = "LbLastName2";
             this.LbLastName2.Size = new System.Drawing.Size(90, 21);
             this.LbLastName2.TabIndex = 3;
@@ -182,6 +183,7 @@
             this.TbID.ReadOnly = true;
             this.TbID.Size = new System.Drawing.Size(258, 29);
             this.TbID.TabIndex = 9;
+            this.TbID.Visible = false;
             // 
             // TbName
             // 
@@ -189,7 +191,7 @@
             this.TbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbName.ForeColor = System.Drawing.Color.White;
-            this.TbName.Location = new System.Drawing.Point(161, 92);
+            this.TbName.Location = new System.Drawing.Point(161, 42);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(258, 29);
             this.TbName.TabIndex = 10;
@@ -200,7 +202,7 @@
             this.TbLastname1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbLastname1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLastname1.ForeColor = System.Drawing.Color.White;
-            this.TbLastname1.Location = new System.Drawing.Point(161, 182);
+            this.TbLastname1.Location = new System.Drawing.Point(161, 135);
             this.TbLastname1.Name = "TbLastname1";
             this.TbLastname1.Size = new System.Drawing.Size(258, 29);
             this.TbLastname1.TabIndex = 11;
@@ -211,7 +213,7 @@
             this.TbLastName2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbLastName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLastName2.ForeColor = System.Drawing.Color.White;
-            this.TbLastName2.Location = new System.Drawing.Point(161, 272);
+            this.TbLastName2.Location = new System.Drawing.Point(161, 228);
             this.TbLastName2.Name = "TbLastName2";
             this.TbLastName2.Size = new System.Drawing.Size(258, 29);
             this.TbLastName2.TabIndex = 12;

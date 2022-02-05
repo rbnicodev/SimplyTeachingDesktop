@@ -36,4 +36,3 @@ C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.UserComponents.TeachersAdd.resources
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.Views.AddEditForm.resources
 C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.UserComponents.SubjectsAdd.resources
-C:\Users\ruben\Documents\GitHub\SimplyTeachingDesktop\SimplyTeachingDesktop\obj\Debug\SimplyTeachingDesktop.Views.PruebaFlow.resources
