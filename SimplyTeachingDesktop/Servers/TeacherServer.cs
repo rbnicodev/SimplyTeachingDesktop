@@ -109,7 +109,7 @@ namespace SimplyTeachingDesktop.Servers
 
         public bool Delete(string id)
         {
-            return repository.Delete(repository.Find(int.Parse(id)));
+            return repository.Delete(repository.Find(int.Parse(id.Trim())));
         }
     }
 }
