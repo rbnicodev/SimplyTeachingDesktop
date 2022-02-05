@@ -92,14 +92,18 @@ namespace SimplyTeachingDesktop.Servers
             TeacherModel model = new TeacherModel();
             int aux;
             if(int.TryParse(teacher[0], out aux)) model.id = aux;
+            aux = 0;
             model.dni = teacher[1];
             model.name = teacher[2];
             model.last_name_1 = teacher[3];
             model.last_name_2 = teacher[4];
             model.post_address = teacher[5];
             if (int.TryParse(teacher[6], out aux)) model.seg_social = aux;
+            aux = 0;
             if (int.TryParse(teacher[7], out aux)) model.tel_1 = aux;
+            aux = 0;
             if (int.TryParse(teacher[8], out aux)) model.tel_2 = aux;
+            aux = 0;
             model.email = teacher[9];
 
             return repository.Save(model);

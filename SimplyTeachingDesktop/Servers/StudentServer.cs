@@ -51,6 +51,25 @@ namespace SimplyTeachingDesktop.Servers
             return result;
         }
 
+        public bool Save(string[] student)
+        {
+            StudentModel model = new StudentModel();
+            int aux;
+            if (int.TryParse(student[0], out aux)) model.id = aux;
+            aux = 0;
+            model.name = student[1];
+            model.last_name_1 = student[2];
+            model.last_name_2 = student[3];
+            model.post_address = student[4];
+            if (int.TryParse(student[5], out aux)) model.tel_1 = aux;
+            aux = 0;
+            if (int.TryParse(student[6], out aux)) model.tel_2 = aux;
+            aux = 0;
+            model.email = student[9];
+
+            return studentsRepository.Save(model);
+        }
+
         public bool Delete(string id)
         {
             return studentsRepository.Delete(studentsRepository.Find(int.Parse(id.Trim())));

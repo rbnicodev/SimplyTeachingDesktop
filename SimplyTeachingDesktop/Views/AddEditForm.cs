@@ -192,7 +192,23 @@ namespace SimplyTeachingDesktop.Views
             return controller.SaveSubject(subject);
 
         }
-        private bool saveStudent() { return true; }
+        private bool saveStudent()
+        {
+            string[] student = new string[9];
+
+            student[0] = studentsAdd1.TbID.Text;
+            student[1] = studentsAdd1.TbName.Text;
+            student[2] = studentsAdd1.TbLastname1.Text;
+            student[3] = studentsAdd1.TbLastName2.Text;
+            student[4] = studentsAdd1.TbDir.Text;
+            student[5] = studentsAdd1.TbTel1.Text;
+            student[6] = studentsAdd1.TbTel2.Text;
+            student[7] = studentsAdd1.TbEmail.Text;
+            string[] teacher = studentsAdd1.CbTutor.Text.Split(' ');
+            student[8] = controller.FindTeacherByName(teacher[0])[0];
+            return controller.SaveStudent(student);
+
+        }
 
         private void BtnSave2_Click(object sender, EventArgs e)
         {
