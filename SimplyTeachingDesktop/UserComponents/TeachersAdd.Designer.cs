@@ -35,7 +35,6 @@
             this.TbLastName2 = new System.Windows.Forms.TextBox();
             this.TbLastname1 = new System.Windows.Forms.TextBox();
             this.TbName = new System.Windows.Forms.TextBox();
-            this.TbID = new System.Windows.Forms.TextBox();
             this.LbEmail = new System.Windows.Forms.Label();
             this.LbTel2 = new System.Windows.Forms.Label();
             this.LbTel1 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.TbDNI = new System.Windows.Forms.TextBox();
             this.LbSegSocial = new System.Windows.Forms.Label();
             this.LbDNI = new System.Windows.Forms.Label();
+            this.TbID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TbEmail
@@ -62,7 +62,7 @@
             this.TbEmail.Location = new System.Drawing.Point(557, 272);
             this.TbEmail.Name = "TbEmail";
             this.TbEmail.Size = new System.Drawing.Size(329, 29);
-            this.TbEmail.TabIndex = 32;
+            this.TbEmail.TabIndex = 33;
             // 
             // TbTel2
             // 
@@ -76,7 +76,7 @@
             this.TbTel2.Location = new System.Drawing.Point(557, 182);
             this.TbTel2.Name = "TbTel2";
             this.TbTel2.Size = new System.Drawing.Size(329, 29);
-            this.TbTel2.TabIndex = 31;
+            this.TbTel2.TabIndex = 32;
             // 
             // TbTel1
             // 
@@ -90,7 +90,7 @@
             this.TbTel1.Location = new System.Drawing.Point(557, 92);
             this.TbTel1.Name = "TbTel1";
             this.TbTel1.Size = new System.Drawing.Size(329, 29);
-            this.TbTel1.TabIndex = 30;
+            this.TbTel1.TabIndex = 31;
             // 
             // TbDir
             // 
@@ -104,7 +104,7 @@
             this.TbDir.Location = new System.Drawing.Point(557, 2);
             this.TbDir.Name = "TbDir";
             this.TbDir.Size = new System.Drawing.Size(329, 29);
-            this.TbDir.TabIndex = 29;
+            this.TbDir.TabIndex = 30;
             // 
             // TbLastName2
             // 
@@ -112,7 +112,7 @@
             this.TbLastName2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbLastName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLastName2.ForeColor = System.Drawing.Color.White;
-            this.TbLastName2.Location = new System.Drawing.Point(161, 272);
+            this.TbLastName2.Location = new System.Drawing.Point(161, 227);
             this.TbLastName2.Name = "TbLastName2";
             this.TbLastName2.Size = new System.Drawing.Size(258, 29);
             this.TbLastName2.TabIndex = 28;
@@ -123,7 +123,7 @@
             this.TbLastname1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbLastname1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbLastname1.ForeColor = System.Drawing.Color.White;
-            this.TbLastname1.Location = new System.Drawing.Point(161, 182);
+            this.TbLastname1.Location = new System.Drawing.Point(161, 137);
             this.TbLastname1.Name = "TbLastname1";
             this.TbLastname1.Size = new System.Drawing.Size(258, 29);
             this.TbLastname1.TabIndex = 27;
@@ -134,23 +134,10 @@
             this.TbName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbName.ForeColor = System.Drawing.Color.White;
-            this.TbName.Location = new System.Drawing.Point(161, 92);
+            this.TbName.Location = new System.Drawing.Point(161, 45);
             this.TbName.Name = "TbName";
             this.TbName.Size = new System.Drawing.Size(258, 29);
             this.TbName.TabIndex = 26;
-            // 
-            // TbID
-            // 
-            this.TbID.BackColor = System.Drawing.Color.Black;
-            this.TbID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TbID.Enabled = false;
-            this.TbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbID.ForeColor = System.Drawing.Color.White;
-            this.TbID.Location = new System.Drawing.Point(161, 2);
-            this.TbID.Name = "TbID";
-            this.TbID.ReadOnly = true;
-            this.TbID.Size = new System.Drawing.Size(258, 29);
-            this.TbID.TabIndex = 25;
             // 
             // LbEmail
             // 
@@ -215,7 +202,7 @@
             this.LbLastName2.AutoSize = true;
             this.LbLastName2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbLastName2.ForeColor = System.Drawing.Color.White;
-            this.LbLastName2.Location = new System.Drawing.Point(50, 272);
+            this.LbLastName2.Location = new System.Drawing.Point(50, 227);
             this.LbLastName2.Name = "LbLastName2";
             this.LbLastName2.Size = new System.Drawing.Size(90, 21);
             this.LbLastName2.TabIndex = 20;
@@ -228,7 +215,7 @@
             this.LbLastName1.AutoSize = true;
             this.LbLastName1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbLastName1.ForeColor = System.Drawing.Color.White;
-            this.LbLastName1.Location = new System.Drawing.Point(50, 182);
+            this.LbLastName1.Location = new System.Drawing.Point(50, 137);
             this.LbLastName1.Name = "LbLastName1";
             this.LbLastName1.Size = new System.Drawing.Size(97, 21);
             this.LbLastName1.TabIndex = 19;
@@ -241,7 +228,7 @@
             this.LbName.AutoSize = true;
             this.LbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbName.ForeColor = System.Drawing.Color.White;
-            this.LbName.Location = new System.Drawing.Point(50, 92);
+            this.LbName.Location = new System.Drawing.Point(50, 45);
             this.LbName.Name = "LbName";
             this.LbName.Size = new System.Drawing.Size(71, 21);
             this.LbName.TabIndex = 18;
@@ -259,6 +246,7 @@
             this.LbID.Size = new System.Drawing.Size(28, 21);
             this.LbID.TabIndex = 17;
             this.LbID.Text = "ID:";
+            this.LbID.Visible = false;
             // 
             // TbSegSocial
             // 
@@ -272,7 +260,7 @@
             this.TbSegSocial.Location = new System.Drawing.Point(557, 362);
             this.TbSegSocial.Name = "TbSegSocial";
             this.TbSegSocial.Size = new System.Drawing.Size(329, 29);
-            this.TbSegSocial.TabIndex = 36;
+            this.TbSegSocial.TabIndex = 34;
             // 
             // TbDNI
             // 
@@ -280,10 +268,10 @@
             this.TbDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbDNI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbDNI.ForeColor = System.Drawing.Color.White;
-            this.TbDNI.Location = new System.Drawing.Point(161, 362);
+            this.TbDNI.Location = new System.Drawing.Point(161, 321);
             this.TbDNI.Name = "TbDNI";
             this.TbDNI.Size = new System.Drawing.Size(258, 29);
-            this.TbDNI.TabIndex = 35;
+            this.TbDNI.TabIndex = 29;
             // 
             // LbSegSocial
             // 
@@ -306,11 +294,25 @@
             this.LbDNI.AutoSize = true;
             this.LbDNI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbDNI.ForeColor = System.Drawing.Color.White;
-            this.LbDNI.Location = new System.Drawing.Point(50, 362);
+            this.LbDNI.Location = new System.Drawing.Point(50, 321);
             this.LbDNI.Name = "LbDNI";
             this.LbDNI.Size = new System.Drawing.Size(40, 21);
             this.LbDNI.TabIndex = 33;
             this.LbDNI.Text = "DNI:";
+            // 
+            // TbID
+            // 
+            this.TbID.BackColor = System.Drawing.Color.Black;
+            this.TbID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TbID.Enabled = false;
+            this.TbID.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TbID.ForeColor = System.Drawing.Color.White;
+            this.TbID.Location = new System.Drawing.Point(161, 2);
+            this.TbID.Name = "TbID";
+            this.TbID.ReadOnly = true;
+            this.TbID.Size = new System.Drawing.Size(258, 29);
+            this.TbID.TabIndex = 25;
+            this.TbID.Visible = false;
             // 
             // TeachersAdd
             // 
@@ -353,7 +355,6 @@
         public System.Windows.Forms.TextBox TbLastName2;
         public System.Windows.Forms.TextBox TbLastname1;
         public System.Windows.Forms.TextBox TbName;
-        public System.Windows.Forms.TextBox TbID;
         public System.Windows.Forms.Label LbEmail;
         public System.Windows.Forms.Label LbTel2;
         public System.Windows.Forms.Label LbTel1;
@@ -366,5 +367,6 @@
         public System.Windows.Forms.TextBox TbDNI;
         public System.Windows.Forms.Label LbSegSocial;
         public System.Windows.Forms.Label LbDNI;
+        public System.Windows.Forms.TextBox TbID;
     }
 }
