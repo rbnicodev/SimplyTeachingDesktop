@@ -71,7 +71,7 @@ namespace SimplyTeachingDesktop
             }
             catch (Exception ex)
             {
-                Console.WriteLine("MdbTeacherRepository\n" + ex.Message);
+                Console.WriteLine("\n\n\nTEACHER REPOSITORY Find()\n" + ex.Message);
             }
             finally
             {
@@ -104,15 +104,10 @@ namespace SimplyTeachingDesktop
                     {
                         entity = new TeacherModel();
                         entity.id = int.Parse(reader.GetString(0));
-                        Console.WriteLine(entity.id);
                         entity.dni = reader.GetString(1);
-                        Console.WriteLine(entity.dni);
                         entity.name = reader.GetString(2);
-                        Console.WriteLine(entity.name);
                         entity.last_name_1 = reader.GetString(3);
-                        Console.WriteLine(entity.last_name_1);
                         entity.last_name_2 = reader.GetString(4);
-                        Console.WriteLine(entity.last_name_2);
                         entity.post_address = reader.GetString(5);
                         entity.seg_social = int.Parse(reader.GetString(6));
                         entity.tel_1 = int.Parse(reader.GetString(7));
@@ -125,7 +120,7 @@ namespace SimplyTeachingDesktop
                 }
             }catch(Exception ex)
             {
-                Console.WriteLine("MdbTeacherRepository\n"+ ex.Message);
+                Console.WriteLine("\n\n\nTEACHER REPOSITORY FindAll()\n"+ ex.Message);
             }
             finally
             {
@@ -140,16 +135,14 @@ namespace SimplyTeachingDesktop
         public bool Save(Entity entity)
         {
             connection = new MySqlConnection(connectionString);
-            command = new MySqlCommand(query, connection);
             TeacherModel model = entity as TeacherModel;
             bool result = false;
-            if (Find(model.id) == null) query = "INSERT INTO teachers (dni, name, last_name_1, last_name_2, post_address, seg_social, tel_1, tel_2, email) VALUES (@dni, @name, @last_name_1, @last_name_2, @post_address, @seg_social, @tel_1, @tel_2, @email);";
-            else
-            {
-                query = "UPDATE teachers SET dni = @dni, name = @name, last_name_1 = @last_name_1, last_name_2 = @last_name_2, post_address = @post_address, seg_social = @seg_social, tel_1 = @tel_1, tel_2 = @tel_2, email = @email WHERE id = @id";
-            }
-
-            try { command.Parameters.AddWithValue("@id", model.id); } catch (Exception ex) { }
+            if (model.id == 0) query = "INSERT INTO teachers VALUES (@id, @dni, @name, @last_name_1, @last_name_2, @post_address, @seg_social, @tel_1, @tel_2, @email)";
+            else query = "UPDATE teachers SET dni = @dni, name = @name, last_name_1 = @last_name_1, last_name_2 = @last_name_2, post_address = @post_address, seg_social = @seg_social, tel_1 = @tel_1, tel_2 = @tel_2, email = @email WHERE id = @id;";
+            
+            command = new MySqlCommand(query, connection);
+            
+            command.Parameters.AddWithValue("@id", model.id);
             command.Parameters.AddWithValue("@dni", model.dni);
             command.Parameters.AddWithValue("@name", model.name);
             command.Parameters.AddWithValue("@last_name_1", model.last_name_1);
@@ -167,8 +160,8 @@ namespace SimplyTeachingDesktop
                 command.ExecuteNonQuery();
                 result = true;
             }
-            catch (MySqlException ex) { Console.WriteLine(ex.StackTrace + "NO VAAAAA"); }
-            catch (Exception e) { Console.WriteLine(e.StackTrace); }
+            catch (MySqlException ex) { Console.WriteLine("\n\n\nTEACHER REPOSITORY Save()\n" + ex.StackTrace); }
+            catch (Exception e) { Console.WriteLine("\n\n\nTEACHER REPOSITORY Save()\n" + e.StackTrace); }
             finally
             {
                 if (connection != null)

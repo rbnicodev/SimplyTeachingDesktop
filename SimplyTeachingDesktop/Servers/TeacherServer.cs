@@ -91,8 +91,7 @@ namespace SimplyTeachingDesktop.Servers
         {
             TeacherModel model = new TeacherModel();
             int aux;
-            int.TryParse(teacher[0], out aux);
-            model.id = aux;
+            if(int.TryParse(teacher[0], out aux)) model.id = aux;
             model.dni = teacher[1];
             model.name = teacher[2];
             model.last_name_1 = teacher[3];
