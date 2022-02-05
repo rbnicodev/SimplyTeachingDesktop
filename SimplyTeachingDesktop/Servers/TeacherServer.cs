@@ -106,5 +106,10 @@ namespace SimplyTeachingDesktop.Servers
             return repository.Save(model);
 
         }
+
+        public bool Delete(string id)
+        {
+            return repository.Delete(repository.Find(int.Parse(id)));
+        }
     }
 }

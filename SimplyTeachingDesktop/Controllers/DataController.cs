@@ -107,9 +107,9 @@ namespace SimplyTeachingDesktop
         public Boolean SaveSubject(string[] subject) { return subjectServer.Save(subject); }
 
         public Boolean SaveTeacher(string[] teacher) { return teacherServer.Save(teacher); }
-        public Boolean DeleteStudent(string id) { return true; ; }
+        public Boolean DeleteStudent(string id) { return studentServer.Delete(id); }
         public Boolean DeleteSubject(string id) { return subjectServer.Delete(id); }
-        public Boolean DeleteTeacher(string id) { return true; }
+        public Boolean DeleteTeacher(string id) { return teacherServer.Delete(id); }
         public List<string> FindAllTeachers() { return teacherServer.FindAll(); }
 
     }

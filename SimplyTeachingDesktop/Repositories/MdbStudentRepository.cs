@@ -23,7 +23,7 @@ namespace SimplyTeachingDesktop
         {
             result = false;
             connection = new MySqlConnection(connectionString);
-            query = "DELETE * FROM students WHERE id = @id;";
+            query = "DELETE FROM students WHERE id = @id;";
             command = new MySqlCommand(query, connection);
             command.Parameters.AddWithValue("@id", (entity as StudentModel).id);
 

@@ -17,7 +17,25 @@ namespace SimplyTeachingDesktop
         string query = null;
         public bool Delete(Entity entity)
         {
-            throw new NotImplementedException();
+            bool result = false;
+            connection = new MySqlConnection(connectionString);
+            query = "DELETE FROM teachers WHERE id = @id;";
+            command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@id", (entity as TeacherModel).id);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch (Exception ex)
+            { }
+            finally
+            {
+                if (connection != null) connection.Close();
+            }
+            return result;
         }
 
         public Entity Find(int id)

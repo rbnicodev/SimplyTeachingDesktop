@@ -50,5 +50,10 @@ namespace SimplyTeachingDesktop.Servers
 
             return result;
         }
+
+        public bool Delete(string id)
+        {
+            return studentsRepository.Delete(studentsRepository.Find(int.Parse(id.Trim())));
+        }
     }
 }
