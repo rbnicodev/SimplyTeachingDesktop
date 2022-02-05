@@ -65,7 +65,9 @@ namespace SimplyTeachingDesktop.Servers
             aux = 0;
             if (int.TryParse(student[6], out aux)) model.tel_2 = aux;
             aux = 0;
-            model.email = student[9];
+            model.email = student[7];
+            if (int.TryParse(student[8], out aux)) model.tutor_id = aux;
+            aux = 0;
 
             return studentsRepository.Save(model);
         }
