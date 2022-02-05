@@ -22,7 +22,7 @@ namespace SimplyTeachingDesktop
         public static Color colorResaltLow = Color.FromArgb(255, 0, 100, 195);
 
         public static string UrlConnection = "datasource=localhost;port=3306;username=root;password=bitnami;database=SimplyTeaching;";
-        public static string UrlConnection = "datasource=sql11.freemysqlhosting.net;port=3306;username=sql11470340;password=TF2jhuIMjf;database=sql11470340;";
+        //public static string UrlConnection = "datasource=sql11.freemysqlhosting.net;port=3306;username=sql11470340;password=TF2jhuIMjf;database=sql11470340;";
 
 
         public static void SetNight(Boolean activeNight)

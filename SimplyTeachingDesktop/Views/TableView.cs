@@ -263,10 +263,11 @@ namespace SimplyTeachingDesktop
         {
             AddEditForm addEditForm = new AddEditForm(type);
             //this.Visible = false;
-            if (addEditForm.ShowDialog() == DialogResult.OK || addEditForm.ShowDialog() == DialogResult.No)
+            if (addEditForm.ShowDialog() == DialogResult.OK)
             {
                 ReloadTable();
                 this.Focus();
+                Data_Panel();
             }
             else
             {
@@ -284,6 +285,7 @@ namespace SimplyTeachingDesktop
                 {
                     ReloadTable();
                     this.Focus();
+                    Data_Panel();
                 }
                 else
                 {

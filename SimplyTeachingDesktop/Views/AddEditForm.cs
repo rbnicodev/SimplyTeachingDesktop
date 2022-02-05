@@ -138,7 +138,7 @@ namespace SimplyTeachingDesktop.Views
                 }
 
                 if (!result) MessageBox.Show("Ha habido un problema al borrar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else DialogResult = DialogResult.OK;
+                else { DialogResult = DialogResult.OK; this.Close(); }
             }
         }
 

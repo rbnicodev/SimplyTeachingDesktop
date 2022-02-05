@@ -36,22 +36,33 @@ namespace SimplyTeachingDesktop.Servers
         {
             TeacherModel model = repository.Find(id) as TeacherModel;
             string[] result = new string[10];
-            result[0] = model.id.ToString();
-            result[1] = model.dni;
-            result[2] = model.name;
-            result[3] = model.last_name_1;
-            result[4] = model.last_name_2;
-            result[5] = model.post_address;
-            result[6] = model.seg_social.ToString();
-            result[7] = model.tel_1.ToString();
-            if(model.tel_1 <= 0)
+            if(model != null)
             {
-                result[8] = model.tel_2.ToString();
-            }else
-            {
-                result[8] = "";
+                result[0] = model.id.ToString();
+                result[1] = model.dni;
+                result[2] = model.name;
+                result[3] = model.last_name_1;
+                result[4] = model.last_name_2;
+                result[5] = model.post_address;
+                result[6] = model.seg_social.ToString();
+                result[7] = model.tel_1.ToString();
+                if (model.tel_1 <= 0)
+                {
+                    result[8] = model.tel_2.ToString();
+                }
+                else
+                {
+                    result[8] = "";
+                }
+                result[9] = model.email;
             }
-            result[9] = model.email;
+            else
+            {
+                for(int i = 0; i < 10; i++)
+                {
+                    result[i] = "";
+                }
+            }
 
             return result;
         }
