@@ -40,6 +40,7 @@
             // TbH
             // 
             this.TbH.BackColor = System.Drawing.Color.Black;
+            this.TbH.Enabled = false;
             this.TbH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbH.ForeColor = System.Drawing.Color.White;
             this.TbH.Location = new System.Drawing.Point(27, 13);
@@ -87,6 +88,7 @@
             // TbMin
             // 
             this.TbMin.BackColor = System.Drawing.Color.Black;
+            this.TbMin.Enabled = false;
             this.TbMin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TbMin.ForeColor = System.Drawing.Color.White;
             this.TbMin.Location = new System.Drawing.Point(83, 13);

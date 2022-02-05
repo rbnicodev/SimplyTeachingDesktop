@@ -116,7 +116,6 @@ namespace SimplyTeachingDesktop.Views
                 entity = controller.FindSubject(id.ToString());
                 subjectsAdd1.TbID.Text = entity[0];
                 subjectsAdd1.TbName.Text = entity[1];
-                Console.WriteLine(entity[2]);
                 subjectsAdd1.selectHour1.TbH.Text = entity[2].Substring(0, entity[2].Length - 3);
                 subjectsAdd1.selectHour1.TbMin.Text = entity[2].Substring(3);
                 subjectsAdd1.CbDay.Text = entity[3];
@@ -190,7 +189,6 @@ namespace SimplyTeachingDesktop.Views
             subject[2] = subjectsAdd1.selectHour1.TbH.Text + subjectsAdd1.selectHour1.TbMin.Text + "00";
             subject[3] = (subjectsAdd1.CbDay.SelectedIndex + 1).ToString();
             subject[4] = subjectsAdd1.TbPrice.Text;
-            Console.WriteLine("VENTANAAAAAAA : " + subject[4]);
             return controller.SaveSubject(subject);
 
         }
