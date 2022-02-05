@@ -42,9 +42,13 @@ namespace SimplyTeachingDesktop.Servers
             result[2] = model.last_name_1;
             result[3] = model.last_name_2;
             result[4] = model.post_address;
-            result[5] = model.tel_1.ToString();
+
+            if (model.tel_1 > 0) result[5] = model.tel_1.ToString();
+            else result[5] = "";
+
             if (model.tel_2 <= 0) result[6] = "";
             else result[6] = model.tel_2.ToString();
+
             result[7] = model.email;
             result[8] = (teachersRepository.Find(model.tutor_id) as TeacherModel).name + " " + (teachersRepository.Find(model.tutor_id) as TeacherModel).last_name_1;
 
