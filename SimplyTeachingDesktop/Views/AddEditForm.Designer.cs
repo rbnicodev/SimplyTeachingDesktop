@@ -150,6 +150,7 @@
             this.BtnSave2.TabIndex = 16;
             this.BtnSave2.Text = "Guardar y Cont.";
             this.BtnSave2.UseVisualStyleBackColor = false;
+            this.BtnSave2.Click += new System.EventHandler(this.BtnSave2_Click);
             // 
             // AddEditForm
             // 

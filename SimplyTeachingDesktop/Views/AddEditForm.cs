@@ -194,6 +194,20 @@ namespace SimplyTeachingDesktop.Views
         }
         private bool saveStudent() { return true; }
 
+        private void BtnSave2_Click(object sender, EventArgs e)
+        {
+            bool result = false;
+            switch (type)
+            {
+                case 0: result = saveTeacher(); break;
+                case 1: result = saveSubject(); break;
+                case 2: result = saveStudent(); break;
+                default:; break;
+            }
+            if (result) this.DialogResult = DialogResult.Retry;
+            else MessageBox.Show("Parece que ha habido un error al intentar guardar el registro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
         private void addStudent()
         {
             

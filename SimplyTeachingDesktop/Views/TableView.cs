@@ -262,12 +262,16 @@ namespace SimplyTeachingDesktop
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             AddEditForm addEditForm = new AddEditForm(type);
-            //this.Visible = false;
-            if (addEditForm.ShowDialog() == DialogResult.OK)
+            DialogResult result = addEditForm.ShowDialog();
+            if (result == DialogResult.OK)
             {
                 ReloadTable();
                 this.Focus();
                 Data_Panel();
+            } else if( result == DialogResult.Retry)
+            {
+                ReloadTable();
+                BtnAdd_Click(sender, e);
             }
             else
             {
@@ -281,11 +285,17 @@ namespace SimplyTeachingDesktop
             {
                 string id = dataTable.SelectedRows[0].Cells[0].Value.ToString();
                 AddEditForm addEditForm = new AddEditForm(type, id);
-                if (addEditForm.ShowDialog() == DialogResult.OK)
+                DialogResult result = addEditForm.ShowDialog();
+                if (result == DialogResult.OK)
                 {
                     ReloadTable();
                     this.Focus();
                     Data_Panel();
+                }
+                else if (result == DialogResult.Retry)
+                {
+                    ReloadTable();
+                    BtnAdd_Click(sender, e);
                 }
                 else
                 {
