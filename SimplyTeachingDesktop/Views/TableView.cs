@@ -268,6 +268,7 @@ namespace SimplyTeachingDesktop
             teacherPanel1.BackColor = EnvironmentVars.color6;
             subjectPanel1.BackColor = EnvironmentVars.color6;
             dataTable.GridColor = EnvironmentVars.color2;
+            subjectPanel1.SetTheme();
 
         }
 

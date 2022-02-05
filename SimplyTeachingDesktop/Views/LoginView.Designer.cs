@@ -41,17 +41,34 @@ namespace SimplyTeachingDesktop
             this.LbNight = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.SuspendLayout();
-            //
+            // 
+            // BtnMinimize
+            // 
+            this.BtnMinimize.FlatAppearance.BorderSize = 0;
+            this.BtnMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            // 
+            // BtnMaximize
+            // 
+            this.BtnMaximize.FlatAppearance.BorderSize = 0;
+            this.BtnMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.BtnMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.FlatAppearance.BorderSize = 0;
+            this.BtnExit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.BtnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            // 
             // BtnLogin
             // 
             this.BtnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            //this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(75)))), ((int)(((byte)(174)))));
-            this.BtnLogin.BackColor = EnvironmentVars.colorResalt;
+            this.BtnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
             this.BtnLogin.FlatAppearance.BorderSize = 0;
-            this.BtnLogin.FlatAppearance.MouseDownBackColor = EnvironmentVars.colorResaltLow;
-            this.BtnLogin.FlatAppearance.MouseOverBackColor = EnvironmentVars.colorResaltHigh;
+            this.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(195)))));
+            this.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(140)))), ((int)(((byte)(225)))));
             this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLogin.ForeColor = System.Drawing.Color.White;
@@ -66,14 +83,14 @@ namespace SimplyTeachingDesktop
             // 
             // TbUser
             // 
-            this.TbUser.BackColor = EnvironmentVars.color7;
+            this.TbUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TbUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbUser.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbUser.ForeColor = EnvironmentVars.color2;
-            this.TbUser.Location = new System.Drawing.Point(112, 156);
+            this.TbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.TbUser.Location = new System.Drawing.Point(57, 155);
             this.TbUser.Margin = new System.Windows.Forms.Padding(2);
             this.TbUser.Name = "TbUser";
-            this.TbUser.Size = new System.Drawing.Size(225, 25);
+            this.TbUser.Size = new System.Drawing.Size(338, 32);
             this.TbUser.TabIndex = 2;
             this.TbUser.Text = "Usuario";
             this.TbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -84,14 +101,14 @@ namespace SimplyTeachingDesktop
             // 
             // TbPass
             // 
-            this.TbPass.BackColor = EnvironmentVars.color7;
+            this.TbPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.TbPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TbPass.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TbPass.ForeColor = EnvironmentVars.color2;
-            this.TbPass.Location = new System.Drawing.Point(112, 205);
+            this.TbPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(84)))), ((int)(((byte)(84)))));
+            this.TbPass.Location = new System.Drawing.Point(57, 205);
             this.TbPass.Margin = new System.Windows.Forms.Padding(2);
             this.TbPass.Name = "TbPass";
-            this.TbPass.Size = new System.Drawing.Size(225, 25);
+            this.TbPass.Size = new System.Drawing.Size(338, 32);
             this.TbPass.TabIndex = 3;
             this.TbPass.Text = "Contraseña";
             this.TbPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -115,7 +132,7 @@ namespace SimplyTeachingDesktop
             this.LbSimplyTeaching.AutoSize = true;
             this.LbSimplyTeaching.BackColor = System.Drawing.Color.Transparent;
             this.LbSimplyTeaching.Font = new System.Drawing.Font("Segoe UI", 23F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LbSimplyTeaching.ForeColor = EnvironmentVars.color1;
+            this.LbSimplyTeaching.ForeColor = System.Drawing.Color.White;
             this.LbSimplyTeaching.Location = new System.Drawing.Point(104, 102);
             this.LbSimplyTeaching.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LbSimplyTeaching.Name = "LbSimplyTeaching";
@@ -125,9 +142,9 @@ namespace SimplyTeachingDesktop
             // 
             // LbNight
             // 
-            this.LbNight.ForeColor = EnvironmentVars.color1;
             this.LbNight.AutoSize = true;
             this.LbNight.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LbNight.ForeColor = System.Drawing.Color.White;
             this.LbNight.Location = new System.Drawing.Point(405, 291);
             this.LbNight.Name = "LbNight";
             this.LbNight.Size = new System.Drawing.Size(33, 25);
@@ -139,7 +156,6 @@ namespace SimplyTeachingDesktop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            //this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(450, 325);
             this.Controls.Add(this.LbNight);
             this.Controls.Add(this.LbSimplyTeaching);
@@ -147,6 +163,7 @@ namespace SimplyTeachingDesktop
             this.Controls.Add(this.TbPass);
             this.Controls.Add(this.TbUser);
             this.Controls.Add(this.BtnLogin);
+            this.Location = new System.Drawing.Point(0, 0);
             this.MaximumSize = new System.Drawing.Size(450, 325);
             this.MinimumSize = new System.Drawing.Size(450, 325);
             this.Name = "LoginView";
