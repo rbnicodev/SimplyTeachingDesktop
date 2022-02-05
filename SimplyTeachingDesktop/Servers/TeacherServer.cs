@@ -44,16 +44,15 @@ namespace SimplyTeachingDesktop.Servers
                 result[3] = model.last_name_1;
                 result[4] = model.last_name_2;
                 result[5] = model.post_address;
-                result[6] = model.seg_social.ToString();
-                result[7] = model.tel_1.ToString();
-                if (model.tel_1 <= 0)
-                {
-                    result[8] = model.tel_2.ToString();
-                }
-                else
-                {
-                    result[8] = "";
-                }
+                if (model.seg_social > 0) result[6] = model.seg_social.ToString();
+                else result[6] = "";
+
+                if (model.tel_1 > 0) result[7] = model.tel_1.ToString();
+                else result[7] = "";
+
+                if (model.tel_2 > 0)  result[8] = model.tel_2.ToString();
+                else result[8] = "";
+
                 result[9] = model.email;
             }
             else
