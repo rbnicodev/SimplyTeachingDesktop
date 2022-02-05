@@ -340,6 +340,26 @@ namespace SimplyTeachingDesktop
                         break;
                     default: break;
                 }
+            } else
+            {
+                switch(type)
+                {
+                    case 0:
+                        teacherPanel1.TbTel1.Text = "";
+                        teacherPanel1.TbTel2.Text = "";
+                        teacherPanel1.TbDir.Text = "";
+                        teacherPanel1.TbEmail.Text = ""; break;
+                    case 1:
+                        subjectPanel1.TbID.Text = "";
+                        subjectPanel1.TbHora.Text = "";
+                        subjectPanel1.TbDia.Text = ""; break;
+                    case 2:
+                        studentsPanel1.TbEmail.Text = "";
+                        studentsPanel1.TbTel1.Text = "";
+                        studentsPanel1.TbTel2.Text = "";
+                        studentsPanel1.TbTutor.Text = ""; break;
+                    default: break;
+                }
             }
         }
     }
