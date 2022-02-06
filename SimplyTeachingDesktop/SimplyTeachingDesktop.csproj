@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ControllerBuilder.cs" />
+    <Compile Include="Controllers\SecurityController.cs" />
     <Compile Include="Repositories\MdbUserRepository.cs" />
     <Compile Include="Servers\StudentServer.cs" />
     <Compile Include="Servers\SubjectServer.cs" />

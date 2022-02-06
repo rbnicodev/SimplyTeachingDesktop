@@ -95,7 +95,6 @@ namespace SimplyTeachingDesktop
             this.TbUser.TabIndex = 2;
             this.TbUser.Text = "Usuario";
             this.TbUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.TbUser.TextChanged += new System.EventHandler(this.TbUser_Changed);
             this.TbUser.Enter += new System.EventHandler(this.TbUser_Enter);
             this.TbUser.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Tb_KeyPress);
             this.TbUser.Leave += new System.EventHandler(this.TbUser_Leave);

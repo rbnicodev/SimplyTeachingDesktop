@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SimplyTeachingDesktop.Controllers;
 
 namespace SimplyTeachingDesktop.Repositories
 {
@@ -38,8 +39,8 @@ namespace SimplyTeachingDesktop.Repositories
                     while (reader.Read())
                     {
                         entity.id = int.Parse(reader.GetString(0));
-                        entity.user = reader.GetString(1);
-                        entity.password = reader.GetString(2);
+                        entity.user = SecurityController.Decrypt(reader.GetString(1));
+                        entity.password = SecurityController.Decrypt(reader.GetString(2));
                     }
                 }
             }
@@ -68,8 +69,8 @@ namespace SimplyTeachingDesktop.Repositories
                     {
                         entity = new UserModel();
                         entity.id = int.Parse(reader.GetString(0));
-                        entity.user = reader.GetString(1);
-                        entity.password = reader.GetString(2);
+                        entity.user = SecurityController.Decrypt(reader.GetString(1));
+                        entity.password = SecurityController.Decrypt(reader.GetString(2));
 
                         list.Add(entity);
                         entity = null;
@@ -97,8 +98,8 @@ namespace SimplyTeachingDesktop.Repositories
             query = "INSERT INTO users (user, pass) VALUES (@user, @pass);";
             connection = new MySqlConnection(connectionString);
             command = new MySqlCommand(query, connection);
-            command.Parameters.AddWithValue("@user", model.user);
-            command.Parameters.AddWithValue("@pass", model.password);
+            command.Parameters.AddWithValue("@user", SecurityController.Encrypt(model.user));
+            command.Parameters.AddWithValue("@pass", SecurityController.Encrypt(model.password));
 
             try
             {

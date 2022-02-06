@@ -63,25 +63,6 @@ namespace SimplyTeachingDesktop
             }
         }
 
-        private void TbUser_Changed(object sender, EventArgs e)
-        {
-
-            if(TbUser.Text =="" || TbUser.Text == "Usuario")
-            {
-                TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = EnvironmentVars.color7;
-            }
-            else if (!controller.Validate_Email(TbUser.Text))
-            {
-                TbUser.BackColor = Color.FromArgb(255, 80, 0, 0);
-            }
-            else
-            {
-                TbUser.BorderStyle = BorderStyle.None;
-                TbUser.BackColor = EnvironmentVars.color7;
-                TbUser.ForeColor = EnvironmentVars.color1;
-            }
-        }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using SimplyTeachingDesktop.Controllers;
 namespace SimplyTeachingDesktop
 {
     internal class DataController
@@ -25,7 +25,7 @@ namespace SimplyTeachingDesktop
 
         public Boolean TestConnection()
         {
-            bool result = false; ;
+            bool result = false;
             if (userServer.TestConnection()) result = true;
 
             return result;
