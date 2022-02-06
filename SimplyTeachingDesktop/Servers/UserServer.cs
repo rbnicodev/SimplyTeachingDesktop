@@ -31,5 +31,15 @@ namespace SimplyTeachingDesktop.Servers
             }
             return result;
         }
+
+        public bool SignUp(string user, string pass)
+        {
+
+            UserModel userModel = new UserModel();
+            userModel.user = user;
+            userModel.password = pass;
+
+            return repository.Save(userModel);
+        }
     }
 }

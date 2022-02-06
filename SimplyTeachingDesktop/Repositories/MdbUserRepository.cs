@@ -92,7 +92,29 @@ namespace SimplyTeachingDesktop.Repositories
 
         public bool Save(Entity entity)
         {
-            throw new NotImplementedException();
+            UserModel model = entity as UserModel;
+            bool result = false;
+            query = "INSERT INTO users (user, pass) VALUES (@user, @pass);";
+            connection = new MySqlConnection(connectionString);
+            command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@user", model.user);
+            command.Parameters.AddWithValue("@pass", model.password);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                result = true;
+            }
+            catch (MySqlException ex) { Console.WriteLine(ex.StackTrace); }
+            catch (Exception e) { Console.WriteLine(e.StackTrace); }
+            finally
+            {
+                if (connection != null)
+                    connection.Close();
+            }
+
+            return result;
         }
 
         public bool TestConnection()

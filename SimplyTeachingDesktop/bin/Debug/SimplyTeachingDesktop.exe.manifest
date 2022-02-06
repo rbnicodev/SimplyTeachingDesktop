@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimplyTeachingDesktop.exe" size="953824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SimplyTeachingDesktop.exe" size="955360">
       <assemblyIdentity name="SimplyTeachingDesktop" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SEUIDWV9XFNFrgWWXTKyDNl51A5ZewVidd+riwckApg=</dsig:DigestValue>
+        <dsig:DigestValue>vOMnRaex2fUWXCJh3f28b1e+7sz3bhwdrT3S1/OK9r4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

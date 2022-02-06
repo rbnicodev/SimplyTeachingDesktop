@@ -14,10 +14,9 @@ namespace SimplyTeachingDesktop
     public partial class LoginView : UserForm
     {
         DataController controller;
+        bool signup = false;
         public LoginView()
         {
-            //PruebaFlow pruebaFlow = new PruebaFlow();
-            //pruebaFlow.ShowDialog();
             InitializeComponent();
             controller = ControllerBuilder.GetController();
             BtnExit.Location = new Point(this.Width - 30, 0);
@@ -31,7 +30,7 @@ namespace SimplyTeachingDesktop
             if(TbUser.Text == "Usuario")
             {
                 TbUser.Text = "";
-                TbUser.ForeColor = Color.White;
+                TbUser.ForeColor = EnvironmentVars.color1;
             }
         }
 
@@ -86,22 +85,43 @@ namespace SimplyTeachingDesktop
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            if(controller.TestConnection())
+            if(!signup)
             {
-                if (controller.Login(TbUser.Text.Trim(), TbPass.Text.Trim()))
+                if (controller.TestConnection())
                 {
-                    TableView teachersView = new TableView();
-                    teachersView.Show();
-                    this.Visible = false;
+                    if (controller.Login(TbUser.Text.Trim(), TbPass.Text.Trim()))
+                    {
+                        TableView teachersView = new TableView();
+                        teachersView.Show();
+                        this.Visible = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario y/o contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Usuario y/o contraseña incorrecto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Ha habido algún error con la conexión\nComprueba que tengas conexión a internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Ha habido algún error con la conexión\nComprueba que tengas conexión a internet", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(controller.SignUp(TbUser.Text, TbPass.Text))
+                {
+                    MessageBox.Show("El registro se ha realizado con éxito", "Registro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Ha habido un error durante el registro", "Error", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error);
+                    if(result == DialogResult.Retry)
+                    {
+                        return;
+                    }
+                }
+
+                SignUp_Click(null, null);
             }
             
         }
@@ -128,6 +148,7 @@ namespace SimplyTeachingDesktop
 
         private void setTheme()
         {
+            BtnSignUp.ForeColor = EnvironmentVars.color1;
             BackColor = EnvironmentVars.color6;
             LbNight.ForeColor = EnvironmentVars.color1;
             LbSimplyTeaching.ForeColor = EnvironmentVars.color1;
@@ -148,6 +169,32 @@ namespace SimplyTeachingDesktop
             this.PbLogo.Dock = DockStyle.None;
             this.PbLogo.Image = (Image)image;
             image = null;
+        }
+
+        private void SignUp_Click(object sender, EventArgs e)
+        {
+            if(!signup)
+            {
+                TbPass.Text = "";
+                TbUser.Text = "";
+                TbPass_Leave(null, null);
+                TbUser_Leave(null, null);
+                signup = true;
+                BtnLogin.Text = "Registrarse";
+                BtnSignUp.Text = "❮";
+                this.Focus();
+            }
+            else
+            {
+                TbPass.Text = "";
+                TbUser.Text = "";
+                TbPass_Leave(null, null);
+                TbUser_Leave(null, null);
+                signup = false;
+                BtnLogin.Text = "Iniciar Sesión";
+                BtnSignUp.Text = "Registrarse";
+                this.Focus();
+            }
         }
     }
 }

@@ -39,6 +39,7 @@ namespace SimplyTeachingDesktop
             this.PbLogo = new System.Windows.Forms.PictureBox();
             this.LbSimplyTeaching = new System.Windows.Forms.Label();
             this.LbNight = new System.Windows.Forms.Label();
+            this.BtnSignUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,11 +153,27 @@ namespace SimplyTeachingDesktop
             this.LbNight.Text = "🌓";
             this.LbNight.Click += new System.EventHandler(this.LbNight_Click);
             // 
+            // BtnSignUp
+            // 
+            this.BtnSignUp.AutoSize = true;
+            this.BtnSignUp.FlatAppearance.BorderSize = 0;
+            this.BtnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSignUp.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.BtnSignUp.ForeColor = System.Drawing.Color.White;
+            this.BtnSignUp.Location = new System.Drawing.Point(0, 284);
+            this.BtnSignUp.Name = "BtnSignUp";
+            this.BtnSignUp.Size = new System.Drawing.Size(104, 40);
+            this.BtnSignUp.TabIndex = 10;
+            this.BtnSignUp.Text = "Registrarse";
+            this.BtnSignUp.UseVisualStyleBackColor = true;
+            this.BtnSignUp.Click += new System.EventHandler(this.SignUp_Click);
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 325);
+            this.Controls.Add(this.BtnSignUp);
             this.Controls.Add(this.LbNight);
             this.Controls.Add(this.LbSimplyTeaching);
             this.Controls.Add(this.PbLogo);
@@ -179,6 +196,7 @@ namespace SimplyTeachingDesktop
             this.Controls.SetChildIndex(this.BtnMaximize, 0);
             this.Controls.SetChildIndex(this.BtnExit, 0);
             this.Controls.SetChildIndex(this.LbNight, 0);
+            this.Controls.SetChildIndex(this.BtnSignUp, 0);
             ((System.ComponentModel.ISupportInitialize)(this.PbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -193,6 +211,7 @@ namespace SimplyTeachingDesktop
         private System.Windows.Forms.PictureBox PbLogo;
         private System.Windows.Forms.Label LbSimplyTeaching;
         private System.Windows.Forms.Label LbNight;
+        private Button BtnSignUp;
     }
 }
 

@@ -35,6 +35,11 @@ namespace SimplyTeachingDesktop
         {
             return userServer.Login(user, pass);
         }
+
+        public Boolean SignUp(string user, string pass)
+        {
+            return userServer.SignUp(user, pass);
+        }
         
 
         public Boolean Validate_Email(String email)
