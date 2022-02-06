@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimplyTeachingDesktop.Controllers
 {
-    internal class SecurityController
+    class SecurityController
     {
         public static string Encrypt(string stringToEncrypt)
         {
