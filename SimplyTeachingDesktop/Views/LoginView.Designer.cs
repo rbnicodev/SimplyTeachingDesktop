@@ -163,12 +163,11 @@ namespace SimplyTeachingDesktop
             this.Controls.Add(this.TbPass);
             this.Controls.Add(this.TbUser);
             this.Controls.Add(this.BtnLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.MaximumSize = new System.Drawing.Size(450, 325);
             this.MinimumSize = new System.Drawing.Size(450, 325);
             this.Name = "LoginView";
-            this.ShowIcon = false;
-            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SimplyTeaching";
             this.Controls.SetChildIndex(this.BtnLogin, 0);

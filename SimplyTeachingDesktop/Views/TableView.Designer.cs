@@ -175,7 +175,7 @@ namespace SimplyTeachingDesktop
             this.subjectPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subjectPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.subjectPanel1.Location = new System.Drawing.Point(500, 61);
-            this.subjectPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.subjectPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.subjectPanel1.Name = "subjectPanel1";
             this.subjectPanel1.Size = new System.Drawing.Size(440, 447);
             this.subjectPanel1.TabIndex = 15;
@@ -312,11 +312,11 @@ namespace SimplyTeachingDesktop
             this.Controls.Add(this.studentsPanel1);
             this.Controls.Add(this.subjectPanel1);
             this.Controls.Add(this.teacherPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Margin = new System.Windows.Forms.Padding(3);
             this.MinimumSize = new System.Drawing.Size(960, 585);
             this.Name = "TableView";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeachersView";
             this.Load += new System.EventHandler(this.Form_Load);

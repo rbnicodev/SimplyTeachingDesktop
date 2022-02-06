@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditForm));
             this.teachersAdd1 = new SimplyTeachingDesktop.UserComponents.TeachersAdd();
             this.LbEntity = new System.Windows.Forms.Label();
             this.studentsAdd1 = new SimplyTeachingDesktop.UserComponents.StudentsAdd();
@@ -167,8 +168,10 @@
             this.Controls.Add(this.teachersAdd1);
             this.Controls.Add(this.subjectsAdd1);
             this.Controls.Add(this.studentsAdd1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(0, 0);
             this.Name = "AddEditForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddEditForm";
             this.Controls.SetChildIndex(this.studentsAdd1, 0);
