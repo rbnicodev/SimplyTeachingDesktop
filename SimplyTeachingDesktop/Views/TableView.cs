@@ -141,7 +141,7 @@ namespace SimplyTeachingDesktop
         /// This function handles the selection of the teachers tab
         /// </summary>
         /// <param name="sender">Label Teachers</param>
-        /// <param name="e">clikc</param>
+        /// <param name="e">click</param>
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color4;
@@ -157,10 +157,10 @@ namespace SimplyTeachingDesktop
             subjectPanel1.Visible = false;
         }
         /// <summary>
-        /// 
+        /// This function handles the selection of the subjects tab
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">Label Subjects</param>
+        /// <param name="e">click</param>
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color6;
@@ -175,7 +175,11 @@ namespace SimplyTeachingDesktop
             subjectPanel1.Visible = true;
             ReloadTable();
         }
-
+        /// <summary>
+        /// This function handles the selection of the students tab
+        /// </summary>
+        /// <param name="sender">Label Students</param>
+        /// <param name="e">click</param>
         private void BtnAlumnos_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color4;
@@ -190,16 +194,14 @@ namespace SimplyTeachingDesktop
             subjectPanel1.Visible = false;
             ReloadTable();
         }
-
-        
-
-        
-
+        /// <summary>
+        /// Function that fills the table with the updated data from the database
+        /// </summary>
         private void ReloadTable()
         {
             dataTable.Rows.Clear();
             string[][] rows = null;
-            if (type == 0)
+            if (type == 0) // An "IF" statement for each entity, so that the view is reactive with the selection.
             {
                 rows = controller.TeachersTable();
                 if(rows != null)
@@ -238,12 +240,19 @@ namespace SimplyTeachingDesktop
                 HelpPanel.Visible = false;
 
         }
-
+        /// <summary>
+        /// Listener for the Log Out button
+        /// </summary>
+        /// <param name="sender">BackButton</param>
+        /// <param name="e">Click</param>
         private void BtnBack_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             new LoginView().ShowDialog();
         }
+        /// <summary>
+        /// Function that repaints all the elements on the screen to apply the appropriate color to the theme selected on the login screen
+        /// </summary>
         private void setTheme()
         {
             dataTable_Initcialize();
@@ -299,7 +308,11 @@ namespace SimplyTeachingDesktop
             subjectPanel1.SetTheme();
 
         }
-
+        /// <summary>
+        /// Listener for the button to add a record. It takes into account the selected entity in order to open the instance of the add window configured for said entity
+        /// </summary>
+        /// <param name="sender">Button Add</param>
+        /// <param name="e">Click</param>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             AddEditForm addEditForm = new AddEditForm(type);
@@ -319,7 +332,11 @@ namespace SimplyTeachingDesktop
                 this.Focus();
             }
         }
-
+        /// <summary>
+        /// Listener for the button to edit a record. It takes into account the selected entity in order to open the instance of the add window configured for said entity
+        /// </summary>
+        /// <param name="sender">Button Edit</param>
+        /// <param name="e">Click</param>
         private void BtnEdit_Click(object sender, EventArgs e)
         {
             try
@@ -348,9 +365,15 @@ namespace SimplyTeachingDesktop
                 MessageBox.Show("No hay fila seleccionada o no es válida", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        /// <summary>
+        /// Listener that reloads the right pane based on the item selected in the table. This calls the Data_Panel() function
+        /// </summary>
+        /// <param name="sender">A cell of the table</param>
+        /// <param name="e"></param>
         private void DataTable_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e) { Data_Panel(); }
-
+        /// <summary>
+        /// Reloads the right pane based on the item selected in the table
+        /// </summary>
         private void Data_Panel()
         {
             if (dataTable.SelectedRows.Count > 0)
