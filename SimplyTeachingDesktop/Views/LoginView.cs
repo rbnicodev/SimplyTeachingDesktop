@@ -24,7 +24,11 @@ namespace SimplyTeachingDesktop
             setTheme();
         }
 
-
+        /// <summary>
+        /// Empty the user textBox when clicking on it
+        /// </summary>
+        /// <param name="sender">TextBox User</param>
+        /// <param name="e">TextBox User</param>
         private void TbUser_Enter(object sender, EventArgs e)
         {
             if(TbUser.Text == "Usuario")
