@@ -21,7 +21,11 @@ namespace SimplyTeachingDesktop
             teacherPanel1.Visible = true;
             setTheme();
         }
-
+        /// <summary>
+        /// This function controls that all elements are responsive to the size of the window.
+        /// </summary>
+        /// <param name="sender">the window itself</param>
+        /// <param name="e">resize</param>
         private void Form_Resize(object sender, EventArgs e)
         {
             dataTable.Width = this.Width / 2 - 10;
@@ -45,7 +49,11 @@ namespace SimplyTeachingDesktop
             BtnAlumnos.Location = new Point((this.Width / 2 + 12 + BtnAsignaturas.Width * 2), 32);
             HelpPanel.Location = new Point(32, this.Height / 2);
         }
-
+        /// <summary>
+        /// This function checks that all the elements are well placed when loading the window
+        /// </summary>
+        /// <param name="sender">this window</param>
+        /// <param name="e">resize</param>
         private void Form_Load(object sender, EventArgs e)
         {
             dataTable_Initcialize();
@@ -71,6 +79,9 @@ namespace SimplyTeachingDesktop
             studentsPanel1.Location = new Point(this.Width * 640 / 1280, this.Height * 105 / 720);
             studentsPanel1.Width = this.Width * 615 / 1280;
         }
+        /// <summary>
+        /// Function that is responsible for coloring and formatting the data table.
+        /// </summary>
         private void dataTable_Initcialize()
         {
             dataTable.BackgroundColor = EnvironmentVars.color6;
@@ -106,18 +117,31 @@ namespace SimplyTeachingDesktop
                 i++;
             }
         }
-
+        /// <summary>
+        /// Modify the hover color of the button
+        /// </summary>
+        /// <param name="sender">EntityLabels</param>
+        /// <param name="e">MouseHover</param>
         private void LabelButton_MouseHover(object sender, EventArgs e)
         {
             backColor = ((Button)sender).BackColor;
             ((Button)sender).BackColor = EnvironmentVars.color4;
         }
-
+        /// <summary>
+        /// Modify the leave color of the button
+        /// </summary>
+        /// <param name="sender">EntityLables</param>
+        /// <param name="e">MouseLeave</param>
         private void LabelButton_MouseLeave(object sender, EventArgs e)
         {
             ((Button)sender).BackColor = backColor;
         }
 
+        /// <summary>
+        /// This function handles the selection of the teachers tab
+        /// </summary>
+        /// <param name="sender">Label Teachers</param>
+        /// <param name="e">clikc</param>
         private void BtnProfesores_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color4;
@@ -132,7 +156,11 @@ namespace SimplyTeachingDesktop
             studentsPanel1.Visible = false;
             subjectPanel1.Visible = false;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAsignaturas_Click(object sender, EventArgs e)
         {
             BtnAsignaturas.BackColor = EnvironmentVars.color6;
