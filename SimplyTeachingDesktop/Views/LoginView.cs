@@ -37,7 +37,11 @@ namespace SimplyTeachingDesktop
                 TbUser.ForeColor = EnvironmentVars.color1;
             }
         }
-
+        /// <summary>
+        /// Empty the user textBox when clicking on it
+        /// </summary>
+        /// <param name="sender">TextBox Pass</param>
+        /// <param name="e">Mouse enter</param>
         private void TbPass_Enter(object sender, EventArgs e)
         {
             if(TbPass.Text == "Contraseña")
@@ -48,6 +52,11 @@ namespace SimplyTeachingDesktop
             }
         }
 
+        /// <summary>
+        /// Put "Usuario" in the text box when the mouse leave
+        /// </summary>
+        /// <param name="sender">TextBox User</param>
+        /// <param name="e"></param>
         private void TbUser_Leave(object sender, EventArgs e)
         {
             if(TbUser.Text == "")
@@ -57,6 +66,11 @@ namespace SimplyTeachingDesktop
             }
         }
 
+        /// <summary>
+        /// Put "Contraseña" in the text box when the mouse leave
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TbPass_Leave(object sender, EventArgs e)
         {
             if (TbPass.Text == "")
@@ -67,7 +81,11 @@ namespace SimplyTeachingDesktop
             }
         }
 
-
+        /// <summary>
+        /// ClickListener for the LoginButton
+        /// </summary>
+        /// <param name="sender">Button Login</param>
+        /// <param name="e">Click</param>
         private void BtnLogin_Click(object sender, EventArgs e)
         {
             if(!signup)
@@ -111,12 +129,22 @@ namespace SimplyTeachingDesktop
             
         }
 
+        /// <summary>
+        /// KeyListener for the Text Box Password
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Tb_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Return)
                 BtnLogin_Click(null, null);
         }
 
+        /// <summary>
+        /// This function is the switch to set the DarkTheme/LightTheme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LbNight_Click(object sender, EventArgs e)
         {
             if(EnvironmentVars.night)
@@ -131,6 +159,9 @@ namespace SimplyTeachingDesktop
 
         }
 
+        /// <summary>
+        /// Set the LightTheme/DarkTheme
+        /// </summary>
         private void setTheme()
         {
             BtnSignUp.ForeColor = EnvironmentVars.color1;
@@ -156,6 +187,11 @@ namespace SimplyTeachingDesktop
             image = null;
         }
 
+        /// <summary>
+        /// Listener for Login
+        /// </summary>
+        /// <param name="sender">Login Button</param>
+        /// <param name="e">Click</param>
         private void SignUp_Click(object sender, EventArgs e)
         {
             if(!signup)
